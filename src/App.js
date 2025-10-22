@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom/client";
 import {BrowserRouter} from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
+import Main from "./Main";
 import './App.css';
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<h1>Hello World</h1>} />
+          <Route path="/" element={<Main />} />
           <Route path="/about" element={<h1>About Page</h1>} />
           <Route path="/contact" element={<h1>Contact Page</h1>} />
           <Route path="/gallery" element={<h1>Gallery Page</h1>} />
