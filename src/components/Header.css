@@ -1,0 +1,118 @@
+/* === HEADER BASE === */
+.header {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 1.4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+/* === HEADER CONTAINER === */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.6rem 2rem 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* === LOGO GROUP (image + text) === */
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 1.0rem; /* spacing between logo and name */
+  text-decoration: none;
+}
+
+/* === LOGO IMAGE === */
+.logo {
+  height: 110px;
+  transition: all 0.3s ease;
+}
+
+/* === ARTIST NAME (next to logo) === */
+ .artist-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  font-size: 1.5rem;
+  text-shadow: 0.6px 0 0 currentColor;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: -0.4rem; /* moves it slightly up */
+ }
+
+.name {
+  margin: 0;
+  color: #c0be8e;
+  text-decoration: none;
+  margin-bottom: 0.4rem;
+  margin-top: -0.2rem;
+}
+
+.surname {
+  margin: 0;
+  color: #c0be8e;
+  text-decoration: none;
+}
+
+
+.profession {
+  /* margin-top: 0.1rem; */
+  font-size: 1.0rem;
+  color: #623008; 
+  text-shadow: 0.5px 0 0 currentColor;
+}
+
+
+/* === NAVIGATION === */
+.nav {
+  display: flex;
+  gap: 4rem;
+}
+
+.nav-option {
+  text-decoration: none;
+  color: #2e2e2e;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.nav-option:hover {
+  color: #8b5e3c;
+}
+
+/* === SCROLL STATE === */
+.header.scrolled {
+  font-size: 1.2rem;
+  padding: 0.2rem 0;
+}
+
+.header.scrolled .header-container {
+  padding: 0.1rem 2rem;
+}
+
+.header.scrolled .logo {
+  height: 70px;
+}
+
+.header.scrolled .artist-name {
+  font-size: 1.3rem;
+  color: #c0be8e;
+  margin-top: 0.3rem;
+}
+
+
+.header.scrolled .profession {
+  font-size: 0.9rem;
+  color: #623008; 
+  margin-bottom: 1.2rem;
+}

@@ -1,0 +1,107 @@
+
+
+.hero {
+  height: 100vh;
+  background-image: url('/public/images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  
+  font-family: 'Zen Old Mincho', serif;
+}
+
+.quote {
+  max-width: 1000px;
+  padding: 1rem 2rem;
+  /* background: rgba(0, 0, 0, 0.4); */
+  border-radius: 8px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.quote-title {
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px; /* adjust the height of fade */
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, white 100%);
+  pointer-events: none; /* so it doesn’t block scrolling or buttons */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* horizontally centers inner sections */
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px; /* keeps it neat on large screens */
+  margin: 0 auto;
+  padding: 4rem 1.5rem; /* responsive side padding */
+}
+
+/* === SECTIONS === */
+.content-section {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+/* Optional: Add subtle section separation */
+.content-section:not(:last-child) {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding-bottom: 4rem;
+}
+
+/* === ABOUT SECTION === */
+.content-about {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  display: flex;  
+}
+
+.content-about-image {
+  max-width: 400px;
+  margin-right: 1rem;
+  border-radius: 8px;
+  height: 500px;
+} 
+
+.content-about-text-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.content-about-text-body {
+  margin-bottom: 1.5rem;
+}
+
+.content-about-text-signature {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: #555;
+}
+
+.content-about-text-profession {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 1.5rem;
+} 
+
+
