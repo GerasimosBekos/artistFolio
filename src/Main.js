@@ -25,7 +25,7 @@ function Main(props) {
                 <section id="about" className="content-section">
                     <div className="content-about">
                         <div className="content-about-image">
-                            <img src="/images/artist.jpeg" alt="About Me" className="content-about-image" />
+                            <img src="/images/artist.jpeg" alt="About Me" className="content-about-img" />
                         </div>
                         <div className="content-about-text">
                             <div className="content-about-text-title">
@@ -50,11 +50,24 @@ function Main(props) {
                 {/* GALLERY SECTION */}
                 <section id="gallery" className="content-section">
                     <div className="content-gallery">
+                        <div className="content-gallery-subtitle">
+                            KATHΓOPIEΣ
+                        </div>
                         <div className="content-gallery-title">
                             Δημιουργίες
                         </div>
                         <div className="content-gallery-grid">
-                            {/* Gallery items would go here */}
+                            
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+                {/* TO -> GALLERY SECTION */}
+                <section id="gallery" className="content-section">
+                    <div className="content-to-gallery">
+                        <div className="content-to-gallery-title">
+                            Ανακαλύψτε όλες τις δημιουργίες μου εδώ
                         </div>
                     </div>
                 </section>
@@ -62,7 +75,6 @@ function Main(props) {
                 <section id="contact" className="content-section">
                     This is the Contact section
                 </section>
-            </div>
             <Footer />
         </div>
     );

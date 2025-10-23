@@ -42,29 +42,31 @@
   pointer-events: none; /* so it doesn’t block scrolling or buttons */
 }
 
+/* =============== CONTENT =============== */
+
 .content {
   display: flex;
   flex-direction: column;
   align-items: center; /* horizontally centers inner sections */
   justify-content: center;
   width: 100%;
-  max-width: 1200px; /* keeps it neat on large screens */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 1.5rem; /* responsive side padding */
+  padding: 2rem 1.5rem; /* responsive side padding */
 }
 
 /* === SECTIONS === */
 .content-section {
   width: 100%;
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 }
 
 /* Optional: Add subtle section separation */
-.content-section:not(:last-child) {
+/* .content-section:not(:last-child) {
   border-bottom: 1px solid rgba(0,0,0,0.05);
-  padding-bottom: 4rem;
-}
+  padding-bottom: 1rem;
+} */
 
 /* ========== ABOUT SECTION ============= */
 .content-about {
@@ -72,15 +74,35 @@
   font-size: 1.2rem;
   line-height: 1.8;
   color: #333;
-  display: flex;  
+  display: flex;
 }
 
 .content-about-image {
+  flex: 0 0 auto;
+  margin-right: 2rem;
+}
+
+.content-about-img {
+  width: 100%;
   max-width: 400px;
-  margin-right: 1rem;
-  border-radius: 8px;
-  height: 500px;
-} 
+  height: auto;
+  border-radius: 2px;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .content-about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .content-about-image {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+}
 
 .content-about-text-title {
   font-size: 2.5rem;
@@ -104,21 +126,61 @@
   margin-bottom: 1.5rem;
 } 
 
-/* ========== GALLERY SECTION ============= */
+/* ========== GALLERY SECTION ==================== */
+.content-gallery-subtitle {
+  font-size: 1.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Zen Old Mincho', serif;
+  opacity: 0.7;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  color: #c0be8e;
+}
 
 .content-gallery-title {
+  font-size: 3.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Zen Old Mincho', serif;
+  opacity: 0.85;
+  margin: 0;
+  /* margin-top: -5rem; */
+  position: relative;
+  overflow: hidden;
+  color: #333;
+}
+
+
+
+
+
+/* ========== TO -> GALLERY SECTION ============= */
+
+.content-to-gallery-title {
   font-size: 2.5rem;
-  /* margin-bottom: 2rem; */
-  background-image: url('/public/images/hand.jpg');
+  background-image: url('/public/images/hand_crop.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.9;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   text-shadow: 0 2px 6px rgba(0,0,0,0.7);
-  
   font-family: 'Zen Old Mincho', serif;
+  opacity: 0.85;
+  margin: 1rem 0 0;
+  margin-top: -2rem;
+  position: relative;
+  overflow: hidden;
 }
+
 
