@@ -21,6 +21,7 @@ function Main(props) {
                 <div className="hero-fade"></div>
             </section>
             <div className="content">
+                {/* ABOUT SECTION */}
                 <section id="about" className="content-section">
                     <div className="content-about">
                         <div className="content-about-image">
@@ -46,9 +47,18 @@ function Main(props) {
                         </div>
                     </div>
                 </section>
+                {/* GALLERY SECTION */}
                 <section id="gallery" className="content-section">
-                    This is the Gallery section
+                    <div className="content-gallery">
+                        <div className="content-gallery-title">
+                            Δημιουργίες
+                        </div>
+                        <div className="content-gallery-grid">
+                            {/* Gallery items would go here */}
+                        </div>
+                    </div>
                 </section>
+                {/* CONTACT SECTION */}
                 <section id="contact" className="content-section">
                     This is the Contact section
                 </section>
