@@ -1,6 +1,7 @@
 import "./Main.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { Link } from "react-router-dom";
 
 
 function Main(props) {
@@ -79,13 +80,26 @@ function Main(props) {
                 <section id="gallery" className="content-section">
                     <div className="content-to-gallery">
                         <div className="content-to-gallery-title">
-                            Ανακαλύψτε όλες τις δημιουργίες μου εδώ
-                        </div>
+                            <div className="content-to-gallery-title-fade"></div>
+                            <div className="content-to-gallery-text">
+                                Ανακαλύψτε όλες τις δημιουργίες μου
+                            </div>
+                            <Link to="/gallery" className="content-to-gallery-button">
+                                Δείτε τη συλλογή
+                            </Link>
+                        </div> 
                     </div>
                 </section>
                 {/* CONTACT SECTION */}
                 <section id="contact" className="content-section">
-                    This is the Contact section
+                    <div className="content-contact">
+                        <div className="content-gallery-subtitle">
+                            ΕΠΙΚΟΙΝΩΝΙΑ
+                        </div>
+                        <div className="content-gallery-title">
+                            Επικοινωνήστε μαζί μου
+                        </div>
+                    </div>
                 </section>
             <Footer />
         </div>
