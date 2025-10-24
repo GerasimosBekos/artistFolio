@@ -1,4 +1,13 @@
 /* =============== CONTENT =============== */
+.main {
+  font-family: 'Zen Old Mincho', serif;
+   background-color: #fff;
+  background-image: url('/public/images/mainbg.png');
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+  background-size: contain; /* or 50%, depending on design */
+}
+
 
 .content {
   display: flex;
@@ -6,9 +15,9 @@
   align-items: center; /* horizontally centers inner sections */
   justify-content: center;
   width: 100%;
-  max-width: 65%;  /*or 1200px*/
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1.5rem; /* responsive side padding */
+  padding: 2rem 0; /* responsive side padding */
 }
 
 /* === SECTIONS === */
@@ -16,6 +25,7 @@
   width: 100%;
   text-align: center;
   margin-bottom: 3rem;
+  font-family: 'Zen Old Mincho', serif;
 }
 
 /* Optional: Add subtle section separation */
