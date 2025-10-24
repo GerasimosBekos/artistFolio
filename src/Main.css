@@ -86,9 +86,9 @@
   width: 100%;
   max-width: 400px;
   height: auto;
-  border-radius: 2px;
+  border-radius: 10px;
   object-fit: cover;
-  opacity: 0.85;
+  opacity: 0.80;
 }
 
 @media (max-width: 768px) {
@@ -156,6 +156,103 @@
   color: #333;
 }
 
+/* ============================ GRID ================================ */
+
+/* === GALLERY GRID LAYOUT === */
+.content-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 220px;
+  gap: 1.2rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/* === EACH CATEGORY CARD === */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* === IMAGE === */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.65; /* slightly dimmed for text readability */
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* === TITLE OVERLAY === */
+.gallery-item span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* === BACKGROUND OVERLAY for extra readability === */
+.gallery-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  transition: background 0.4s ease;
+  z-index: 1;
+}
+
+/* === HOVER EFFECT === */
+.gallery-item:hover img {
+  transform: scale(1.05);
+  opacity: 1; /* become clearer */
+}
+
+.gallery-item:hover::before {
+  background: rgba(0, 0, 0, 0.1); /* lighten overlay slightly */
+}
+
+.gallery-item:hover span {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* === SIZE VARIATIONS === */
+.gallery-item.wide {
+  grid-column: span 2;
+}
+
+.gallery-item.tall {
+  grid-row: span 2;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .content-gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-auto-rows: 180px;
+  }
+
+  .gallery-item.wide,
+  .gallery-item.tall {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .gallery-item span {
+    font-size: 1.1rem;
+  }
+}
 
 
 
