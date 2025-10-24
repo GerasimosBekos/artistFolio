@@ -19,6 +19,7 @@ function Main(props) {
             </div>
             <MainToGallery />
             <MainContact />
+            
             <Footer />
         </div>
     );

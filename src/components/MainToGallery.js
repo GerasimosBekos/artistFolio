@@ -8,7 +8,6 @@ function MainToGallery(props) {
             <section id="gallery" className="content-section">
                 <div className="content-to-gallery">
                     <div className="content-to-gallery-title">
-                        <div className="content-to-gallery-title-fade"></div>
                         <div className="content-to-gallery-text">
                             Ανακαλύψτε όλες τις δημιουργίες μου
                         </div>
