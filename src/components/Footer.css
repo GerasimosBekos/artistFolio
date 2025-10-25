@@ -1,6 +1,6 @@
 /* === FOOTER === */
 .site-footer {
-  background-color: #1a1a1a; /* deep charcoal */
+  background-color: #1a1a1aCC; /* deep charcoal */
   color: #f2f2f2;           /* soft white text */
   padding: 3rem 1.5rem;
   font-family: 'Zen Old Mincho', serif;
@@ -9,7 +9,6 @@
   align-items: center;
   text-align: center;
   border-top: 2px solid #8b7355;
-  opacity: 0.8;
 }
 
 .footer-content {

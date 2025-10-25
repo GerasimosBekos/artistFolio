@@ -1,7 +1,7 @@
 html, body {
   height: 100%;
   margin: 0;
-  background-color: #1a1a1aCC; /* same as footer background */
+  background-color: #fff; /* fixes dark strip */
 }
 
 body {
@@ -10,5 +10,5 @@ body {
 }
 
 .content {
-  flex: 1; /* pushes footer to the bottom */
+  flex: 1;
 }

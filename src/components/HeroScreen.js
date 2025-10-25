@@ -1,17 +1,16 @@
 import "./HeroScreen.css";
 import "../Main.css";
 
-function HeroScreen(props) {
+function HeroScreen({image, title, text, height}) {
     return (
         <div>
-            <section className="hero">
+            <section className="hero" style={{backgroundImage: `url(${image})`, height: height}}>
                 <div className="quote">
                     <div className="quote-title">
-                        Ξυλογλυπτική
+                        {title}
                     </div>
                     <div className="quote-text">
-                        "Η τέχνη που έδωσε στον άνθρωπο τη δυνατότητα να εκφράσει έναν ολοκληρωμένο και 
-                        μοναδικό τρόπο αισθητικής αντίληψης μέσω της πλαστικότητας του ξύλου"
+                        {text}
                     </div>
                 </div>
                 <div className="hero-fade"></div>

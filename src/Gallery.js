@@ -1,16 +1,26 @@
 import "./Gallery.css";
 import Header from "./components/Header";
+import MainGallery from "./components/MainGallery";
+import HeroScreen from "./components/HeroScreen";
 import Footer from "./components/Footer";
 
 
 function Gallery(props) {
+    const title = "Ξυλογλυπτική Τέχνη";
+    const text = "Ξυλόγλυπτα έργα τέχνης φτιαγμένα με μεράκι και αγάπη για την παράδοση";
+    const heroImage = "/images/gallery.jpg";
+    
     return (
-        <div className="gallery">
+        <>
             <Header />
-            <h1>Welcome to the Gallery Page</h1>
-            <p>This is the gallery of the application.</p>
+            <HeroScreen title={title} text={text} image={heroImage} height="70vh"/>
+            <div className="gallery">
+                
+                <MainGallery/>
+                
+            </div>
             <Footer />
-        </div>
+        </>
     );
 }
 export default Gallery;
