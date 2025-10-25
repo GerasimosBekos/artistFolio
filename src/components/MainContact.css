@@ -1,19 +1,49 @@
 /* === CONTENT CONTACT WRAPPER === */
 .content-contact {
+  position: relative;
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  background-color: #fdfbf7;
-  padding: 4rem 2rem; /* reduced horizontal padding for balance */
+  background: url('/public/images/form.jpg') center/cover no-repeat;
+  padding: 4rem 2rem;
   text-align: center;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
   font-family: 'Zen Old Mincho', serif;
-  box-sizing: border-box; /* ensures padding doesn't shift total width */
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-bottom: 7rem;
 }
+
+/* Semi-transparent image overlay */
+.content-contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('/public/images/form.jpg') center/cover no-repeat;
+  opacity: 0.4; /* controls photo visibility */
+  z-index: 0;
+  filter: brightness(0.8); /* optional: brighten the image a bit */
+}
+
+/* Optional: add subtle color veil on top */
+.content-contact::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.4); /* soft white filter */
+  z-index: 1;
+}
+
+/* Bring text & form above overlays */
+.content-contact > * {
+  position: relative;
+  z-index: 2;
+}
+
 
 /* === CONTACT FORM === */
 .contact-form {
@@ -22,7 +52,7 @@
   gap: 2rem;
   width: 100%;
   max-width: 700px;
-  margin: 2rem auto 1rem auto; /* center horizontally */
+  margin: 1rem auto 1rem auto; /* center horizontally */
   box-sizing: border-box;
   align-items: stretch; /* ensures inputs fill full width */
 }
@@ -46,10 +76,11 @@
 
 /* ===== LABELS ===== */
 .contact-field label {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
-  color: #333;
+  /* color: #333; */
+  color: white;
   text-align: center;
 }
 
@@ -125,18 +156,22 @@
 /* ===== PHONE ===== */
 .contact-divider {
   margin: 1.5rem 0;
-  font-size: 1.2rem;
-  color: #666;
+  font-size: 1.8rem;
+  /* color: #666; */
+  color: white
 }
 
 .contact-phone-button {
-  background: none;
+  /* background: none; */
+  background: white;
   border: 2px solid #8b7355;
   color: #8b5e3c;
   padding: 1.2rem 2.5rem;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-size: 1.2rem;
+  font-family: 'Zen Old Mincho', serif;
 }
 
 .contact-phone-button:hover {

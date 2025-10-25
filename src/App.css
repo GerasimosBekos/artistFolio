@@ -1,0 +1,14 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #1a1a1aCC; /* same as footer background */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1; /* pushes footer to the bottom */
+}

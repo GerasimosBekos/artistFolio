@@ -5,14 +5,14 @@ function MainContact(props) {
     return (
         <div>
             <section id="contact" className="content-section">
+                 <div className="content-gallery-subtitle">
+                    ΕΠΙΚΟΙΝΩΝΙΑ
+                </div>
+                <div className="content-gallery-title" style={{marginBottom: '3rem'}}> 
+                    Επικοινωνήστε μαζί μου
+                </div>
                 <div className="content-contact">
-                    <div className="content-gallery-subtitle">
-                        ΕΠΙΚΟΙΝΩΝΙΑ
-                    </div>
-                    <div className="content-gallery-title">
-                        Επικοινωνήστε μαζί μου
-                    </div>
-                    <form className="contact-form">
+                   <form className="contact-form">
                         <div className="contact-row">
                             <div className="contact-field">
                             <label htmlFor="name">
