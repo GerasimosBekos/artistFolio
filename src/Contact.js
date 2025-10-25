@@ -5,12 +5,14 @@ import Footer from "./components/Footer";
 
 function Contact(props) {
     return (
-        <div className="contact">
-            <Header />
-            <h1>Welcome to the Contact Page</h1>
-            <p>This is the Contact of the application.</p>
+        <>
+            <div className="contact">
+                <Header />
+                <h1>Welcome to the Contact Page</h1>
+                <p>This is the Contact of the application.</p>
+            </div>
             <Footer />
-        </div>
+        </>
     );
 }
 export default Contact;

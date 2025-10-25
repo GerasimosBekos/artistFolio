@@ -7,6 +7,7 @@ import MainToGallery from "./components/MainToGallery";
 import MainContact from "./components/MainContact";
 import Image from "./components/Image";
 import Footer from "./components/Footer";
+import "./App.css";
 
 
 function Main(props) {
@@ -26,8 +27,9 @@ function Main(props) {
                 <MainToGallery />
                 <MainContact />
                 <Image text={psalmos} image={'/images/footer.jpg'} height="350px" textSize="2rem" titleSize="3rem"/>
+                <Footer />
             </div>
-            <Footer />
+            
         </>
     );
 }

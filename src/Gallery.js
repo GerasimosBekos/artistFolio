@@ -18,7 +18,6 @@ function Gallery(props) {
             <Breadcrumb />
             <div className="gallery">
                 <MainGallery/>
-                
             </div>
             <Footer />
         </>

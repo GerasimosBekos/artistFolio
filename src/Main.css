@@ -6,14 +6,15 @@
   background-repeat: no-repeat;
   background-position: top left, bottom right;
   background-size: contain;
-  
-  /* make it fill viewport */
+
+  /* Make layout fill viewport */
   min-height: 100vh;
-  width: 100%;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
+  flex: 1; /* Push footer to bottom if content is short */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +24,6 @@
   margin: 0 auto;
   padding: 2rem 0;
 }
-
 .content-section {
   width: 100%;
   text-align: center;

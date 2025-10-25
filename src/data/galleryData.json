@@ -1,0 +1,29 @@
+{
+  "templa": {
+    "title": "Τέμπλα",
+    "hero": "/images/gallery/templa/templa.jpg",
+    "images": [
+      "/images/gallery/templa/1.jpg",
+      "/images/gallery/templa/2.jpg",
+      "/images/gallery/templa/3.jpg",
+      "/images/gallery/templa/4.jpg",
+      "/images/gallery/templa/5.jpg"
+    ]
+  },
+  "proskinitaria": {
+    "title": "Προσκυνητάρια",
+    "hero": "/images/gallery/proskinitaria/proskinitaria.jpg",
+    "images": [
+      "/images/gallery/proskinitaria/1.jpg",
+      "/images/gallery/proskinitaria/2.jpg"
+    ]
+  },
+  "stasidia": {
+    "title": "Στασίδια",
+    "hero": "/images/gallery/stasidia/stasidia.jpg",
+    "images": [
+      "/images/gallery/stasidia/1.jpg",
+      "/images/gallery/stasidia/2.jpg"
+    ]
+  }
+}
