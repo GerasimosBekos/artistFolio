@@ -1,0 +1,38 @@
+.category-gallery {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-family: 'Zen Old Mincho', serif;
+  color: #5c3d1e;
+}
+
+.category-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.category-grid img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.gallery-back {
+  margin-top: 2rem;
+}
+
+.gallery-back a {
+  color: #8b7355;
+  text-decoration: none;
+}
+
+.gallery-back a:hover {
+  color: #5c3d1e;
+}

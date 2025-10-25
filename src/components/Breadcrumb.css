@@ -1,0 +1,26 @@
+.breadcrumb {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 1.4rem;
+  color: #8b7355;
+  margin: 3rem 0 0 15rem; /* left offset */
+  text-align: left;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* handle narrow screens */
+}
+
+.breadcrumb a {
+  color: #8b7355;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: #5c3d1e;
+  /* text-decoration: underline; */
+}
+
+.breadcrumb-current {
+  color: #5c3d1e;
+  font-weight: 600;
+}
