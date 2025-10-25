@@ -4,6 +4,9 @@ import Footer from "./components/Footer";
 
 
 function Contact(props) {
+
+    
+
     return (
         <>
             <div className="contact">
