@@ -19,14 +19,14 @@ function Main(props) {
         <>
             <div className="main">
                 <Header />
-                <HeroScreen image={heroImage} title="Ξυλογλυπτική" text={woodcarvingQuote} height="100vh"/>
+                <HeroScreen image={heroImage} title="Ξυλογλυπτική" text={woodcarvingQuote} height="100vh" opacity="0.9"/>
                 <div className="content">
                     <MainAbout />
                     <MainGallery />
                 </div>
                 <MainToGallery />
                 <MainContact />
-                <Image text={psalmos} image={'/images/footer.jpg'} height="350px" textSize="2rem" titleSize="3rem"/>
+                <Image text={psalmos} image={'/images/footer.jpg'} height="350px" textSize="2rem"/>
                 <Footer />
             </div>
             

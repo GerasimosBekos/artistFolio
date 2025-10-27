@@ -1,177 +1,159 @@
-/* === CONTENT CONTACT WRAPPER === */
-.content-contact {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  background: url('/public/images/form.jpg') center/cover no-repeat;
-  padding: 4rem 2rem;
-  text-align: center;
-  border-radius: 12px;
+/* === SPLIT CONTACT WRAPPER === */
+.contact-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Zen Old Mincho', serif;
+  border-radius: 12px;
   overflow: hidden;
-  box-sizing: border-box;
-  margin-bottom: 7rem;
+  max-width: 1000px;
+  margin: 0 auto 7rem auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Semi-transparent image overlay */
-.content-contact::before {
+/* === LEFT IMAGE SIDE === */
+.contact-image {
+  flex: 1;
+  background: url("/public/images/form.jpg") center/cover no-repeat;
+  opacity: 0.7;
+  min-height: 550px;
+}
+
+.contact-form-side {
+  flex: 2;
+  position: relative;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.12);
+  max-width: 650px;
+  width: 100%;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  /* border: 0px solid rgba(255,255,255,0.3); */
+  overflow: hidden; /* ensures texture stays inside the card */
+  padding-right: 4.6rem;
+}
+
+/* subtle paper texture inside */
+.contact-form-side::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('/public/images/form.jpg') center/cover no-repeat;
-  opacity: 0.4; /* controls photo visibility */
+  background: url('/public/images/texture.jpg') center/cover no-repeat;
+  opacity: 0.35; /* adjust for visibility */
   z-index: 0;
-  filter: brightness(0.8); /* optional: brighten the image a bit */
+  mix-blend-mode: multiply;
 }
 
-/* Optional: add subtle color veil on top */
-.content-contact::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.4); /* soft white filter */
+/* keep form content above texture */
+.contact-form-side > * {
+  position: relative;
   z-index: 1;
 }
 
-/* Bring text & form above overlays */
-.content-contact > * {
-  position: relative;
-  z-index: 2;
-}
 
 
-/* === CONTACT FORM === */
+
+
+/* === FORM === */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   width: 100%;
   max-width: 700px;
-  margin: 1rem auto 1rem auto; /* center horizontally */
-  box-sizing: border-box;
-  align-items: stretch; /* ensures inputs fill full width */
+  margin: 0 auto;
 }
 
-
-/* === FORM ROWS === */
+/* === ROWS === */
 .contact-row {
   display: flex;
-  gap: 5rem; /* smaller gap looks more proportional */
+  gap: 4rem;
   width: 100%;
-  justify-content: center; /* ensures even centering of the two inputs */
 }
 
 .contact-field {
   flex: 1;
   display: flex;
   flex-direction: column;
-  text-align: left;
 }
 
-
-/* ===== LABELS ===== */
 .contact-field label {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 500;
-  margin-bottom: 0.5rem;
-  /* color: #333; */
-  color: white;
-  text-align: center;
-}
-
-.required {
-  color: #c00;
-}
-
-/* ===== INPUTS & TEXTAREAS ===== */
-.contact-input,
-.contact-textarea {
-  box-sizing: border-box;
-  width: 100%;
-  font-size: 1.2rem;
-  padding: 0.4rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  outline: none;
-  transition: border-color 0.2s ease;
-  font-family: 'Zen Old Mincho', serif;
+  margin-bottom: 0.4rem;
   color: #333;
   text-align: left;
 }
 
-.contact-textarea#message {
+.required {
+  color: #b33;
+}
+
+/* === INPUTS === */
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-family: "Zen Old Mincho", serif;
+  color: #333;
+}
+
+.contact-textarea {
   height: 120px;
   resize: vertical;
 }
-
 
 .contact-input:focus,
 .contact-textarea:focus {
   border-color: #8b7355;
 }
 
-/* Bigger text inside the form */
-.contact-input::placeholder,
-.contact-textarea::placeholder {
-  font-size: 1.1rem;
-}
-
-/* ===== BUTTON ===== */
+/* === SUBMIT BUTTON === */
 .contact-submit {
   background-color: #8b7355;
+  /* background: url("/public/images/form.jpg") center/cover no-repeat; */
   color: white;
   border: none;
   padding: 1.2rem 2.5rem;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   transition: background-color 0.3s ease;
-  font-family: 'Zen Old Mincho', serif;
+  font-family: "Zen Old Mincho", serif;
   align-self: center;
-  margin-top: 1.2rem;
+  margin-top: 1rem;
 }
-
 
 .contact-submit:hover {
-  background-color: #555;
+  background-color: #5f4a33;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-  .contact-row {
-    flex-direction: column;
-  }
-
-  .contact-submit {
-    width: 100%;
-  }
-}
-
-
-/* ===== PHONE ===== */
+/* === DIVIDER === */
 .contact-divider {
-  margin: 1.5rem 0;
-  font-size: 1.8rem;
-  /* color: #666; */
-  color: white
+  margin: 2rem 0 1rem 0;
+  font-size: 1.6rem;
+  color: #555;
+  text-align: center;
 }
 
+/* === PHONE SECTION === */
 .contact-phone-button {
-  /* background: none; */
   background: white;
   border: 2px solid #8b7355;
   color: #8b5e3c;
-  padding: 1.2rem 2.5rem;
+  padding: 1rem 2rem;
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease, color 0.3s ease, background-color 0.3s ease;
   font-size: 1.2rem;
-  font-family: 'Zen Old Mincho', serif;
+  font-family: "Zen Old Mincho", serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px; /* prevents button shrinking when text changes */
 }
 
 .contact-phone-button:hover {
@@ -179,15 +161,14 @@
   color: white;
 }
 
-.contact-phone-number {
-  margin-top: 0.8rem;
-  font-size: 1.3rem;
-  color: #333;
+.contact-phone-button:active {
+  transform: scale(0.98);
 }
 
-/* ===== SOCIALS ===== */
+
+/* === SOCIALS === */
 .contact-socials {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -202,4 +183,23 @@
 
 .contact-social-link:hover {
   color: #a8744f;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-image {
+    height: 250px;
+  }
+
+  .contact-row {
+    flex-direction: column;
+  }
+
+  .contact-submit {
+    width: 100%;
+  }
 }

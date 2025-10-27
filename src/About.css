@@ -1,7 +1,5 @@
 .about {
   font-family: 'Zen Old Mincho', serif;
-
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,4 +38,5 @@
   position: relative;
   overflow: hidden;
   color: #333;
+  margin-bottom: 5rem;
 }

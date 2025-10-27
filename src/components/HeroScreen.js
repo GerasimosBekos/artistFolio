@@ -1,10 +1,10 @@
 import "./HeroScreen.css";
 import "../Main.css";
 
-function HeroScreen({image, title, text, height}) {
+function HeroScreen({image, title, text, height, opacity}) {
     return (
         <div>
-            <section className="hero" style={{backgroundImage: `url(${image})`, height: height}}>
+            <section className="hero" style={{backgroundImage: `url(${image})`, height: height, opacity: opacity}}>
                 <div className="quote">
                     <div className="quote-title">
                         {title}
