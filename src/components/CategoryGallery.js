@@ -14,28 +14,54 @@ const CategoryGallery = () => {
 
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [imageClasses, setImageClasses] = useState({});
+  const [orderedImages, setOrderedImages] = useState([]);
 
-  // --- Detect image proportions ---
+  // --- Detect proportions and auto-balance grid order ---
   useEffect(() => {
     if (!data || !data.images) return;
 
     const loadImages = async () => {
-      const classes = {};
+      const imagesInfo = [];
+
       await Promise.all(
         data.images.map((src) => {
           return new Promise((resolve) => {
             const img = new Image();
             img.onload = () => {
-              if (img.height > img.width * 1.2) classes[src] = "tall";
-              else if (img.width > img.height * 1.2) classes[src] = "wide";
-              else classes[src] = "";
+              const aspect = img.width / img.height;
+              let cls = "";
+              if (aspect > 1.3) cls = "wide";
+              else if (aspect < 0.8) cls = "tall";
+              imagesInfo.push({ src, aspect, cls });
               resolve();
             };
             img.src = src;
           });
         })
       );
-      setImageClasses(classes);
+
+      // Separate by class type
+      const tall = imagesInfo.filter((i) => i.cls === "tall");
+      const wide = imagesInfo.filter((i) => i.cls === "wide");
+      const normal = imagesInfo.filter((i) => i.cls === "");
+
+      // --- Simple balancing algorithm ---
+      const mixed = [];
+      while (tall.length || wide.length || normal.length) {
+        if (normal.length) mixed.push(normal.shift());
+        if (wide.length) mixed.push(wide.shift());
+        if (tall.length) mixed.push(tall.shift());
+      }
+
+      // Set state for both classes and order
+      setImageClasses(
+        mixed.reduce((acc, item) => {
+          acc[item.src] = item.cls;
+          return acc;
+        }, {})
+      );
+
+      setOrderedImages(mixed.map((i) => i.src));
     };
 
     loadImages();
@@ -47,23 +73,23 @@ const CategoryGallery = () => {
       if (selectedIndex === null || !data) return;
       if (e.key === "Escape") setSelectedIndex(null);
       else if (e.key === "ArrowRight")
-        setSelectedIndex((i) => (i + 1) % data.images.length);
+        setSelectedIndex((i) => (i + 1) % orderedImages.length);
       else if (e.key === "ArrowLeft")
         setSelectedIndex(
-          (i) => (i - 1 + data.images.length) % data.images.length
+          (i) => (i - 1 + orderedImages.length) % orderedImages.length
         );
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [selectedIndex, data]);
+  }, [selectedIndex, orderedImages, data]);
 
-  // --- Conditional rendering is safe AFTER hooks ---
+  // --- If category doesn't exist ---
   if (!data) {
     return (
       <>
         <Header />
-        <div className="category-gallery">
-          <h1>Η κατηγορία δεν βρέθηκε.</h1>
+        <div className="category-gallery" style={{marginTop: "250px", fontFamily: " 'Zen Old Mincho', serif", textAlign: "center"}}>
+          <h1>Μόνο Τέμπλα μπορείτε να διαλέξετε (τα υπόλοιπα είναι προς υλοποίηση)</h1>
           <Link to="/gallery" className="gallery-back">
             ← Επιστροφή στις κατηγορίες
           </Link>
@@ -83,7 +109,7 @@ const CategoryGallery = () => {
         <h1 className="category-title">{data.title}</h1>
 
         <div className="category-grid">
-          {data.images.map((src, i) => (
+          {orderedImages.map((src, i) => (
             <div
               key={i}
               className={`category-item ${imageClasses[src] || ""}`}
@@ -94,11 +120,14 @@ const CategoryGallery = () => {
           ))}
         </div>
 
-        <div >
-          <Link to="/gallery" className="gallery-back">← Επιστροφή στις κατηγορίες</Link>
+        <div>
+          <Link to="/gallery" className="gallery-back">
+            ← Επιστροφή στις κατηγορίες
+          </Link>
         </div>
       </div>
 
+      {/* --- LIGHTBOX --- */}
       {selectedIndex !== null && (
         <div className="lightbox" onClick={() => setSelectedIndex(null)}>
           <span
@@ -106,20 +135,20 @@ const CategoryGallery = () => {
             onClick={(e) => {
               e.stopPropagation();
               setSelectedIndex(
-                (selectedIndex - 1 + data.images.length) % data.images.length
+                (selectedIndex - 1 + orderedImages.length) %
+                  orderedImages.length
               );
             }}
           >
             ‹
           </span>
 
-          {/* ZOOM Component */}
           <div
             className="zoom-wrapper"
-            onClick={(e) => e.stopPropagation()} // prevents closing when clicking inside
+            onClick={(e) => e.stopPropagation()} // prevent close when zooming
           >
             <Zoom
-              src={data.images[selectedIndex]}
+              src={orderedImages[selectedIndex]}
               alt={`Full view ${selectedIndex + 1}`}
               zoom="200"
               transitionTime={0.4}
@@ -127,12 +156,11 @@ const CategoryGallery = () => {
             />
           </div>
 
-
           <span
             className="nav-arrow right"
             onClick={(e) => {
               e.stopPropagation();
-              setSelectedIndex((selectedIndex + 1) % data.images.length);
+              setSelectedIndex((selectedIndex + 1) % orderedImages.length);
             }}
           >
             ›

@@ -9,12 +9,12 @@ import Footer from "./components/Footer";
 
 function About(props) {
 
-    const title = "Το εργαστήρι μας";
+    const title = "Εργαστήρι Ξυλογλυπτικής";
     const text = "Ο χώρος όπου η ξυλογλυπτική τέχνη ζωντανεύει";
     const heroImage = "/images/about4.jpg";
 
     // Image component props
-    const image_text = "\"Τὸν ἄνθρωπον ὁ Θεὸς ἐποίησε δημιουργὸν, ὅπως μιμηθῇ τὸν Δημιουργόν\" - Ἅγιος Ἰωάννης ὁ Δαμασκηνός"
+    const image_text = "\"... αὐτοῦ γάρ ἐσμέν ποίημα, κτισθέντες ἐν Χριστῷ Ἰησοῦ ἐπὶ ἔργοις ἀγαθοῖς\" - προς Ἐφεσίους 2:10";
     const image = "/images/woodcarving2.jpg";
     const image_height = "350px";
     const image_textSize = "2rem";

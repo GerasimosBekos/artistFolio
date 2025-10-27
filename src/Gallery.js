@@ -13,7 +13,7 @@ function Gallery(props) {
     const heroImage = "/images/gallery.jpg";
     
     // Image Footer
-    const image_text = "\"Τὸν ἄνθρωπον ὁ Θεὸς ἐποίησε δημιουργὸν, ὅπως μιμηθῇ τὸν Δημιουργόν\" - Ἅγιος Ἰωάννης ὁ Δαμασκηνός"
+    const image_text = "\"... ὃ ἐὰν ποιῆτε, ἐκ ψυχῆς ἐργάζεσθε ὡς τῷ Κυρίῳ καὶ οὐκ ἀνθρώποις\" - Πρὸς Κολοσσαεῖς 3:23"
     const image = "/images/woodcarving1.jpg";
     const image_height = "350px";
     const image_textSize = "2rem";

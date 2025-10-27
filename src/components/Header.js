@@ -38,7 +38,7 @@ function Header(props) {
                         Δημιουργίες
                     </Link>
                     <Link to="/about" style={{ textDecoration: 'none' }} className="nav-option">
-                        Ποιοί είμαστε
+                        To Εργαστήρι
                     </Link>
                     <Link to="/contact" style={{ textDecoration: 'none' }} className="nav-option">
                         Επικοινωνία

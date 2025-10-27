@@ -14,7 +14,7 @@ function Contact(props) {
     const heroImage = "/images/contact.jpg";
 
     // Image component props
-    const image_text = "\"Τὸν ἄνθρωπον ὁ Θεὸς ἐποίησε δημιουργὸν, ὅπως μιμηθῇ τὸν Δημιουργόν\" - Ἅγιος Ἰωάννης ὁ Δαμασκηνός"
+    const image_text = "\"... καὶ ἴδε ἐπὶ τοὺς δούλους σου καὶ ἐπὶ τὰ ἔργα σου καὶ ὁδήγησον τοὺς υἱοὺς αὐτῶν\" - Ψαλμός 89:16"
     const image = "/images/woodcarving3.jpg";
     const image_height = "350px";
     const image_textSize = "2rem";
