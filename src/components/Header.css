@@ -1,6 +1,6 @@
 /* === HEADER BASE === */
 .header {
-  font-family: 'Zen Old Mincho', serif;
+  font-family: var(--font-main);
   font-size: 1.4rem;
   position: fixed;
   top: 0;

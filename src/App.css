@@ -1,9 +1,21 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Chiron+Sung+HK:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+/* Alegreya, Chiron Sung HK */
+:root {
+  /* --font-main: "Alegreya, serif"; */
+  /* --font-main: "Chiron Sung HK, serif"; */
+  --font-main: 'Fira Sans', serif;
+}
+
+
 html, body #root{
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #fff; /* fixes dark strip */
-  
+  background-color: white;
+  font-family: var(--font-main);
 }
 
 #root {

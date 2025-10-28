@@ -9,7 +9,7 @@ import Gallery from "./Gallery";
 import CategoryGallery from "./components/CategoryGallery";
 import ScrollToTop from "./components/ScrollToTop";
 import './App.css';
- 
+ import './index.css';
 
 function App() {
   return (

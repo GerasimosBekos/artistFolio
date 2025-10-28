@@ -5,7 +5,7 @@
 .category-gallery h1.category-title {
   font-size: 3rem;
   margin: 1rem 0 2rem;
-  font-family: 'Zen Old Mincho', serif;
+  font-family: var(--font-main);
   color: #333;
   text-align: center;
 }
@@ -15,7 +15,7 @@
   font-size: 1.3rem;
   color: #555;
   transition: color 0.3s ease;
-  font-family: 'Zen Old Mincho', serif;
+  font-family: var(--font-main);
   text-align: center;
   text-decoration: none;
   display: flex;

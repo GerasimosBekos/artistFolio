@@ -1,5 +1,5 @@
 .breadcrumb {
-  font-family: 'Zen Old Mincho', serif;
+  font-family: var(--font-main);
   font-size: 1.5rem;
   color: #8b7355;
   margin: 3rem 0 0 15rem; /* left offset */

@@ -3,7 +3,7 @@
   background-color: #1a1a1aCC; /* deep charcoal */
   color: #f2f2f2;           /* soft white text */
   padding: 3rem 1.5rem;
-  font-family: 'Zen Old Mincho', serif;
+  font-family: var(--font-main);
   display: flex;
   flex-direction: column;
   align-items: center;

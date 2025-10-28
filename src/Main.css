@@ -1,6 +1,6 @@
 /* =============== CONTENT =============== */
 .main {
-  font-family: 'Zen Old Mincho', serif;
+  font-family: var(--font-main);
   background-color: #fff;
   background-image: url('/public/images/mainbg.png');
   background-repeat: no-repeat;
@@ -28,5 +28,5 @@
   width: 100%;
   text-align: center;
   margin-bottom: 3rem;
-  font-family: 'Zen Old Mincho', serif;
+  font-family: var(--font-main);
 }

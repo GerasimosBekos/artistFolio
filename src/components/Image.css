@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: center;
   color: white;
-  font-family: 'Zen Old Mincho', serif;
+  font-family: var(--font-main);
   position: relative;
   overflow: hidden;
   z-index: 0;

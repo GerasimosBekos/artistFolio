@@ -1,6 +1,6 @@
 /* ========== GALLERY SECTION ==================== */
 .content-about {
-  font-family: 'Zen Old Mincho', serif;
+  font-family: var(--font-main);
   font-size: 1.2rem;
   line-height: 1.8;
   color: #333;

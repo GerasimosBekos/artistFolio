@@ -22,7 +22,7 @@
   justify-content: center;
   color: white;
   text-shadow: 0 2px 6px rgba(0,0,0,0.7);
-  font-family: 'Zen Old Mincho', serif;
+  font-family: var(--font-main);
   margin: 1rem 0 0;
   position: relative;
   overflow: hidden;

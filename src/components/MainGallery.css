@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Zen Old Mincho', serif;
+  font-family: var(--font-main);
   opacity: 0.7;
   margin: 0rem;
   position: relative;
@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Zen Old Mincho', serif;
+  font-family: var(--font-main);
   opacity: 0.85;
   margin: 0;
   position: relative;
@@ -66,7 +66,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-family: 'Zen Old Mincho', serif;
+  font-family: var(--font-main);
   font-size: 1.8rem;
   font-weight: 500;
   text-align: center;
