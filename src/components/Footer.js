@@ -11,9 +11,9 @@ function Footer(props) {
                 </div>
 
                 <div className="footer-center">
-                <Link to="/contact" className="footer-link">Σχετικά</Link>
+                <Link to="/about" className="footer-link">To Εργαστήρι</Link>
                 <Link to="/gallery" className="footer-link">Δημιουργίες</Link>
-                <Link to="/about" className="footer-link">Επικοινωνία</Link>
+                <Link to="/contact" className="footer-link">Επικοινωνία</Link>
                 
                 </div>
 

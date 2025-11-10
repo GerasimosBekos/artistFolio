@@ -7,53 +7,56 @@
   left: 0;
   width: 100%;
   background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 100;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 /* === HEADER CONTAINER === */
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.6rem 2rem 0.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 0.3s ease;
+
+  /* Interpolated padding based on scroll progress */
+  padding: calc(0.2rem + (0.4rem * (1 - var(--header-progress))))
+           calc(2rem);
+  transition: padding 0.1s linear;
 }
 
 /* === LOGO GROUP (image + text) === */
 .logo-group {
   display: flex;
   align-items: center;
-  gap: 1.0rem; /* spacing between logo and name */
+  gap: 1rem;
   text-decoration: none;
 }
 
 /* === LOGO IMAGE === */
 .logo {
-  height: 110px;
-  transition: all 0.3s ease;
+  height: calc(70px + (40px * (1 - var(--header-progress))));
+  transition: height 0.1s linear;
 }
 
 /* === ARTIST NAME (next to logo) === */
- .artist-name {
+.artist-name {
   display: flex;
   flex-direction: column;
   line-height: 1.2;
-  font-size: 1.5rem;
+  font-size: calc(1.3rem + (0.2rem * (1 - var(--header-progress))));
   text-shadow: 0.6px 0 0 currentColor;
   letter-spacing: 0.5px;
   text-decoration: none;
-  transition: all 0.3s ease;
-  margin-top: -0.4rem; /* moves it slightly up */
- }
+  color: #c0be8e;
+  margin-top: calc(0.3rem - (0.7rem * (1 - var(--header-progress))));
+  transition: font-size 0.1s linear, margin-top 0.1s linear;
+}
 
 .name {
   margin: 0;
   color: #c0be8e;
-  text-decoration: none;
   margin-bottom: 0.4rem;
   margin-top: -0.2rem;
 }
@@ -61,17 +64,13 @@
 .surname {
   margin: 0;
   color: #c0be8e;
-  text-decoration: none;
 }
-
 
 .profession {
-  /* margin-top: 0.1rem; */
-  font-size: 1.0rem;
-  color: #623008; 
+  font-size: calc(0.9rem + (0.1rem * (1 - var(--header-progress))));
+  color: #623008;
   text-shadow: 0.5px 0 0 currentColor;
 }
-
 
 /* === NAVIGATION === */
 .nav {
@@ -80,39 +79,64 @@
 }
 
 .nav-option {
+  position: relative;
+  display: inline-block;
   text-decoration: none;
   color: #2e2e2e;
   font-weight: 400;
   transition: color 0.3s ease;
+  padding-bottom: 4px;
+}
+
+.nav-option:link,
+.nav-option:visited {
+  color: #2e2e2e;
+  text-decoration: none;
+}
+
+/* === Underline from center === */
+.nav-option::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #8b5e3c;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+  transform-origin: center;
 }
 
 .nav-option:hover {
   color: #8b5e3c;
 }
 
-/* === SCROLL STATE === */
+.nav-option:hover::after {
+  width: 100%;
+}
+
+.nav-option.active {
+  color: #8b5e3c;
+  font-weight: 500;
+}
+
+.nav-option.active::after {
+  width: 100%;
+  background-color: #8b5e3c;
+}
+
+/* === Smooth letter-only hover motion === */
+.nav-option span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.nav-option:hover span {
+  transform: translateY(-2px);
+}
+
+/* === SCROLL STATE (legacy fallback if needed) === */
 .header.scrolled {
   font-size: 1.2rem;
-  padding: 0.2rem 0;
-}
-
-.header.scrolled .header-container {
-  padding: 0.1rem 2rem;
-}
-
-.header.scrolled .logo {
-  height: 70px;
-}
-
-.header.scrolled .artist-name {
-  font-size: 1.3rem;
-  color: #c0be8e;
-  margin-top: 0.3rem;
-}
-
-
-.header.scrolled .profession {
-  font-size: 0.9rem;
-  color: #623008; 
-  margin-bottom: 1.2rem;
 }
