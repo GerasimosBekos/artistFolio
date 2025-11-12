@@ -6,13 +6,7 @@ function MainGallery(props) {
     return (
         <div data-aos="fade-up">
             <section id="gallery" className="content-section">
-                <div className="content-gallery">
-                    <div className="content-gallery-subtitle">
-                        KATHΓOPIEΣ
-                    </div>
-                    <div className="content-gallery-title">
-                        Δημιουργίες
-                    </div>
+                <div className="content-gallery"> 
                     <div className="content-gallery-grid">
                         <Link to="/gallery/templa" className="gallery-item wide">
                             <img src="/images/categories/templo.jpg" alt="Τέμπλα" />

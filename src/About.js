@@ -5,6 +5,7 @@ import MainAbout from "./components/MainAbout";
 import Breadcrumb from "./components/Breadcrumb";
 import Image from "./components/Image";
 import Footer from "./components/Footer";
+import Title from "./components/Title";
 
 
 function About(props) {
@@ -24,14 +25,9 @@ function About(props) {
             <Header />
             <HeroScreen title={title} text={text} image={heroImage} height="70vh" opacity="0.8"/>
             <Breadcrumb />
+
             <div className="about">
-                <div className="about-subtitle">
-                    ΙΣΤΟΡΙΑ
-                </div>
-                <div className="about-title">
-                    Το εργαστήρι μας
-                </div>
-                {/* <div className="about-content" */}
+                <Title title={"Το Εργαστήρι μας"} subtitle={"ΙΣΤΟΡΙΑ"} />
                 <MainAbout />
                 
             </div>

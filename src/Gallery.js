@@ -5,6 +5,7 @@ import HeroScreen from "./components/HeroScreen";
 import Breadcrumb from "./components/Breadcrumb";
 import Image from "./components/Image";
 import Footer from "./components/Footer";
+import Title from "./components/Title";
 
 
 function Gallery(props) {
@@ -24,6 +25,7 @@ function Gallery(props) {
             <HeroScreen title={title} text={text} image={heroImage} height="70vh" opacity="0.8"/>
             <Breadcrumb />
             <div className="gallery">
+                <Title title={"Δημιουργίες"} subtitle={"ΚΑΤΗΓΟΡΙΕΣ"} /> 
                 <MainGallery/>
             </div>
             <Image text={image_text} image={image} height={image_height} textSize={image_textSize}/>

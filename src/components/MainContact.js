@@ -42,11 +42,6 @@ function MainContact() {
   return (
     <div data-aos="fade-up">
       <section id="contact" className="content-section">
-        <div className="content-gallery-subtitle">ΕΠΙΚΟΙΝΩΝΙΑ</div>
-        <div className="content-gallery-title" style={{ marginBottom: '3rem' }}>
-          Επικοινωνήστε μαζί μου
-        </div>
-
         <div className="contact-wrapper">
           {/* === LEFT SIDE - PRIMARY CONTACT INFO === */}
           <div className="contact-info-primary">

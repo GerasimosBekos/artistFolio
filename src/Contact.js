@@ -5,6 +5,7 @@ import Breadcrumb from "./components/Breadcrumb";
 import MainContact from "./components/MainContact";
 import Image from "./components/Image";
 import Footer from "./components/Footer";
+import Title from "./components/Title";
 
 
 function Contact(props) {
@@ -24,13 +25,14 @@ function Contact(props) {
             <Header />
             <HeroScreen title={title} text={text} image={heroImage} height="70vh" opacity="0.8"/>
             <Breadcrumb />
-            <div className="contact" style={{marginTop:'2rem'}}>
+            <div className="contact">
                 {/* <div className="contact-subtitle">
                     ΕΠΙΚΟΙΝΩΝΙΑ
                 </div>
                 <div className="contact-title">
                     Επικοινωνήστε μαζί μας
                 </div> */}
+                <Title title={"Eπικοινωνήστε μαζί μου"} subtitle={"ΕΠΙΚΟΙΝΩΝΙΑ"} />
                 <MainContact />
                 
             </div>

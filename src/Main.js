@@ -7,6 +7,7 @@ import MainToGallery from "./components/MainToGallery";
 import MainContact from "./components/MainContact";
 import Image from "./components/Image";
 import Footer from "./components/Footer";
+import Title from "./components/Title";
 import "./App.css";
 
 
@@ -22,9 +23,11 @@ function Main(props) {
                 <HeroScreen image={heroImage} title="Ξυλογλυπτική" text={woodcarvingQuote} height="95vh" opacity="0.82"/>
                 <div className="content">
                     <MainAbout />
+                    <Title title={"Δημιουργίες"} subtitle={"ΚΑΤΗΓΟΡΙΕΣ"} /> 
                     <MainGallery />
                 </div>
                 <MainToGallery />
+                <Title title={"Eπικοινωνήστε μαζί μου"} subtitle={"ΕΠΙΚΟΙΝΩΝΙΑ"} />
                 <MainContact />
                 <Image text={psalmos} image={'/images/footer.jpg'} height="350px" textSize="2rem"/>
                 <Footer />
