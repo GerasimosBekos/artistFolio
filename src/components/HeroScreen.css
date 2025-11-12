@@ -1,5 +1,5 @@
 .hero {
-  position: relative; /* ensures fade positions relative to this */
+  position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -9,26 +9,35 @@
   color: white;
   text-shadow: 0 5px 10px rgba(0,0,0,0.7);
   font-family: var(--font-main);
-  /* font-style: italic; */
-  overflow: hidden; /* keeps the fade neatly clipped */
+  overflow: hidden;
+  min-height: 500px; 
+  width: 100%; /* ensure full width */
 }
 
 /* === TEXT === */
 .quote {
   max-width: 1000px;
-  padding: 1rem 2rem;
+  width: 90%; /* responsive width */
+  padding: 2rem;
   border-radius: 8px;
   font-size: 2rem;
   line-height: 1.6;
   text-align: center;
   z-index: 2;
-  position: relative; /* ensures it’s above the fade */
+  position: relative;
+  margin: auto; /* extra insurance for centering */
 }
 
 .quote-title {
-  /* font-weight: bold; */
+  padding: 0;
   font-size: 4rem;
   margin-bottom: 1rem;
+  /* font-weight: 700; */
+}
+
+.quote-text {
+  font-size: 2rem;
+  line-height: 1.6;
 }
 
 /* === FADE AT BOTTOM === */
@@ -38,8 +47,43 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 140px; /* adjust fade depth */
+  height: 140px;
   background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 100%);
-  pointer-events: none; /* don't block clicks */
+  pointer-events: none;
   z-index: 1;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 400px;
+  }
+
+  .quote {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .quote-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .quote-text {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 350px;
+  }
+
+  .quote-title {
+    font-size: 2rem;
+  }
+
+  .quote-text {
+    font-size: 1.2rem;
+  }
 }

@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 function Gallery(props) {
     const title = "Ξυλογλυπτική Τέχνη";
     const text = "Ξυλόγλυπτα έργα τέχνης φτιαγμένα με μεράκι και αγάπη για την παράδοση";
-    const heroImage = "/images/gallery.jpg";
+    const heroImage = "/images/contact.jpg";
     
     // Image Footer
     const image_text = "\"... ὃ ἐὰν ποιῆτε, ἐκ ψυχῆς ἐργάζεσθε ὡς τῷ Κυρίῳ καὶ οὐκ ἀνθρώποις\" - Πρὸς Κολοσσαεῖς 3:23"
@@ -21,7 +21,7 @@ function Gallery(props) {
     return (
         <>
             <Header />
-            <HeroScreen title={title} text={text} image={heroImage} height="70vh" opacity="0.85"/>
+            <HeroScreen title={title} text={text} image={heroImage} height="70vh" opacity="0.8"/>
             <Breadcrumb />
             <div className="gallery">
                 <MainGallery/>
