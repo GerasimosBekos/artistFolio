@@ -78,7 +78,7 @@ function MainContact() {
               </div>
 
               <div className="contact-info-card">
-                <div className="contact-card-icon"><i class="fa-solid fa-location"></i></div>
+                <div className="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
                 <div className="contact-card-content">
                   <div className="contact-card-label">Διεύθυνση</div>
                   <a 
@@ -112,18 +112,18 @@ function MainContact() {
                   href="https://www.facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="contact-social-btn"
+                  className="contact-social-link-simple"
                 >
-                  <span className="social-icon-primary">f</span>
+                  <i className="fab fa-facebook-f"></i>
                   Facebook
                 </a>
                 <a
                   href="https://www.instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="contact-social-btn"
+                  className="contact-social-link-simple"
                 >
-                  <span className="social-icon-primary">i</span>
+                  <i className="fab fa-instagram"></i>
                   Instagram
                 </a>
               </div>

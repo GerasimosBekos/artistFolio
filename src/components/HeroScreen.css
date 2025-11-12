@@ -9,6 +9,7 @@
   color: white;
   text-shadow: 0 5px 10px rgba(0,0,0,0.7);
   font-family: var(--font-main);
+  /* font-style: italic; */
   overflow: hidden; /* keeps the fade neatly clipped */
 }
 

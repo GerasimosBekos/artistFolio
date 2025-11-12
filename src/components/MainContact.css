@@ -26,7 +26,7 @@
   position: absolute;
   inset: 0;
   background: url('/public/images/texture.jpg') center/cover no-repeat;
-  opacity: 0.25;
+  opacity: 0.45;
   z-index: 0;
   mix-blend-mode: multiply;
 }
@@ -41,7 +41,8 @@
   font-weight: 600;
   color: #5c3d1e;
   margin: 0 0 2.5rem 0;
-  font-family: "Zen Old Mincho", serif;
+  /* font-family: "Zen Old Mincho", serif; */
+  font-family: var(--font-main);
   border-bottom: 3px solid #8b7355;
   padding-bottom: 1rem;
 }
@@ -58,7 +59,7 @@
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
-  padding: 0.5rem;
+  padding: 0.3rem;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 12px;
   border-left: 4px solid #8b7355;
@@ -72,23 +73,25 @@
 }
 
 .contact-card-icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   flex-shrink: 0;
   line-height: 1;
   color: #8b7355;
   /* color: #5c3d1e; */
+  padding-left: 1.7rem;
   margin: auto;
 }
 
 .contact-card-content {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.3rem;
   flex: 1;
+  margin-left: -3rem;
 }
 
 .contact-card-label {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #888;
   font-weight: 600;
   text-transform: uppercase;
@@ -96,11 +99,12 @@
 }
 
 .contact-card-value {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #5c3d1e;
   font-weight: 600;
   line-height: 1.4;
-  font-family: "Zen Old Mincho", serif;
+  /* font-family: "Zen Old Mincho", serif; */
+  font-family: var(--font-main);
 }
 
 .contact-card-link {
@@ -117,13 +121,15 @@
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 /* === SOCIAL MEDIA SECTION === */
 .contact-social-section {
   padding-top: 2rem;
   border-top: 2px solid rgba(139, 115, 85, 0.2);
+  margin: auto;
+
 }
 
 .contact-social-heading {
@@ -137,56 +143,43 @@
 
 .contact-socials-primary {
   display: flex;
-  gap: 1.2rem;
-}
-
-.contact-social-btn {
-  flex: 1;
-  display: flex;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
-  padding: 1rem 1.5rem;
-  background: white;
-  border: 2px solid #8b7355;
-  border-radius: 10px;
+}
+
+.contact-social-link-simple {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   text-decoration: none;
   color: #5c3d1e;
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-weight: 500;
+  font-size: 1.15rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.contact-social-link-simple i {
+  font-size: 1.4rem;
+  color: #8b7355;
   transition: all 0.3s ease;
 }
 
-.contact-social-btn:hover {
-  background: #8b7355;
-  color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(139, 115, 85, 0.3);
-}
-
-.social-icon-primary {
-  font-size: 1.4rem;
-  font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  background: #8b7355;
-  color: white;
-  border-radius: 50%;
-  font-family: Arial, sans-serif;
-}
-
-.contact-social-btn:hover .social-icon-primary {
-  background: white;
+.contact-social-link-simple:hover {
   color: #8b7355;
+  transform: translateX(5px);
+}
+
+.contact-social-link-simple:hover i {
+  color: #5c3d1e;
+  transform: scale(1.15);
 }
 
 /* === RIGHT SIDE - COMPACT FORM === */
 .contact-form-secondary {
   flex: 0.8;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   padding: 2.5rem;
@@ -202,7 +195,7 @@
   position: absolute;
   inset: 0;
   background: url('/public/images/texture.jpg') center/cover no-repeat;
-  opacity: 0.2;
+  opacity: 0.45;
   z-index: 0;
   mix-blend-mode: multiply;
 }
@@ -217,7 +210,8 @@
   font-weight: 600;
   color: #5c3d1e;
   margin: 0 0 0.8rem 0;
-  font-family: "Zen Old Mincho", serif;
+  /* font-family: "Zen Old Mincho", serif; */
+  font-family: var(--font-main);
 }
 
 .contact-form-subtitle {
@@ -254,10 +248,11 @@
   border: 2px solid #e0d5c7;
   border-radius: 10px;
   outline: none;
-  font-family: "Zen Old Mincho", serif;
+  /* font-family: "Zen Old Mincho", serif; */
+  font-family: var(--font-main);
   color: #333;
   transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .contact-input-compact::placeholder,
@@ -290,7 +285,8 @@
   font-size: 1.3rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  font-family: "Zen Old Mincho", serif;
+  /* font-family: "Zen Old Mincho", serif; */
+  font-family: var(--font-main);
   box-shadow: 0 4px 15px rgba(139, 115, 85, 0.3);
   letter-spacing: 0.5px;
   margin-top: 0.5rem;
