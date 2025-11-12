@@ -12,7 +12,6 @@ function HeroScreen({image, title, text, height, opacity}) {
                     {text}
                 </div>
             </div>
-            <div className="hero-fade"></div>
         </section>
     );
 }

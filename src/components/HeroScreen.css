@@ -26,6 +26,7 @@
   z-index: 2;
   position: relative;
   margin: auto; /* extra insurance for centering */
+  max-height: 11rem;
 }
 
 .quote-title {
@@ -33,10 +34,11 @@
   font-size: 4rem;
   margin-bottom: 1rem;
   /* font-weight: 700; */
+
 }
 
 .quote-text {
-  font-size: 2rem;
+  font-size: 1.9rem;
   line-height: 1.6;
 }
 

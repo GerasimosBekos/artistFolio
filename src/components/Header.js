@@ -79,6 +79,7 @@ function Header() {
             { to: "/contact", label: "Επικοινωνία" },
           ].map((link) => (
             <NavLink
+              key={link.to}
               to={link.to}
               onClick={(e) => {
                 if (location.pathname === link.to) {

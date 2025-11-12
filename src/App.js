@@ -9,9 +9,20 @@ import Gallery from "./Gallery";
 import CategoryGallery from "./components/CategoryGallery";
 import ScrollToTop from "./components/ScrollToTop";
 import './App.css';
- import './index.css';
+import './index.css';
+import { useEffect } from "react";
+
+//  AOS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <div className="App">
       <BrowserRouter>

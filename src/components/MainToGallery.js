@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function MainToGallery(props) {
     return (
-        <div>
+        <div data-aos="fade-up">
             <section id="gallery" className="content-section">
                 <div className="content-to-gallery">
                     <div className="content-to-gallery-title">

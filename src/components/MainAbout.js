@@ -3,7 +3,7 @@ import "./MainAbout.css";
 
 function MainAbout(props) {
     return (
-        <div>
+        <div data-aos="fade-up">
             <section id="about" className="content-section">
                 <div className="content-about">
                     <div className="content-about-image">

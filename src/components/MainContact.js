@@ -40,7 +40,7 @@ function MainContact() {
   };
 
   return (
-    <div>
+    <div data-aos="fade-up">
       <section id="contact" className="content-section">
         <div className="content-gallery-subtitle">ΕΠΙΚΟΙΝΩΝΙΑ</div>
         <div className="content-gallery-title" style={{ marginBottom: '3rem' }}>
@@ -135,7 +135,8 @@ function MainContact() {
             <h3 className="contact-form-heading">Γρήγορο Μήνυμα</h3>
             <p className="contact-form-subtitle">Στείλτε μου ένα σύντομο μήνυμα και θα επικοινωνήσω μαζί σας σύντομα</p>
             
-            <div className="contact-form-compact">
+            <form>
+              <div className="contact-form-compact">
               <div className="contact-field-compact">
                 <label htmlFor="name">Όνομα *</label>
                 <input
@@ -194,6 +195,7 @@ function MainContact() {
                 </div>
               )}
             </div>
+            </form>
           </div>
         </div>
       </section>
