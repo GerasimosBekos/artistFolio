@@ -8,6 +8,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 0;
+  width: 70%;
 }
 
 .about-subtitle {
@@ -22,7 +23,6 @@
   position: relative;
   overflow: hidden;
   color: #c0be8e;
-
   margin-bottom: -0.8rem;
 }
 

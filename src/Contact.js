@@ -24,7 +24,7 @@ function Contact(props) {
             <Header />
             <HeroScreen title={title} text={text} image={heroImage} height="70vh" opacity="0.8"/>
             <Breadcrumb />
-            <div className="contact">
+            <div className="contact" style={{marginTop:'2rem'}}>
                 {/* <div className="contact-subtitle">
                     ΕΠΙΚΟΙΝΩΝΙΑ
                 </div>

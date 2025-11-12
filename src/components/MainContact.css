@@ -1,205 +1,371 @@
-/* === SPLIT CONTACT WRAPPER === */
+/* === CONTACT WRAPPER === */
 .contact-wrapper {
   display: flex;
-  border-radius: 12px;
-  overflow: hidden;
-  max-width: 1000px;
+  gap: 3rem;
+  max-width: 60%;
   margin: 0 auto 7rem auto;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  align-items: flex-start;
 }
 
-/* === LEFT IMAGE SIDE === */
-.contact-image {
-  flex: 1;
-  background: url("/public/images/form.jpg") center/cover no-repeat;
-  opacity: 0.7;
-  min-height: 550px;
-}
-
-.contact-form-side {
-  flex: 2;
-  position: relative;
+/* === LEFT SIDE - PRIMARY CONTACT INFO === */
+.contact-info-primary {
+  flex: 1.2;
   background: rgba(255, 255, 255, 0.7);
-  border-radius: 12px;
-  padding: 3rem 2.5rem;
-  box-shadow: 0 4px 25px rgba(0,0,0,0.12);
-  max-width: 650px;
-  width: 100%;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  /* border: 0px solid rgba(255,255,255,0.3); */
-  overflow: hidden; /* ensures texture stays inside the card */
-  padding-right: 4.6rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  position: relative;
+  overflow: hidden;
 }
 
-/* subtle paper texture inside */
-.contact-form-side::before {
+/* Subtle texture overlay */
+.contact-info-primary::before {
   content: "";
   position: absolute;
   inset: 0;
   background: url('/public/images/texture.jpg') center/cover no-repeat;
-  opacity: 0.35; /* adjust for visibility */
+  opacity: 0.25;
   z-index: 0;
   mix-blend-mode: multiply;
 }
 
-/* keep form content above texture */
-.contact-form-side > * {
+.contact-info-primary > * {
   position: relative;
   z-index: 1;
 }
 
+.contact-info-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #5c3d1e;
+  margin: 0 0 2.5rem 0;
+  font-family: "Zen Old Mincho", serif;
+  border-bottom: 3px solid #8b7355;
+  padding-bottom: 1rem;
+}
 
-
-
-
-/* === FORM === */
-.contact-form {
+/* === CONTACT INFO CARDS === */
+.contact-info-list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
 }
 
-/* === ROWS === */
-.contact-row {
+.contact-info-card {
   display: flex;
-  gap: 4rem;
-  width: 100%;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  border-left: 4px solid #8b7355;
+  transition: all 0.3s ease;
 }
 
-.contact-field {
+.contact-info-card:hover {
+  background: rgba(255, 255, 255, 0.85);
+  transform: translateX(8px);
+  box-shadow: 0 4px 16px rgba(139, 115, 85, 0.15);
+}
+
+.contact-card-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  line-height: 1;
+  color: #8b7355;
+  /* color: #5c3d1e; */
+  margin: auto;
+}
+
+.contact-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.contact-card-label {
+  font-size: 1rem;
+  color: #888;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-card-value {
+  font-size: 1.5rem;
+  color: #5c3d1e;
+  font-weight: 600;
+  line-height: 1.4;
+  font-family: "Zen Old Mincho", serif;
+}
+
+.contact-card-link {
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-card-link:hover {
+  color: #8b7355;
+}
+
+.contact-card-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 1.4rem;
+}
+
+/* === SOCIAL MEDIA SECTION === */
+.contact-social-section {
+  padding-top: 2rem;
+  border-top: 2px solid rgba(139, 115, 85, 0.2);
+}
+
+.contact-social-heading {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-socials-primary {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.contact-social-btn {
   flex: 1;
   display: flex;
-  flex-direction: column;
-}
-
-.contact-field label {
-  font-size: 1.4rem;
-  font-weight: 500;
-  margin-bottom: 0.4rem;
-  color: #333;
-  text-align: left;
-}
-
-.required {
-  color: #b33;
-}
-
-/* === INPUTS === */
-.contact-input,
-.contact-textarea {
-  width: 100%;
-  font-size: 1.1rem;
-  padding: 0.6rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  outline: none;
-  font-family: "Zen Old Mincho", serif;
-  color: #333;
-}
-
-.contact-textarea {
-  height: 120px;
-  resize: vertical;
-}
-
-.contact-input:focus,
-.contact-textarea:focus {
-  border-color: #8b7355;
-}
-
-/* === SUBMIT BUTTON === */
-.contact-submit {
-  background-color: #8b7355;
-  /* background: url("/public/images/form.jpg") center/cover no-repeat; */
-  color: white;
-  border: none;
-  padding: 1.2rem 2.5rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1.4rem;
-  transition: background-color 0.3s ease;
-  font-family: "Zen Old Mincho", serif;
-  align-self: center;
-  margin-top: 1rem;
-}
-
-.contact-submit:hover {
-  background-color: #5f4a33;
-}
-
-/* === DIVIDER === */
-.contact-divider {
-  margin: 2rem 0 1rem 0;
-  font-size: 1.6rem;
-  color: #555;
-  text-align: center;
-}
-
-/* === PHONE SECTION === */
-.contact-phone-button {
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1rem 1.5rem;
   background: white;
   border: 2px solid #8b7355;
-  color: #8b5e3c;
-  padding: 1rem 2rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease, color 0.3s ease, background-color 0.3s ease;
-  font-size: 1.2rem;
-  font-family: "Zen Old Mincho", serif;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #5c3d1e;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-social-btn:hover {
+  background: #8b7355;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(139, 115, 85, 0.3);
+}
+
+.social-icon-primary {
+  font-size: 1.4rem;
+  font-weight: bold;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 220px; /* prevents button shrinking when text changes */
-}
-
-.contact-phone-button:hover {
-  background-color: #8b7355;
+  width: 28px;
+  height: 28px;
+  background: #8b7355;
   color: white;
+  border-radius: 50%;
+  font-family: Arial, sans-serif;
 }
 
-.contact-phone-button:active {
-  transform: scale(0.98);
+.contact-social-btn:hover .social-icon-primary {
+  background: white;
+  color: #8b7355;
 }
 
-
-/* === SOCIALS === */
-.contact-socials {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+/* === RIGHT SIDE - COMPACT FORM === */
+.contact-form-secondary {
+  flex: 0.8;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  position: relative;
+  overflow: hidden;
 }
 
-.contact-social-link {
-  text-decoration: none;
+/* Subtle texture overlay */
+.contact-form-secondary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('/public/images/texture.jpg') center/cover no-repeat;
+  opacity: 0.2;
+  z-index: 0;
+  mix-blend-mode: multiply;
+}
+
+.contact-form-secondary > * {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-form-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
   color: #5c3d1e;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  margin: 0 0 0.8rem 0;
+  font-family: "Zen Old Mincho", serif;
 }
 
-.contact-social-link:hover {
-  color: #a8744f;
+.contact-form-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin: 0 0 2rem 0;
+  line-height: 1.5;
+}
+
+/* === COMPACT FORM === */
+.contact-form-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-field-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-field-compact label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #5c3d1e;
+}
+
+.contact-input-compact,
+.contact-textarea-compact {
+  width: 100%;
+  font-size: 1.05rem;
+  padding: 0.9rem 1.1rem;
+  border: 2px solid #e0d5c7;
+  border-radius: 10px;
+  outline: none;
+  font-family: "Zen Old Mincho", serif;
+  color: #333;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.contact-input-compact::placeholder,
+.contact-textarea-compact::placeholder {
+  color: #999;
+  font-size: 0.95rem;
+}
+
+.contact-textarea-compact {
+  height: 140px;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-input-compact:focus,
+.contact-textarea-compact:focus {
+  border-color: #8b7355;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(139, 115, 85, 0.1);
+}
+
+.contact-submit-compact {
+  width: 100%;
+  background: linear-gradient(135deg, #8b7355 0%, #6b5742 100%);
+  color: white;
+  border: none;
+  padding: 1.2rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-family: "Zen Old Mincho", serif;
+  box-shadow: 0 4px 15px rgba(139, 115, 85, 0.3);
+  letter-spacing: 0.5px;
+  margin-top: 0.5rem;
+}
+
+.contact-submit-compact:hover:not(:disabled) {
+  background: linear-gradient(135deg, #6b5742 0%, #5f4a33 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 115, 85, 0.4);
+}
+
+.contact-submit-compact:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-success-compact {
+  background: #d4edda;
+  color: #155724;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border: 2px solid #c3e6cb;
 }
 
 /* === RESPONSIVE === */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .contact-wrapper {
     flex-direction: column;
+    gap: 2rem;
   }
 
-  .contact-image {
-    height: 250px;
+  .contact-info-primary,
+  .contact-form-secondary {
+    flex: 1;
+    width: 100%;
   }
 
-  .contact-row {
+  .contact-info-primary {
+    padding: 2.5rem;
+  }
+
+  .contact-form-secondary {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-info-primary {
+    padding: 2rem;
+  }
+
+  .contact-form-secondary {
+    padding: 1.8rem;
+  }
+
+  .contact-info-heading {
+    font-size: 1.8rem;
+  }
+
+  .contact-form-heading {
+    font-size: 1.6rem;
+  }
+
+  .contact-card-value {
+    font-size: 1.3rem;
+  }
+
+  .contact-socials-primary {
     flex-direction: column;
   }
 
-  .contact-submit {
-    width: 100%;
+  .contact-info-card:hover {
+    transform: translateX(4px);
   }
 }

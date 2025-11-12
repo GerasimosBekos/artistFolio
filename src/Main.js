@@ -19,7 +19,7 @@ function Main(props) {
         <>
             <div className="main">
                 <Header />
-                <HeroScreen image={heroImage} title="Ξυλογλυπτική" text={woodcarvingQuote} height="95vh" opacity="0.9"/>
+                <HeroScreen image={heroImage} title="Ξυλογλυπτική" text={woodcarvingQuote} height="95vh" opacity="0.85"/>
                 <div className="content">
                     <MainAbout />
                     <MainGallery />

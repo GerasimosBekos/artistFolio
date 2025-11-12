@@ -31,6 +31,7 @@ function About(props) {
                 <div className="about-title">
                     Το εργαστήρι μας
                 </div>
+                {/* <div className="about-content" */}
                 <MainAbout />
                 
             </div>
