@@ -158,6 +158,108 @@
   transform: translateY(-2px);
 }
 
+/* .lang-toggle {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #444;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.lang-toggle:hover {
+  opacity: 0.6;
+  transform: translateY(-1px);
+}
+
+.lang-toggle:active {
+  opacity: 0.9;
+  transform: scale(0.98);
+} */
+ .lang-dropdown {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  user-select: none;
+  z-index: 1001;
+}
+
+.lang-button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.lang-button:hover {
+  opacity: 0.6;
+}
+
+/* Tiny arrow */
+.arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #333;
+  transition: transform 0.2s ease;
+}
+
+.arrow.up {
+  transform: rotate(180deg);
+}
+
+/* Dropdown menu */
+.lang-menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 6px;
+  padding: 4px 0;
+  min-width: 60px;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.15s ease;
+}
+
+.lang-option {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: #333;
+  text-align: right;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.lang-option:hover {
+  background: var(--accent-color, #a15c00);
+  color: white;
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 968px) {
   .logo-group {
@@ -197,4 +299,5 @@
   .nav-option {
     font-size: 1.2rem;
   }
+
 }

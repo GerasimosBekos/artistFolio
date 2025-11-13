@@ -1,11 +1,16 @@
 import "./Header.css";
 import React, { useState, useEffect, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { useLanguage } from "../contexts/LanguageContext"
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const isScrollingToTop = useRef(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const {t} = useLanguage();
+  const { language, toggleLanguage } = useLanguage();
 
   // Scroll detection - only when not actively scrolling to top
   useEffect(() => {
@@ -57,6 +62,20 @@ function Header() {
     }, 800);
   }, [location.pathname]);
 
+   // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (!e.target.closest(".lang-dropdown")) setDropdownOpen(false);
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
+
+  const handleLanguageSelect = () => {
+    toggleLanguage();
+    setDropdownOpen(false);
+  };
+
   return (
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="header-container">
@@ -72,18 +91,18 @@ function Header() {
         >
           <img src="/images/logo.png" alt="Woodcarver Logo" className="logo" />
           <div className="artist-name">
-            <span className="surname">Μπέκος</span>
-            <span className="name">&nbsp;&nbsp;Παναγιώτης</span>
-            <span className="profession">Ξυλογλύπτης</span>
+            <span className="surname">{t.header.woodcarverSurname}</span>
+            <span className="name">&nbsp;&nbsp;{t.header.woodcarverName}</span>
+            <span className="profession">{t.header.woodcarverSpeciality}</span>
           </div>
         </NavLink>
 
         <nav className="nav">
           {[
-            { to: "/", label: "Αρχική" },
-            { to: "/gallery", label: "Δημιουργίες" },
-            { to: "/about", label: "To Εργαστήρι" },
-            { to: "/contact", label: "Επικοινωνία" },
+            { to: "/", label: t.header.main },
+            { to: "/gallery", label: t.header.gallery },
+            { to: "/about", label: t.header.about },
+            { to: "/contact", label: t.header.contact },
           ].map((link) => (
             <NavLink
               key={link.to}
@@ -102,7 +121,30 @@ function Header() {
             </NavLink>
           ))}
         </nav>
+        {/* <button className="lang-toggle" onClick={toggleLanguage}>
+          {language === 'el' ? 'EN' : 'EL'}
+        </button> */}
+        <div className="lang-dropdown">
+          <button
+            className="lang-button"
+            onClick={() => setDropdownOpen((prev) => !prev)}
+          >
+            {language === "el" ? "EL" : "EN"}
+            <span className={`arrow ${dropdownOpen ? "up" : "down"}`}></span>
+          </button>
+          {dropdownOpen && (
+            <div className="lang-menu">
+              <button
+                className="lang-option"
+                onClick={handleLanguageSelect}
+              >
+                {language === "el" ? "EN" : "EL"}
+              </button>
+            </div>
+          )}
+        </div>
       </div>
+       
     </header>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./MainContact.css";
 import "../Main.css";
+import { useLanguage } from "../contexts/LanguageContext"
 
 function MainContact() {
   const [formData, setFormData] = useState({
@@ -10,6 +11,8 @@ function MainContact() {
   });
   const [formStatus, setFormStatus] = useState('');
   const [isMobile, setIsMobile] = useState(false);
+
+  const {t} = useLanguage();
 
   React.useEffect(() => {
     const checkMobile = () => {
@@ -45,7 +48,7 @@ function MainContact() {
         <div className="contact-wrapper">
           {/* === LEFT SIDE - PRIMARY CONTACT INFO === */}
           <div className="contact-info-primary">
-            <h3 className="contact-info-heading">Στοιχεία Επικοινωνίας</h3>
+            <h3 className="contact-info-heading">{t.contact.contactInfoTitle}</h3>
             
             <div className="contact-info-list">
               <div className="contact-info-card">
@@ -61,7 +64,7 @@ function MainContact() {
               <div className="contact-info-card">
                 <div className="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
                 <div className="contact-card-content">
-                  <div className="contact-card-label">Τηλέφωνο</div>
+                  <div className="contact-card-label">{t.contact.phoneTitle}</div>
                   {isMobile ? (
                     <a href="tel:+306941234567" className="contact-card-value contact-card-link">
                       694 123 4567
@@ -75,14 +78,15 @@ function MainContact() {
               <div className="contact-info-card">
                 <div className="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
                 <div className="contact-card-content">
-                  <div className="contact-card-label">Διεύθυνση</div>
+                  <div className="contact-card-label">{t.contact.addressTitle}</div>
                   <a 
-                    href="https://www.google.com/maps/search/?api=1&query=Αθήνα+Ελλάδα" 
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${t.contact.addressValue} ${t.contact.addressValueCountry}`
+  )}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="contact-card-value contact-card-link"
                   >
-                    Αθήνα, Ελλάδα
+                    {t.contact.addressValue}, {t.contact.addressValueCountry}
                   </a>
                 </div>
               </div>
@@ -90,10 +94,10 @@ function MainContact() {
               <div className="contact-info-card">
                 <div className="contact-card-icon"><i class="fa-solid fa-clock"></i></div>
                 <div className="contact-card-content">
-                  <div className="contact-card-label">Ώρες Λειτουργίας</div>
+                  <div className="contact-card-label">{t.contact.openingHoursTitle}</div>
                   <div className="contact-card-value contact-card-hours">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
-                    <div>Δευτέρα - Παρασκευή</div>
-                    <div>9:00 - 18:00</div>
+                    <div>{t.contact.openingHoursDays}</div>
+                    <div>{t.contact.openingHoursHours}</div>
                   </div>
                 </div>
               </div>
@@ -101,7 +105,7 @@ function MainContact() {
 
             {/* Social Media */}
             <div className="contact-social-section">
-              <div className="contact-social-heading">Ακολουθήστε με</div>
+              <div className="contact-social-heading">{t.contact.followMe}</div>
               <div className="contact-socials-primary">
                 <a
                   href="https://www.facebook.com"
@@ -127,13 +131,13 @@ function MainContact() {
 
           {/* === RIGHT SIDE - QUICK MESSAGE FORM === */}
           <div className="contact-form-secondary">
-            <h3 className="contact-form-heading">Γρήγορο Μήνυμα</h3>
-            <p className="contact-form-subtitle">Στείλτε μου ένα σύντομο μήνυμα και θα επικοινωνήσω μαζί σας σύντομα</p>
+            <h3 className="contact-form-heading">{t.contact.quickMessageTitle}</h3>
+            <p className="contact-form-subtitle">{t.contact.quickMessageText}</p>
             
             <form>
               <div className="contact-form-compact">
               <div className="contact-field-compact">
-                <label htmlFor="name">Όνομα *</label>
+                <label htmlFor="name">{t.contact.nameTitle} *</label>
                 <input
                   id="name"
                   name="name"
@@ -141,7 +145,7 @@ function MainContact() {
                   className="contact-input-compact"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Το όνομά σας"
+                  placeholder={t.contact.namePlaceholder}
                   required
                 />
               </div>
@@ -161,14 +165,14 @@ function MainContact() {
               </div>
 
               <div className="contact-field-compact">
-                <label htmlFor="message">Μήνυμα *</label>
+                <label htmlFor="message">{t.contact.messageTitle} *</label>
                 <textarea
                   id="message"
                   name="message"
                   className="contact-textarea-compact"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Πείτε μου περισσότερα για το έργο σας..."
+                  placeholder={t.contact.messagePlaceholder}
                   required
                 ></textarea>
               </div>
@@ -179,14 +183,14 @@ function MainContact() {
                 onClick={handleSubmit}
                 disabled={formStatus === 'sending'}
               >
-                {formStatus === 'sending' ? 'Αποστολή...' : 
-                 formStatus === 'success' ? '✓ Στάλθηκε!' : 
-                 'Αποστολή Μηνύματος'}
+                {formStatus === 'sending' ? t.contact.messageSending : 
+                 formStatus === 'success' ? '✓ ' + t.contact.messageSent: 
+                 t.contact.messageButton}
               </button>
 
               {formStatus === 'success' && (
                 <div className="form-success-compact">
-                  ✓ Ευχαριστώ! Θα επικοινωνήσω σύντομα.
+                  ✓ {t.contact.messageSuccess}
                 </div>
               )}
             </div>

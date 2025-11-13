@@ -1,18 +1,22 @@
 import "./MainToGallery.css";
 import "../Main.css";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../contexts/LanguageContext"
 
 function MainToGallery(props) {
+
+    const {t} = useLanguage();
+
     return (
         <div data-aos="fade-up">
             <section id="gallery" className="content-section">
                 <div className="content-to-gallery">
                     <div className="content-to-gallery-title">
                         <div className="content-to-gallery-text">
-                            Ανακαλύψτε όλες τις δημιουργίες μου
+                            {t.main.textToGallery}
                         </div>
                         <Link to="/gallery" className="content-to-gallery-button">
-                            Δείτε τη συλλογή
+                            {t.main.buttonToGallery}
                         </Link>
                     </div> 
                 </div>

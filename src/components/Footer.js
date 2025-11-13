@@ -1,19 +1,23 @@
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import { useLanguage } from "../contexts/LanguageContext"
 
 function Footer(props) {
+
+    const {t} = useLanguage();
+
     return (
         <footer className="site-footer">
             <div className="footer-content">
                 <div className="footer-left">
-                <h3 className="footer-title">Παναγιώτης Μπέκος</h3>
-                <p className="footer-subtitle">Ξυλογλυπτική τέχνη &amp; παράδοση</p>
+                <h3 className="footer-title">{t.footer.woodcarverFullName}</h3>
+                <p className="footer-subtitle">{t.footer.description}</p>
                 </div>
 
                 <div className="footer-center">
-                <Link to="/about" className="footer-link">To Εργαστήρι</Link>
-                <Link to="/gallery" className="footer-link">Δημιουργίες</Link>
-                <Link to="/contact" className="footer-link">Επικοινωνία</Link>
+                <Link to="/about" className="footer-link">{t.footer.about}</Link>
+                <Link to="/gallery" className="footer-link">{t.footer.gallery}</Link>
+                <Link to="/contact" className="footer-link">{t.footer.contact}</Link>
                 
                 </div>
 

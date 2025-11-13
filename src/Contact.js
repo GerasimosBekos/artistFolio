@@ -6,37 +6,30 @@ import MainContact from "./components/MainContact";
 import Image from "./components/Image";
 import Footer from "./components/Footer";
 import Title from "./components/Title";
+import { useLanguage } from "./contexts/LanguageContext";
 
 
 function Contact(props) {
-
-    const title = "Επικοινωνία";
-    const text = "Επικοινωνήστε μαζί μου για περισσότερες πληροφορίες";
     const heroImage = "/images/contact.jpg";
 
     // Image component props
-    const image_text = "\"... καὶ ἴδε ἐπὶ τοὺς δούλους σου καὶ ἐπὶ τὰ ἔργα σου καὶ ὁδήγησον τοὺς υἱοὺς αὐτῶν\" - Ψαλμός 89:16"
     const image = "/images/woodcarving3.jpg";
     const image_height = "350px";
     const image_textSize = "2rem";
 
+    const {t} = useLanguage();
+
     return (
         <>
             <Header />
-            <HeroScreen title={title} text={text} image={heroImage} height="70vh" opacity="0.8"/>
+            <HeroScreen title={t.contact.heroTitle} text={t.contact.heroSubtitle} image={heroImage} height="70vh" opacity="0.8"/>
             <Breadcrumb />
             <div className="contact">
-                {/* <div className="contact-subtitle">
-                    ΕΠΙΚΟΙΝΩΝΙΑ
-                </div>
-                <div className="contact-title">
-                    Επικοινωνήστε μαζί μας
-                </div> */}
-                <Title title={"Eπικοινωνήστε μαζί μου"} subtitle={"ΕΠΙΚΟΙΝΩΝΙΑ"} />
+                <Title title={t.contact.title} subtitle={t.contact.subtitle} />
                 <MainContact />
                 
             </div>
-            <Image text={image_text} image={image} height={image_height} textSize={image_textSize} />
+            <Image text={t.contact.footerImageText} image={image} height={image_height} textSize={image_textSize} />
             <Footer />
         </>
     );

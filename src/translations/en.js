@@ -40,7 +40,7 @@ export const en = {
         title: "Our Workshop",
         subtitle: "HISTORY",
         aboutMeTitle: "About Me",// eslint-disable-next-line
-        aboutMeParagraph: "My approach to this tradition is one of study and apprenticeship based on the works of great woodcarvers, \
+        aboutMeText: "My approach to this tradition is one of study and apprenticeship based on the works of great woodcarvers, \
                 which reveal knowledge, experience, sensitivity, high technique, and which are often the imprint of ecclesiastical \
                 experience on inanimate material, as much as possible. My collaboration with experienced craftsmen aims at the successful \
                 continuation of the art of woodcarving. My brother Theofilos, theologian and cantor, is a companion in this effort. \
@@ -57,9 +57,11 @@ export const en = {
         contactInfoTitle: "Contact Information",
         phoneTitle: "PHONE",
         addressTitle: "ADDRESS",
-        addressValue: "Athens, Greece",
+        addressValue: "Leoforos Alexandras 160",
+        addressValueCountry: "Greece",
         openingHoursTitle: "BUSINESS HOURS",
-        openingHoursValue: "Monday - Friday 9:00 AM - 6:00 PM",
+        openingHoursDays: "Δευτέρα - Παρασκευή",
+        openingHoursHours: "9:00 - 18:00",
         followMe: "FOLLOW ME",
         quickMessageTitle: "Quick Message",
         quickMessageText: "Send me a brief message and I will get back to you soon",
@@ -68,6 +70,8 @@ export const en = {
         messageTitle: "Message",
         messagePlaceholder: "Write your message...",
         messageButton: "Send Message",
+        messageSending: "Sending...",
+        messageSent: "Sent!",
         messageSuccess: "Thank you! I will get back to you soon.",
         footerImageText: "\"...look upon your servants and their work, and guide their children\" - Psalm 90:16"
     }
