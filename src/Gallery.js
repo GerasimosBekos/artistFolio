@@ -6,11 +6,11 @@ import Breadcrumb from "./components/Breadcrumb";
 import Image from "./components/Image";
 import Footer from "./components/Footer";
 import Title from "./components/Title";
+import { useLanguage } from "./contexts/LanguageContext";
 
 
 function Gallery(props) {
-    const title = "Ξυλογλυπτική Τέχνη";
-    const text = "Ξυλόγλυπτα έργα τέχνης φτιαγμένα με μεράκι και αγάπη για την παράδοση";
+    
     const heroImage = "/images/contact.jpg";
     
     // Image Footer
@@ -19,14 +19,18 @@ function Gallery(props) {
     const image_height = "350px";
     const image_textSize = "2rem";
 
+    const { t } = useLanguage();
+
     return (
         <>
             <Header />
-            <HeroScreen title={title} text={text} image={heroImage} height="70vh" opacity="0.8"/>
+            <HeroScreen title={t.gallery.heroTitle} text={t.gallery.heroSubtitle} image={heroImage} height="70vh" opacity="0.8"/>
             <Breadcrumb />
             <div className="gallery">
                 <Title title={"Δημιουργίες"} subtitle={"ΚΑΤΗΓΟΡΙΕΣ"} /> 
-                <MainGallery/>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <MainGallery/>
+                </div>
             </div>
             <Image text={image_text} image={image} height={image_height} textSize={image_textSize}/>
             <Footer />

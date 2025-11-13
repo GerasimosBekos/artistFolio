@@ -40,7 +40,7 @@ function MainContact() {
   };
 
   return (
-    <div data-aos="fade-up">
+    <div>
       <section id="contact" className="content-section">
         <div className="contact-wrapper">
           {/* === LEFT SIDE - PRIMARY CONTACT INFO === */}

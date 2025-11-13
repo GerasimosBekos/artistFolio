@@ -5,9 +5,13 @@ export default function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    // window.scrollTo(0, 0);
+    // Disable browser's scroll restoration
+    window.history.scrollRestoration = 'manual';
+  }, []);
 
+  useEffect(() => {
+    // DO NOTHING on route change - let Header.js handle the scrolling
+    // This prevents conflict with Header's smooth scroll
   }, [pathname]);
 
   return null;

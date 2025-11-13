@@ -9,27 +9,33 @@ import Image from "./components/Image";
 import Footer from "./components/Footer";
 import Title from "./components/Title";
 import "./App.css";
+import { useLanguage } from "./contexts/LanguageContext";
 
 
 function Main(props) {
-    const psalmos = "\"...καὶ ἔστω ἡ λαμπρότης Κυρίου τοῦ Θεοῦ ἡμῶν ἐφ᾿ ἡμᾶς, καὶ τὰ ἔργα τῶν χειρῶν ἡμῶν κατεύθυνον ἐφ᾿ ἡμᾶς καὶ τὸ ἔργον τῶν χειρῶν ἡμῶν κατεύθυνον\" - Ψαλμός 89:17";
     const heroImage = '/images/bg.jpg';
-    const woodcarvingQuote = "\"H τέχνη που έδωσε στον άνθρωπο τη δυνατότητα να εκφράσει έναν ολοκληρωμένο και μοναδικό τρόπο αισθητικής αντίληψης μέσω της πλαστικότητας του ξύλου\"";
+    const { t } = useLanguage();
 
     return (
         <>
             <div className="main">
                 <Header />
-                <HeroScreen image={heroImage} title="Ξυλογλυπτική" text={woodcarvingQuote} height="95vh" opacity="0.82"/>
+                <HeroScreen image={heroImage} title={t.main.heroTitle} text={t.main.heroSubtitle} height="95vh" opacity="0.82"/>
                 <div className="content">
-                    <MainAbout />
-                    <Title title={"Δημιουργίες"} subtitle={"ΚΑΤΗΓΟΡΙΕΣ"} /> 
-                    <MainGallery />
+                    <div data-aos="fade-up">
+                        <MainAbout />
+                    </div>
+                    <div data-aos="fade-up">
+                        <Title title={t.main.galleryTitle} subtitle={t.main.gallerySubtitle} /> 
+                        <MainGallery />
+                    </div>
                 </div>
                 <MainToGallery />
-                <Title title={"Eπικοινωνήστε μαζί μου"} subtitle={"ΕΠΙΚΟΙΝΩΝΙΑ"} />
-                <MainContact />
-                <Image text={psalmos} image={'/images/footer.jpg'} height="350px" textSize="2rem"/>
+                <div data-aos="fade-up">
+                    <Title title={t.main.contactTitle} subtitle={t.main.contactSubtitle} />
+                    <MainContact />
+                </div>
+                <Image text={t.main.footerImageText} image={'/images/footer.jpg'} height="350px" textSize="2rem"/>
                 <Footer />
             </div>
             

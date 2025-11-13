@@ -9,7 +9,7 @@
   background: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 100;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 /* === HEADER CONTAINER === */
@@ -19,11 +19,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.6rem 2rem;
+  transition: padding 0.3s ease;
+}
 
-  /* Interpolated padding based on scroll progress */
-  padding: calc(0.2rem + (0.4rem * (1 - var(--header-progress))))
-           calc(2rem);
-  transition: padding 0.1s linear;
+/* Large header (at top) */
+.header:not(.scrolled) .header-container {
+  padding: 0.6rem 2rem;
+}
+
+/* Small header (scrolled) */
+.header.scrolled .header-container {
+  padding: 0.2rem 2rem;
 }
 
 /* === LOGO GROUP (image + text) === */
@@ -37,8 +44,12 @@
 
 /* === LOGO IMAGE === */
 .logo {
-  height: calc(70px + (40px * (1 - var(--header-progress))));
-  transition: height 0.1s linear;
+  height: 110px;
+  transition: height 0.3s ease;
+}
+
+.header.scrolled .logo {
+  height: 70px;
 }
 
 /* === ARTIST NAME (next to logo) === */
@@ -46,13 +57,18 @@
   display: flex;
   flex-direction: column;
   line-height: 1.2;
-  font-size: calc(1.3rem + (0.2rem * (1 - var(--header-progress))));
+  font-size: 1.5rem;
   text-shadow: 0.6px 0 0 currentColor;
   letter-spacing: 0.5px;
   text-decoration: none;
   color: #c0be8e;
-  margin-top: calc(0.3rem - (0.7rem * (1 - var(--header-progress))));
-  transition: font-size 0.1s linear, margin-top 0.1s linear;
+  margin-top: -0.4rem;
+  transition: all 0.3s ease;
+}
+
+.header.scrolled .artist-name {
+  font-size: 1.3rem;
+  margin-top: 0.3rem;
 }
 
 .name {
@@ -68,9 +84,14 @@
 }
 
 .profession {
-  font-size: calc(0.9rem + (0.1rem * (1 - var(--header-progress))));
+  font-size: 1.1rem;
   color: #623008;
   text-shadow: 0.5px 0 0 currentColor;
+  transition: font-size 0.3s ease;
+}
+
+.header.scrolled .profession {
+  font-size: 0.9rem;
 }
 
 /* === NAVIGATION === */
@@ -137,7 +158,43 @@
   transform: translateY(-2px);
 }
 
-/* === SCROLL STATE (legacy fallback if needed) === */
-.header.scrolled {
-  font-size: 1.2rem;
+/* === RESPONSIVE === */
+@media (max-width: 968px) {
+  .logo-group {
+    margin-left: 2rem;
+  }
+
+  .nav {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-group {
+    margin-left: 0;
+  }
+
+  .logo {
+    height: 80px;
+  }
+
+  .header.scrolled .logo {
+    height: 60px;
+  }
+
+  .artist-name {
+    font-size: 1.3rem;
+  }
+
+  .header.scrolled .artist-name {
+    font-size: 1.1rem;
+  }
+
+  .nav {
+    gap: 1.5rem;
+  }
+
+  .nav-option {
+    font-size: 1.2rem;
+  }
 }
