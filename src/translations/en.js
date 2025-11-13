@@ -60,7 +60,7 @@ export const en = {
         addressValue: "Leoforos Alexandras 160",
         addressValueCountry: "Greece",
         openingHoursTitle: "BUSINESS HOURS",
-        openingHoursDays: "Δευτέρα - Παρασκευή",
+        openingHoursDays: "Monday - Friday",
         openingHoursHours: "9:00 - 18:00",
         followMe: "FOLLOW ME",
         quickMessageTitle: "Quick Message",
@@ -74,5 +74,20 @@ export const en = {
         messageSent: "Sent!",
         messageSuccess: "Thank you! I will get back to you soon.",
         footerImageText: "\"...look upon your servants and their work, and guide their children\" - Psalm 90:16"
+    },
+    categories: {
+        templa: "Iconostases",
+        proskinitaria: "Icon Stands",
+        stasidia: "Choir Stalls",
+        epitafioi: "Epitaphios Shrines",
+        kornizes: "Frames",
+        stavroi: "Crosses",
+        pagkaria: "Donation Boxes",
+        thronoi: "Bishop Thrones",
+        polithrones: "Armchairs",
+        amvones: "Pulpits",
+        karekles: "Chairs",
+        psaltiria: "Chanter Stands",
+        lipsanothikes: "Reliquaries"
     }
 };

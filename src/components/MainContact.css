@@ -26,7 +26,7 @@
   position: absolute;
   inset: 0;
   background: url('/public/images/texture.jpg') center/cover no-repeat;
-  opacity: 0.45;
+  opacity: 0.46;
   z-index: 0;
   mix-blend-mode: multiply;
 }
@@ -55,11 +55,13 @@
   margin-bottom: 3rem;
 }
 
+/* --- Card container --- */
 .contact-info-card {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center; /* vertically center icon + text perfectly */
   gap: 1.5rem;
-  padding: 0.3rem;
+  padding: 0.8rem 1.2rem;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 12px;
   border-left: 4px solid #8b7355;
@@ -72,24 +74,25 @@
   box-shadow: 0 4px 16px rgba(139, 115, 85, 0.15);
 }
 
+/* --- Icon --- */
 .contact-card-icon {
   font-size: 2rem;
-  flex-shrink: 0;
-  line-height: 1;
   color: #8b7355;
-  /* color: #5c3d1e; */
-  padding-left: 1.7rem;
-  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* --- Text content --- */
 .contact-card-content {
   display: flex;
   flex-direction: column;
+  justify-content: center; /* vertical centering inside */
   gap: 0.3rem;
   flex: 1;
-  margin-left: -3rem;
 }
 
+/* --- Label --- */
 .contact-card-label {
   font-size: 0.8rem;
   color: #888;
@@ -98,15 +101,16 @@
   letter-spacing: 1px;
 }
 
+/* --- Value --- */
 .contact-card-value {
   font-size: 1.3rem;
   color: #5c3d1e;
   font-weight: 600;
   line-height: 1.4;
-  /* font-family: "Zen Old Mincho", serif; */
   font-family: var(--font-main);
 }
 
+/* --- Links --- */
 .contact-card-link {
   text-decoration: none;
   transition: color 0.3s ease;
@@ -117,12 +121,14 @@
   color: #8b7355;
 }
 
+/* --- Hours --- */
 .contact-card-hours {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
   font-size: 1.3rem;
 }
+
 
 /* === SOCIAL MEDIA SECTION === */
 .contact-social-section {

@@ -158,34 +158,11 @@
   transform: translateY(-2px);
 }
 
-/* .lang-toggle {
-  position: absolute;
-  top: 14px;
-  right: 20px;
-  background: none;
-  border: none;
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #444;
-  cursor: pointer;
-  letter-spacing: 0.5px;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.lang-toggle:hover {
-  opacity: 0.6;
-  transform: translateY(-1px);
-}
-
-.lang-toggle:active {
-  opacity: 0.9;
-  transform: scale(0.98);
-} */
- .lang-dropdown {
+/* === LANGUAGE DROPDOWN === */
+.lang-dropdown {
   position: absolute;
   top: 12px;
-  right: 20px;
+  right: 12px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -193,72 +170,93 @@
   z-index: 1001;
 }
 
+/* --- Toggle Button --- */
 .lang-button {
   background: none;
   border: none;
-  font-family: inherit;
+  font-family: var(--font-main, inherit);
   font-weight: 600;
   font-size: 0.9rem;
-  color: #333;
+  color: #2b2b2b;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 4px;
-  padding: 4px;
-  transition: opacity 0.2s ease;
+  gap: 5px;
+  padding: 6px 18px;
+  border-radius: 6px;
+  transition: color 0.25s ease, transform 0.2s ease, background 0.3s ease;
 }
 
 .lang-button:hover {
-  opacity: 0.6;
+  color: var(--accent-color, #a15c00);
+  background: rgba(0, 0, 0, 0.03);
+  transform: translateY(-1px);
 }
 
-/* Tiny arrow */
+/* --- Tiny arrow --- */
 .arrow {
-  display: inline-block;
   width: 0;
   height: 0;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 5px solid #333;
-  transition: transform 0.2s ease;
+  border-top: 5px solid currentColor;
+  transition: transform 0.25s ease;
+  opacity: 0.8;
 }
 
 .arrow.up {
   transform: rotate(180deg);
 }
 
-/* Dropdown menu */
+/* --- Dropdown menu --- */
 .lang-menu {
   position: absolute;
-  top: 110%;
+  top: 115%;
   right: 0;
-  background: white;
-  border: 1px solid rgba(0,0,0,0.1);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  border-radius: 6px;
-  padding: 4px 0;
-  min-width: 60px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border: none;
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); */
+  border-radius: 10px;
+  /* padding: 2px 0; */
+  min-width: 72px;
   display: flex;
   flex-direction: column;
-  animation: fadeIn 0.15s ease;
+  overflow: hidden;
+  animation: fadeIn 0.25s ease forwards;
+  transform-origin: top right;
 }
 
+/* --- Dropdown option --- */
 .lang-option {
-  background: none;
+  background: transparent;
   border: none;
-  font-family: inherit;
-  font-size: 0.85rem;
-  color: #333;
-  text-align: right;
-  padding: 6px 12px;
+  font-family: var(--font-main, inherit);
+  font-size: 0.75rem;
+  color: #2b2b2b;
+  text-align: center;
+  padding: 2px;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .lang-option:hover {
-  background: var(--accent-color, #a15c00);
-  color: white;
+  background: rgba(161, 92, 0, 0.1); /* accent tint, not full fill */
+  color: var(--accent-color, #a15c00);
 }
+
+/* --- Animation --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 
 /* === RESPONSIVE === */
 @media (max-width: 968px) {

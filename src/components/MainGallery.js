@@ -1,8 +1,12 @@
 import "./MainGallery.css";
 import "../Main.css";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../contexts/LanguageContext";
 
 function MainGallery(props) {
+
+    const {t} = useLanguage();
+
     return (
         <div>
             <section id="gallery" className="content-section">
@@ -10,67 +14,67 @@ function MainGallery(props) {
                     <div className="content-gallery-grid">
                         <Link to="/gallery/templa" className="gallery-item wide">
                             <img src="/images/categories/templo.jpg" alt="Τέμπλα" />
-                            <span>Τέμπλα</span>
+                            <span>{t.categories.templa}</span>
                         </Link>
 
                         <Link to="/gallery/proskinitaria" className="gallery-item tall">
                             <img src="/images/categories/prosk.jpg" alt="Προσκυνητάρια" />
-                            <span>Προσκυνητάρια</span>
+                            <span>{t.categories.proskinitaria}</span>
                         </Link>
 
                         <Link to="/gallery/stasidia" className="gallery-item">
                             <img src="/images/categories/stasidia.jpg" alt="Στασίδια" />
-                            <span>Στασίδια</span>
+                            <span>{t.categories.stasidia}</span>
                         </Link>
 
                         <Link to="/gallery/epitafioi" className="gallery-item tall">
                             <img src="/images/categories/epitafios.jpg" alt="Επιτάφιοι" />
-                            <span>Επιτάφιοι</span>
+                            <span>{t.categories.epitafioi}</span>
                         </Link>
 
                         <Link to="/gallery/kornizes" className="gallery-item">
                             <img src="/images/categories/korniza.jpg" alt="Κορνίζες" />
-                            <span>Κορνίζες</span>
+                            <span>{t.categories.kornizes}</span>
                         </Link>
 
                         <Link to="/gallery/stavroi" className="gallery-item tall">
                             <img src="/images/categories/stavros.jpg" alt="Σταυροί" />
-                            <span>Σταυροί</span>
+                            <span>{t.categories.stavroi}</span>
                         </Link>
 
                         <Link to="/gallery/thronoi" className="gallery-item tall">
                             <img src="/images/categories/thronos.jpg" alt="Θρόνοι" />
-                            <span>Θρόνοι</span>
+                            <span>{t.categories.thronoi}</span>
                         </Link>
 
                         <Link to="/gallery/pagkaria" className="gallery-item">
                             <img src="/images/categories/pagkari.jpg" alt="Παγκάρια" />
-                            <span>Παγκάρια</span>
+                            <span>{t.categories.pagkaria}</span>
                         </Link>
 
                         <Link to="/gallery/polithrones" className="gallery-item tall">
                             <img src="/images/categories/polithrona.jpg" alt="Πολυθρόνες" />
-                            <span>Πολυθρόνες</span>
+                            <span>{t.categories.polithrones}</span>
                         </Link>
 
                         <Link to="/gallery/amvones" className="gallery-item tall">
                             <img src="/images/categories/amvonas.jpg" alt="Άμβωνες" />
-                            <span>Άμβωνες</span>
+                            <span>{t.categories.amvones}</span>
                         </Link>
 
                         <Link to="/gallery/karekles" className="gallery-item">
                             <img src="/images/categories/karekles.jpg" alt="Καρέκλες" />
-                            <span>Καρέκλες</span>
+                            <span>{t.categories.karekles}</span>
                         </Link>
 
                         <Link to="/gallery/psaltiria" className="gallery-item">
                             <img src="/images/categories/psaltiri.jpg" alt="Ψαλτήρια" />
-                            <span>Ψαλτήρια</span>
+                            <span>{t.categories.psaltiria}</span>
                         </Link>
 
                         <Link to="/gallery/lipsanothikes" className="gallery-item">
                             <img src="/images/categories/lipsanothiki.jpg" alt="Λειψανοθήκες" />
-                            <span>Λειψανοθήκες</span>
+                            <span>{t.categories.lipsanothikes}</span>
                         </Link>
                     </div>
                 </div>
