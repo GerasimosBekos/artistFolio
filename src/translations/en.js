@@ -1,4 +1,8 @@
 export const en = {
+    general: {
+        phone: "6912345669",
+        email: "woodcarver@woodmail.com"
+    },
     header: {
         woodcarverName: "Panagiotis",
         woodcarverSurname: "Bekos",

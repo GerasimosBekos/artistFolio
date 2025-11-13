@@ -10,6 +10,8 @@ function MainContact() {
     message: ''
   });
   const [formStatus, setFormStatus] = useState('');
+  const [emailCopied, setEmailCopied] = useState(false);
+  const [phoneCopied, setPhoneCopied] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   const {t} = useLanguage();
@@ -22,6 +24,28 @@ function MainContact() {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  const handleCopyEmail = async (e) => {
+    e.preventDefault();
+    try {
+      await navigator.clipboard.writeText(t.general.email);
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy email:', err);
+    }
+  };
+
+  const handleCopyPhone = async (e) => {
+    e.preventDefault();
+    try {
+      await navigator.clipboard.writeText(t.general.phone);
+      setPhoneCopied(true);
+      setTimeout(() => setPhoneCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy phone:', err);
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -55,9 +79,19 @@ function MainContact() {
                 <div className="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
                 <div className="contact-card-content">
                   <div className="contact-card-label">Email</div>
-                  <a href="mailto:info@woodcarver.gr" className="contact-card-value">
-                    info@woodcarver.gr
-                  </a>
+                  <button 
+                    onClick={handleCopyEmail} 
+                    className="contact-card-value contact-card-link email-copy-btn"
+                    type="button"
+                  >
+                    {t.general.email}
+                  </button>
+
+                  {emailCopied && (
+                    <div className="email-copy-toast">
+                      ✓ {t.language === 'el' ? 'Email αντιγράφηκε!' : 'Email copied!'}
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -67,10 +101,26 @@ function MainContact() {
                   <div className="contact-card-label">{t.contact.phoneTitle}</div>
                   {isMobile ? (
                     <a href="tel:+306941234567" className="contact-card-value contact-card-link">
-                      694 123 4567
+                      {t.general.phone}
                     </a>
                   ) : (
-                    <div className="contact-card-value">694 123 4567</div>
+                    // <div className="contact-card-value">{t.general.phone}</div>
+                    <div style={{position: "relative"}}>
+                      <button 
+                        onClick={handleCopyPhone} 
+                        className="contact-card-value contact-card-link phone-copy-btn"
+                        type="button"
+                      >
+                        {t.general.phone}
+                      </button>
+
+
+                      {phoneCopied && (
+                        <div className="phone-copy-toast">
+                          ✓ {t.language === 'el' ? 'Τηλέφωνο αντιγράφηκε!' : 'Phone copied!'}
+                        </div>
+                      )}
+                    </div>
                   )}
                 </div>
               </div>

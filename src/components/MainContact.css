@@ -129,6 +129,92 @@
   font-size: 1.3rem;
 }
 
+/* ============================= EMAIL ============================== */
+.email-copy-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #5c3d1e;
+  font-weight: 600;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.email-copy-btn:hover {
+  color: #8b7355;
+}
+
+.email-copy-toast {
+  position: absolute;
+  top: -20px;
+  left: 57%;
+  transform: translateX(-50%);
+  background: #4CAF50;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  animation: fadeToastEmail 0.25s ease-out;
+  z-index: 1000;
+}
+
+@keyframes fadeToastEmail {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.phone-copy-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #5c3d1e;
+  font-weight: 600;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.phone-copy-btn:hover {
+  color: #8b7355;
+}
+
+.phone-copy-toast {
+  position: absolute;
+  top: -52px;
+  left: 48%;
+  transform: translateX(-50%);
+  background: #4CAF50;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  animation: fadeToastPhone 0.25s ease-out;
+  z-index: 1000;
+}
+
+@keyframes fadeToastPhone {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+
 
 /* === SOCIAL MEDIA SECTION === */
 .contact-social-section {

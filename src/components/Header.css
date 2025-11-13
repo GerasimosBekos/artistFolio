@@ -174,15 +174,15 @@
 .lang-button {
   background: none;
   border: none;
-  font-family: var(--font-main, inherit);
-  font-weight: 600;
+  font-family: var(--font-main);
+  font-weight: 400;
   font-size: 0.9rem;
   color: #2b2b2b;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 5px;
-  padding: 6px 18px;
+  padding: 4px 28px;
   border-radius: 6px;
   transition: color 0.25s ease, transform 0.2s ease, background 0.3s ease;
 }
