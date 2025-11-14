@@ -1,6 +1,6 @@
 export const en = {
     general: {
-        phone: "6912345669",
+        phone: "+306912345669",
         email: "woodcarver@woodmail.com"
     },
     header: {
@@ -93,5 +93,17 @@ export const en = {
         karekles: "Chairs",
         psaltiria: "Chanter Stands",
         lipsanothikes: "Reliquaries"
+    },
+    contactMessages: {
+        failCopyEmail: "Failed to copy email:",
+        failCopyPhone: "Failed to copy phone:",
+        nameRequired: "Name is required.",
+        emailRequired: "Email is required.",
+        nameInvalid: "Name contains invalid characters.",
+        emailInvalid: "Invalid email format.",
+        messageRequired: "Message is required.",
+        sendFailed: "Failed to send. Please try again.",
+        emailCopied: "Email copied!",
+        phoneCopied: "Phone copied!",
     }
 };

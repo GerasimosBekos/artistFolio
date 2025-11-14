@@ -147,8 +147,8 @@
 
 .email-copy-toast {
   position: absolute;
-  top: -20px;
-  left: 57%;
+  top: -58px;
+  left: 50%;
   transform: translateX(-50%);
   background: #4CAF50;
   color: white;
@@ -309,7 +309,7 @@
 .contact-form-subtitle {
   font-size: 1rem;
   color: #666;
-  margin: 0 0 2rem 0;
+  margin: 0 0 1.5rem 0;
   line-height: 1.5;
 }
 
@@ -317,7 +317,7 @@
 .contact-form-compact {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.85rem;
   width: 100%;
 }
 
@@ -325,8 +325,10 @@
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  gap: 0.5rem;
+  gap: 0.4rem;
   width: 100%;
+  position: relative;
+
 }
 
 .contact-field-compact label {
@@ -386,6 +388,7 @@
   box-shadow: 0 4px 15px rgba(139, 115, 85, 0.3);
   letter-spacing: 0.5px;
   margin-top: 0.5rem;
+  /* position: relative; */
 }
 
 .contact-submit-compact:hover:not(:disabled) {
@@ -398,17 +401,54 @@
   opacity: 0.6;
   cursor: not-allowed;
 }
-
-.form-success-compact {
-  background: #d4edda;
-  color: #155724;
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 1.05rem;
-  font-weight: 600;
-  border: 2px solid #c3e6cb;
+  
+.input-error {
+  border-color: #d9534f !important;
+  background: #fff6f6;
 }
+
+.error-text {
+  color: #d9534f;
+  font-size: 0.85rem;
+  font-weight: 500;
+  position: absolute;
+  bottom: -20px; /* adjust to sit below input */
+  left: 1rem;
+
+}
+
+/* ============= */
+/* Banner overlays */
+.form-success-compact-overlay,
+.form-error-banner-overlay {
+  position: absolute;
+  top: 42rem; /* adjust distance from top */
+  left: 67.8%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  padding: 22px 40px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  pointer-events: none; /* lets you click through if needed */
+}
+
+/* Success style */
+.form-success-compact-overlay {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+/* Error style */
+.form-error-banner-overlay {
+  background-color: #f44336;
+  color: #fff;
+}
+
+
 
 /* === RESPONSIVE === */
 @media (max-width: 968px) {

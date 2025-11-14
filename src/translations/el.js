@@ -1,16 +1,20 @@
+// Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Đ Ñ Ó Ô Õ Ö Χ Ø Ù
+// A B Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω
+
+
 export const el = {
     general: {
         phone: "6912345669",
         email: "woodcarver@woodmail.com"
     },
     header: {
-        woodcarverName: "Παναγιώτης",
-        woodcarverSurname: "Μπέκος",
-        woodcarverSpeciality: "Ξυλογλύπτης",
-        main: "Αρχική",
-        gallery: "Δημιουργίες",
-        about: "Το Εργαστήρι",
-        contact: "Επικοινωνία"
+        woodcarverName: "Παναγιωτης",
+        woodcarverSurname: "Μπεκος",
+        woodcarverSpeciality: "Ξυλογλυπτης",
+        main: "Αρχικη",
+        gallery: "Δημιουργιες",
+        about: "Το Εργαστηρι",
+        contact: "Επικοινωνια"
     },
     footer: {
         woodcarverFullName: "Παναγιώτης Μπέκος",
@@ -21,25 +25,25 @@ export const el = {
         contact: "Επικοινωνία"
     },
     main: {
-        heroTitle: "Ξυλογλυπτική",
+        heroTitle: "Ξυλογλυπτικη",
         heroSubtitle: "\"H τέχνη που έδωσε στον άνθρωπο τη δυνατότητα να εκφράσει έναν ολοκληρωμένο και μοναδικό τρόπο αισθητικής αντίληψης μέσω της πλαστικότητας του ξύλου\"",
         gallerySubtitle: "ΚΑΤΗΓΟΡΙΕΣ",
-        galleryTitle: "Δημιουργίες",
+        galleryTitle: "Δημιουργιες",
         textToGallery: "Ανακαλύψτε όλες τις δημιουργίες μου",
         buttonToGallery: "Δείτε τη συλλογή",
         contactSubtitle: "ΕΠΙΚΟΙΝΩΝΙΑ",
-        contactTitle: "Eπικοινωνήστε μαζί μου",
+        contactTitle: "Eπικοινωνηστε μαζι μου",
         footerImageText: "\"...καὶ ἔστω ἡ λαμπρότης Κυρίου τοῦ Θεοῦ ἡμῶν ἐφ᾿ ἡμᾶς, καὶ τὰ ἔργα τῶν χειρῶν ἡμῶν κατεύθυνον ἐφ᾿ ἡμᾶς καὶ τὸ ἔργον τῶν χειρῶν ἡμῶν κατεύθυνον\" - Ψαλμός 89:17"},
     gallery: {
-        heroTitle: "Ξυλογλυπτική Τέχνη",
+        heroTitle: "Ξυλογλυπτικη Τεχνη",
         heroSubtitle: "Ξυλόγλυπτα έργα τέχνης φτιαγμένα με μεράκι και αγάπη για την παράδοση",
-        title: "Δημιουργίες",
+        title: "Δημιουργιες",
         subtitle: "ΚΑΤΗΓΟΡΙΕΣ",
         footerImageText: "\"... ὃ ἐὰν ποιῆτε, ἐκ ψυχῆς ἐργάζεσθε ὡς τῷ Κυρίῳ καὶ οὐκ ἀνθρώποις\" - Πρὸς Κολοσσαεῖς 3:23"},
     about: {
-        heroTitle: "Εργαστήρι Ξυλογλυπτικής",
+        heroTitle: "Εργαστηρι Ξυλογλυπτικης",
         heroSubtitle: "Ο χώρος όπου η ξυλογλυπτική τέχνη ζωντανεύει",
-        title: "Το Εργαστήρι μας",
+        title: "Το Εργαστηρι μας",
         subtitle: "ΙΣΤΟΡΙΑ",
         aboutMeTitle: "Σχετικά με μένα", // eslint-disable-next-line
         aboutMeText: "Η στάση μου απέναντι σ' αυτή την παράδοση είναι στάση μελέτης και μαθητείας πάνω στα έργα μεγάλων ξυλογλυπτών ,\
@@ -52,9 +56,9 @@ export const el = {
         footerImageText: "\"... αὐτοῦ γάρ ἐσμέν ποίημα, κτισθέντες ἐν Χριστῷ Ἰησοῦ ἐπὶ ἔργοις ἀγαθοῖς\" - προς Ἐφεσίους 2:10"
     },
     contact: {
-        heroTitle: "Επικοινωνία",
+        heroTitle: "Επικοινωνια",
         heroSubtitle: "Επικοινωνήστε μαζί μου για περισσότερες πληροφορίες",
-        title: "Eπικοινωνήστε μαζί μου",
+        title: "Eπικοινωνηστε μαζι μου",
         subtitle: "ΕΠΙΚΟΙΝΩΝΙΑ",
         contactInfoTitle: "Στοιχεία Επικοινωνίας",
         phoneTitle: "ΤΗΛΕΦΩΝΟ",
@@ -91,6 +95,18 @@ export const el = {
         karekles: "Καρέκλες",
         psaltiria: "Ψαλτήρια",
         lipsanothikes: "Λειψανοθήκες"
+    },
+    contactMessages: {
+        failCopyEmail: "Αποτυχία αντιγραφής email:",
+        failCopyPhone: "Αποτυχία αντιγραφής τηλεφώνου:",
+        nameRequired: "Το όνομα είναι υποχρεωτικό.",
+        emailRequired: "Το email είναι υποχρεωτικό.",
+        nameInvalid: "Το όνομα περιέχει μη έγκυρους χαρακτήρες.",
+        emailInvalid: "Μη έγκυρο email.",
+        messageRequired: "Το μήνυμα είναι υποχρεωτικό.",
+        sendFailed: "Αποτυχία αποστολής. Παρακαλώ δοκιμάστε ξανά.",
+        emailCopied: "Το Email αντιγράφηκε!",
+        phoneCopied: "Το τηλέφωνο αντιγράφηκε!",
     }
 
 };
