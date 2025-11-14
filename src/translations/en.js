@@ -22,7 +22,8 @@ export const en = {
     },
     main: {
         heroTitle: "Woodcarving",
-        heroSubtitle: "\"The art that gave mankind the ability to express a complete and unique way of aesthetic perception through the plasticity of wood\"",
+        // heroSubtitle: "\"The art that gave mankind the ability to express a complete and unique way of aesthetic perception through the plasticity of wood\"",
+        heroSubtitle: "The art that carves stories into the heart of the wood",
         gallerySubtitle: "CATEGORIES",
         galleryTitle: "Creations",
         textToGallery: "Discover all my creations",
@@ -80,6 +81,10 @@ export const en = {
         footerImageText: "\"...look upon your servants and their work, and guide their children\" - Psalm 90:16"
     },
     categories: {
+        main: "Home",
+        gallery: "Gallery",
+        about: "About",
+        contact: "Contact",
         templa: "Iconostases",
         proskinitaria: "Icon Stands",
         stasidia: "Choir Stalls",

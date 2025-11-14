@@ -15,10 +15,10 @@ const Breadcrumb = () => {
 
   useEffect(() => {
     const titleMapping = {
-      "": t.header.main,
-      "gallery": t.header.gallery,
-      "about": t.header.about,
-      "contact": t.header.contact,
+      "": t.categories.main,
+      "gallery": t.categories.gallery,
+      "about": t.categories.about,
+      "contact": t.categories.contact,
       "templa": t.categories.templa,
       "proskinitaria": t.categories.proskinitaria,
       "stasidia": t.categories.stasidia,
@@ -46,7 +46,7 @@ const Breadcrumb = () => {
 
   return (
     <nav className="breadcrumb">
-      <Link to="/">{t.header.main}</Link>
+      <Link to="/">{t.categories.main}</Link>
       {breadcrumbs.map((crumb, index) => (
         <span key={crumb.path}>
           {" › "}

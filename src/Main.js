@@ -20,7 +20,7 @@ function Main(props) {
         <>
             <div className="main">
                 <Header />
-                <HeroScreen image={heroImage} title={t.main.heroTitle} text={t.main.heroSubtitle} height="95vh" opacity="0.82"/>
+                <HeroScreen image={heroImage} title={t.main.heroTitle} text={t.main.heroSubtitle} height="95vh" opacity="0.78" title_size="5.3rem"/>
                 <div className="content">
                     <div data-aos="fade-up">
                         <MainAbout />
