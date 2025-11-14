@@ -1,20 +1,20 @@
 {
   "templa": {
     "title": "Τέμπλα",
-    "hero": "/images/gallery/templa/templa.jpg",
+    "hero": "woodcarver/gallery/templa/templa",
     "images": [
-      "/images/gallery/templa/1.jpg",
-      "/images/gallery/templa/2.jpg",
-      "/images/gallery/templa/3.jpg",
-      "/images/gallery/templa/4.jpg",
-      "/images/gallery/templa/5.jpg",
-      "/images/gallery/templa/6.jpg",
-      "/images/gallery/templa/7.jpg",
-      "/images/gallery/templa/8.jpg",
-      "/images/gallery/templa/9.jpg",
-      "/images/gallery/templa/10.jpg",
-      "/images/gallery/templa/11.jpg",
-      "/images/gallery/templa/12.jpg"
+      "woodcarver/gallery/templa/1",
+      "woodcarver/gallery/templa/2",
+      "woodcarver/gallery/templa/3",
+      "woodcarver/gallery/templa/4",
+      "woodcarver/gallery/templa/5",
+      "woodcarver/gallery/templa/6",
+      "woodcarver/gallery/templa/7",
+      "woodcarver/gallery/templa/8",
+      "woodcarver/gallery/templa/9",
+      "woodcarver/gallery/templa/10",
+      "woodcarver/gallery/templa/11",
+      "woodcarver/gallery/templa/12"
     ]
   }
 }

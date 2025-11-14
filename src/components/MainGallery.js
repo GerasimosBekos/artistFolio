@@ -2,6 +2,7 @@ import "./MainGallery.css";
 import "../Main.css";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
+import { getCloudinaryUrl } from '../utils/cloudinary';
 
 function MainGallery(props) {
 
@@ -12,8 +13,12 @@ function MainGallery(props) {
             <section id="gallery" className="content-section">
                 <div className="content-gallery"> 
                     <div className="content-gallery-grid">
+                        {/* DOOOT TTHEEE RESSTT */}
                         <Link to="/gallery/templa" className="gallery-item wide">
-                            <img src="/images/categories/templo.jpg" alt="Τέμπλα" />
+                            <img 
+                                src={getCloudinaryUrl('woodcarver/categories/templo', { width: 500 })} 
+                                alt="Τέμπλα" 
+                            />
                             <span>{t.categories.templa}</span>
                         </Link>
 

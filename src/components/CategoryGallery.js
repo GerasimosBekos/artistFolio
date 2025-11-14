@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import galleryData from "../data/galleryData.json";
 import Zoom from "react-image-zooom";
 import "./CategoryGallery.css";
+import { getCloudinaryUrl } from "../utils/cloudinary";
 
 const CategoryGallery = () => {
   const { category } = useParams();
@@ -16,6 +17,15 @@ const CategoryGallery = () => {
   const [imageClasses, setImageClasses] = useState({});
   const [orderedImages, setOrderedImages] = useState([]);
 
+  // Convert public IDs to full URLs
+  const getImageUrl = (publicId, width = 800) => {
+    // If it's already a full URL, return it
+    if (publicId.startsWith('http')) return publicId;
+    
+    // Otherwise, generate Cloudinary URL
+    return getCloudinaryUrl(publicId, { width, quality: 'auto' });
+  };
+
   // --- Detect proportions and auto-balance grid order ---
   useEffect(() => {
     if (!data || !data.images) return;
@@ -24,7 +34,7 @@ const CategoryGallery = () => {
       const imagesInfo = [];
 
       await Promise.all(
-        data.images.map((src) => {
+        data.images.map((publicId) => {
           return new Promise((resolve) => {
             const img = new Image();
             img.onload = () => {
@@ -32,10 +42,16 @@ const CategoryGallery = () => {
               let cls = "";
               if (aspect > 1.3) cls = "wide";
               else if (aspect < 0.8) cls = "tall";
-              imagesInfo.push({ src, aspect, cls });
+              imagesInfo.push({ publicId, aspect, cls });
               resolve();
             };
-            img.src = src;
+            img.onerror = () => {
+              console.error(`Failed to load image: ${publicId}`);
+              // Still resolve to not block other images
+              imagesInfo.push({ publicId, aspect: 1, cls: "" });
+              resolve();
+            };
+            img.src = getImageUrl(publicId, 400);
           });
         })
       );
@@ -56,12 +72,12 @@ const CategoryGallery = () => {
       // Set state for both classes and order
       setImageClasses(
         mixed.reduce((acc, item) => {
-          acc[item.src] = item.cls;
+          acc[item.publicId] = item.cls;
           return acc;
         }, {})
       );
 
-      setOrderedImages(mixed.map((i) => i.src));
+      setOrderedImages(mixed.map((i) => i.publicId));
     };
 
     loadImages();
@@ -102,20 +118,27 @@ const CategoryGallery = () => {
   return (
     <>
       <Header />
-      <HeroScreen image={data.hero} title={data.title} height="60vh" />
+      <HeroScreen 
+        image={getImageUrl(data.hero, 1920)} 
+        title={data.title} 
+        height="60vh" 
+      />
       <Breadcrumb />
 
       <div className="category-gallery">
         <h1 className="category-title">{data.title}</h1>
 
         <div className="category-grid">
-          {orderedImages.map((src, i) => (
+          {orderedImages.map((publicId, i) => (
             <div
               key={i}
-              className={`category-item ${imageClasses[src] || ""}`}
+              className={`category-item ${imageClasses[publicId] || ""}`}
               onClick={() => setSelectedIndex(i)}
             >
-              <img src={src} alt={`${data.title} ${i + 1}`} />
+              <img 
+                src={getImageUrl(publicId, 600)} 
+                alt={`${data.title} ${i + 1}`} 
+              />
             </div>
           ))}
         </div>
@@ -145,10 +168,10 @@ const CategoryGallery = () => {
 
           <div
             className="zoom-wrapper"
-            onClick={(e) => e.stopPropagation()} // prevent close when zooming
+            onClick={(e) => e.stopPropagation()}
           >
             <Zoom
-              src={orderedImages[selectedIndex]}
+              src={getImageUrl(orderedImages[selectedIndex], 2000)}
               alt={`Full view ${selectedIndex + 1}`}
               zoom="200"
               transitionTime={0.4}
