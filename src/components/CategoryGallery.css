@@ -44,19 +44,30 @@
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background-color: #f0f0f0; /* Placeholder color while loading */
 }
 
-/* IMAGE INSIDE ITEM */
-.category-item img {
+/* IMAGE INSIDE ITEM - Updated for absolute positioning */
+/* .category-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
-}
+} */
 
 /* HOVER ZOOM */
-.category-item:hover img {
+/* .category-item:hover img {
   transform: scale(1.05);
+} */
+
+/* ===== EACH IMAGE ITEM ===== */
+.category-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #f0f0f0; /* Placeholder color while loading */
+  /* REMOVED: transition from here - now handled in JS */
 }
 
 /* SIZE VARIATIONS */

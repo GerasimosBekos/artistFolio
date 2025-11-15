@@ -11,7 +11,7 @@ import { useLanguage } from "./contexts/LanguageContext";
 
 function Gallery(props) {
 
-    const heroImage = "/images/contact.jpg";
+    const heroImage = "/images/gallery.jpg";
     
     // Image Footer
     const image = "/images/woodcarving1.jpg";
