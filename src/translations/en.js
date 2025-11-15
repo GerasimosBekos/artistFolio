@@ -38,7 +38,8 @@ export const en = {
         title: "Creations",
         subtitle: "CATEGORIES",
         footerImageText: "\"...whatever you do, work at it with all your heart, as working for the Lord, not for human masters\" - Colossians 3:23",
-        return: "← Return to categories",
+        return: "← Back to categories",
+        notAvailable: "Only templa you can choose",
     },
     about: {
         heroTitle: "Woodcarving Workshop",

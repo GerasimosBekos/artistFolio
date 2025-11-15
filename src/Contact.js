@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import HeroScreen from "./components/HeroScreen";
 import Breadcrumb from "./components/Breadcrumb";
 import MainContact from "./components/MainContact";
-import Image from "./components/Image";
+import ImageText from "./components/ImageText";
 import Footer from "./components/Footer";
 import Title from "./components/Title";
 import { useLanguage } from "./contexts/LanguageContext";
@@ -29,7 +29,7 @@ function Contact(props) {
                 <MainContact />
                 
             </div>
-            <Image text={t.contact.footerImageText} image={image} height={image_height} textSize={image_textSize} />
+            <ImageText text={t.contact.footerImageText} image={image} height={image_height} textSize={image_textSize} />
             <Footer />
         </>
     );

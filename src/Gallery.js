@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import MainGallery from "./components/MainGallery";
 import HeroScreen from "./components/HeroScreen";
 import Breadcrumb from "./components/Breadcrumb";
-import Image from "./components/Image";
+import ImageText from "./components/ImageText";
 import Footer from "./components/Footer";
 import Title from "./components/Title";
 import { useLanguage } from "./contexts/LanguageContext";
@@ -31,7 +31,7 @@ function Gallery(props) {
                     <MainGallery/>
                 </div>
             </div>
-            <Image text={t.gallery.footerImageText} image={image} height={image_height} textSize={image_textSize}/>
+            <ImageText text={t.gallery.footerImageText} image={image} height={image_height} textSize={image_textSize}/>
             <Footer />
         </>
     );

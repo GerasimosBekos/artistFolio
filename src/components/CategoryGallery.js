@@ -9,8 +9,8 @@ import Zoom from "react-image-zooom";
 import "./CategoryGallery.css";
 import { getCloudinaryUrl } from "../utils/cloudinary";
 import { useLanguage } from "../contexts/LanguageContext";
-import Title from "./Title";
-import Image from "./Image";
+import Title from "../components/Title";
+import ImageText from "../components/ImageText";
 
 // ===================================================================
 // LAZY LOADING IMAGE COMPONENT
@@ -122,24 +122,13 @@ const CategoryGallery = () => {
   const { t } = useLanguage();
 
   const getCategoryTitle = () => {
-    // Try categoriesNoTones first, fallback to categories, then data.title
-    return t.categoriesNoTones?.[category] || t.categories?.[category] || data?.title || category;
+    return t.categoriesNoTones?.[category] || data?.title || category;
   };
-
-  // Image Footer
-    const image = "/images/woodcarving1.jpg";
-    const image_height = "350px";
-    const image_textSize = "2rem";
-
 
   // KEY ASPECT 5: Detect Image Proportions
   // Uses tiny thumbnails to determine if image is wide/tall/normal
   useEffect(() => {
-
-    if (!data || !data.images || data.images.length === 0) {
-      console.warn(`No images found for category: ${category}`);
-      return;
-    }
+    if (!data || !data.images) return;
 
     const loadImages = async () => {
       const imagesInfo = [];
@@ -192,7 +181,7 @@ const CategoryGallery = () => {
     };
 
     loadImages();
-  }, [data, category]);
+  }, [data]);
 
   // KEY ASPECT 7: Preload Adjacent Images in Lightbox
   // When lightbox opens or navigates, preload next/prev images
@@ -241,17 +230,18 @@ const CategoryGallery = () => {
     return () => window.removeEventListener("keydown", handleKey);
   }, [selectedIndex, orderedImages, data]);
 
-  // --- If category doesn't exist ---
+  // --- If category doesn't exist --
   if (!data) {
     return (
       <>
         <Header />
         <div className="category-gallery" style={{marginTop: "250px", fontFamily: " 'Zen Old Mincho', serif", textAlign: "center"}}>
-          <h1>Μόνο Τέμπλα μπορείτε να διαλέξετε (τα υπόλοιπα είναι προς υλοποίηση)</h1>
+          <h1>{t.gallery.notAvailable}</h1>
           <Link to="/gallery" className="gallery-back">
-            {/* {t.gallery.return} */}
+            {t.gallery.return}
           </Link>
         </div>
+        <ImageText text={t.gallery.footerImageText} image="/images/woodcarving1.jpg" height="350px" textSize="2rem"/>
         <Footer />
       </>
     );
@@ -287,7 +277,7 @@ const CategoryGallery = () => {
 
         <div>
           <Link to="/gallery" className="gallery-back">
-            {/* {t.gallery.return}   */}
+            {t.gallery.return}
           </Link>
         </div>
       </div>
@@ -346,7 +336,7 @@ const CategoryGallery = () => {
           </span>
         </div>
       )}
-      <Image text={t.gallery.footerImageText} image={image} height={image_height} textSize={image_textSize}/>
+      <ImageText text={t.gallery.footerImageText} image="/images/woodcarving1.jpg" height="350px" textSize="2rem"/>
       <Footer />
     </>
   );

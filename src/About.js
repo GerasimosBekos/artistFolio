@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import HeroScreen from "./components/HeroScreen";
 import MainAbout from "./components/MainAbout";
 import Breadcrumb from "./components/Breadcrumb";
-import Image from "./components/Image";
+import ImageText from "./components/ImageText";
 import Footer from "./components/Footer";
 import Title from "./components/Title";
 import { useLanguage } from "./contexts/LanguageContext";
@@ -30,7 +30,7 @@ function About(props) {
                 <MainAbout />
                 
             </div>
-            <Image text={t.about.footerImageText} image={image} height={image_height} textSize={image_textSize}/>
+            <ImageText text={t.about.footerImageText} image={image} height={image_height} textSize={image_textSize}/>
             <Footer />
         </>
     );

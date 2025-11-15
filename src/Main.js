@@ -5,7 +5,7 @@ import MainAbout from "./components/MainAbout";
 import MainGallery from "./components/MainGallery";
 import MainToGallery from "./components/MainToGallery";
 import MainContact from "./components/MainContact";
-import Image from "./components/Image";
+import ImageText from "./components/ImageText";
 import Footer from "./components/Footer";
 import Title from "./components/Title";
 import "./App.css";
@@ -35,7 +35,7 @@ function Main(props) {
                     <Title title={t.main.contactTitle} subtitle={t.main.contactSubtitle} />
                     <MainContact />
                 </div>
-                <Image text={t.main.footerImageText} image={'/images/footer.jpg'} height="350px" textSize="2rem"/>
+                <ImageText text={t.main.footerImageText} image={'/images/footer.jpg'} height="350px" textSize="2rem"/>
                 <Footer />
             </div>
             
