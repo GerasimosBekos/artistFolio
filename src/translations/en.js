@@ -37,7 +37,8 @@ export const en = {
         heroSubtitle: "Handcrafted wooden artworks made with passion and love for tradition",
         title: "Creations",
         subtitle: "CATEGORIES",
-        footerImageText: "\"...whatever you do, work at it with all your heart, as working for the Lord, not for human masters\" - Colossians 3:23"
+        footerImageText: "\"...whatever you do, work at it with all your heart, as working for the Lord, not for human masters\" - Colossians 3:23",
+        return: "← Return to categories",
     },
     about: {
         heroTitle: "Woodcarving Workshop",
@@ -81,6 +82,25 @@ export const en = {
         footerImageText: "\"...look upon your servants and their work, and guide their children\" - Psalm 90:16"
     },
     categories: {
+        main: "Home",
+        gallery: "Gallery",
+        about: "About",
+        contact: "Contact",
+        templa: "Iconostases",
+        proskinitaria: "Icon Stands",
+        stasidia: "Choir Stalls",
+        epitafioi: "Epitaphios Shrines",
+        kornizes: "Frames",
+        stavroi: "Crosses",
+        pagkaria: "Donation Boxes",
+        thronoi: "Bishop Thrones",
+        polithrones: "Armchairs",
+        amvones: "Pulpits",
+        karekles: "Chairs",
+        psaltiria: "Chanter Stands",
+        lipsanothikes: "Reliquaries"
+    },
+    categoriesNoTones: {
         main: "Home",
         gallery: "Gallery",
         about: "About",

@@ -8,6 +8,9 @@ import galleryData from "../data/galleryData.json";
 import Zoom from "react-image-zooom";
 import "./CategoryGallery.css";
 import { getCloudinaryUrl } from "../utils/cloudinary";
+import { useLanguage } from "../contexts/LanguageContext";
+import Title from "./Title";
+import Image from "./Image";
 
 // ===================================================================
 // LAZY LOADING IMAGE COMPONENT
@@ -116,10 +119,27 @@ const CategoryGallery = () => {
   const [imageClasses, setImageClasses] = useState({});
   const [orderedImages, setOrderedImages] = useState([]);
 
+  const { t } = useLanguage();
+
+  const getCategoryTitle = () => {
+    // Try categoriesNoTones first, fallback to categories, then data.title
+    return t.categoriesNoTones?.[category] || t.categories?.[category] || data?.title || category;
+  };
+
+  // Image Footer
+    const image = "/images/woodcarving1.jpg";
+    const image_height = "350px";
+    const image_textSize = "2rem";
+
+
   // KEY ASPECT 5: Detect Image Proportions
   // Uses tiny thumbnails to determine if image is wide/tall/normal
   useEffect(() => {
-    if (!data || !data.images) return;
+
+    if (!data || !data.images || data.images.length === 0) {
+      console.warn(`No images found for category: ${category}`);
+      return;
+    }
 
     const loadImages = async () => {
       const imagesInfo = [];
@@ -172,37 +192,36 @@ const CategoryGallery = () => {
     };
 
     loadImages();
-  }, [data]);
+  }, [data, category]);
 
   // KEY ASPECT 7: Preload Adjacent Images in Lightbox
   // When lightbox opens or navigates, preload next/prev images
   useEffect(() => {
     if (selectedIndex === null || orderedImages.length === 0) return;
 
-    // Preload current image (if not already loaded)
+    // Preload with 'limit' crop mode (no cropping)
     const currentImg = new Image();
     currentImg.src = getCloudinaryUrl(orderedImages[selectedIndex], { 
       width: 2400, 
-      quality: 90 
+      quality: 90,
+      crop: 'limit'  // ⭐ FIX: Don't crop preloaded images
     });
 
-    // FIX: Preload NEXT image
     const nextIndex = (selectedIndex + 1) % orderedImages.length;
     const nextImg = new Image();
     nextImg.src = getCloudinaryUrl(orderedImages[nextIndex], { 
       width: 2400, 
-      quality: 90 
+      quality: 90,
+      crop: 'limit'  // ⭐ FIX
     });
 
-    // FIX: Preload PREVIOUS image
     const prevIndex = (selectedIndex - 1 + orderedImages.length) % orderedImages.length;
     const prevImg = new Image();
     prevImg.src = getCloudinaryUrl(orderedImages[prevIndex], { 
       width: 2400, 
-      quality: 90 
+      quality: 90,
+      crop: 'limit'  // ⭐ FIX
     });
-
-    console.log(`🖼️ Preloading: current=${selectedIndex}, next=${nextIndex}, prev=${prevIndex}`);
 
   }, [selectedIndex, orderedImages]);
 
@@ -230,7 +249,7 @@ const CategoryGallery = () => {
         <div className="category-gallery" style={{marginTop: "250px", fontFamily: " 'Zen Old Mincho', serif", textAlign: "center"}}>
           <h1>Μόνο Τέμπλα μπορείτε να διαλέξετε (τα υπόλοιπα είναι προς υλοποίηση)</h1>
           <Link to="/gallery" className="gallery-back">
-            ← Επιστροφή στις κατηγορίες
+            {/* {t.gallery.return} */}
           </Link>
         </div>
         <Footer />
@@ -243,13 +262,15 @@ const CategoryGallery = () => {
       <Header />
       <HeroScreen 
         image={data.hero} 
-        title={data.title} 
+        // title={data.title}
+        title={getCategoryTitle()} 
         height="60vh" 
       />
       <Breadcrumb />
 
       <div className="category-gallery">
-        <h1 className="category-title">{data.title}</h1>
+        {/* <h1 className="category-title">{getCategoryTitle()}</h1> */}
+        <Title title={getCategoryTitle()} />
 
         <div className="category-grid">
           {orderedImages.map((publicId, i) => (
@@ -266,7 +287,7 @@ const CategoryGallery = () => {
 
         <div>
           <Link to="/gallery" className="gallery-back">
-            ← Επιστροφή στις κατηγορίες
+            {/* {t.gallery.return}   */}
           </Link>
         </div>
       </div>
@@ -293,8 +314,9 @@ const CategoryGallery = () => {
           >
             <Zoom
               src={getCloudinaryUrl(orderedImages[selectedIndex], { 
-                width: 2400, 
-                quality: 90 
+                width: 2400,      // Max width
+                quality: 90,      // High quality
+                crop: 'limit'     // ⭐ FIX: Never crop, just limit size
               })}
               alt={`Full view ${selectedIndex + 1}`}
               zoom="200"
@@ -324,7 +346,7 @@ const CategoryGallery = () => {
           </span>
         </div>
       )}
-
+      <Image text={t.gallery.footerImageText} image={image} height={image_height} textSize={image_textSize}/>
       <Footer />
     </>
   );

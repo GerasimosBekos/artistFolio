@@ -41,6 +41,7 @@ export const el = {
         title: "Δημιουργιες",
         subtitle: "ΚΑΤΗΓΟΡΙΕΣ",
         footerImageText: "\"... ὃ ἐὰν ποιῆτε, ἐκ ψυχῆς ἐργάζεσθε ὡς τῷ Κυρίῳ καὶ οὐκ ἀνθρώποις\" - Πρὸς Κολοσσαεῖς 3:23"},
+        return: "← Επιστροφή στις κατηγορίες",
     about: {
         heroTitle: "Εργαστηρι Ξυλογλυπτικης",
         heroSubtitle: "Ο χώρος όπου η ξυλογλυπτική τέχνη ζωντανεύει",
@@ -100,6 +101,25 @@ export const el = {
         karekles: "Καρέκλες",
         psaltiria: "Ψαλτήρια",
         lipsanothikes: "Λειψανοθήκες"
+    },
+    categoriesNoTones: {
+        main: "Αρχικη",
+        gallery: "Δημιουργιες",
+        about: "Το Εργαστηρι",
+        contact: "Επικοινωνια",
+        templa: "Τεμπλα",
+        proskinitaria: "Προσκυνηταρια",
+        stasidia: "Στασιδια",
+        epitafioi: "Επιταφιοι",
+        kornizes: "Κορνιζες",
+        stavroi: "Σταυροι",
+        pagkaria: "Παγκαρια",
+        thronoi: "Θρονοι",
+        polithrones: "Πολυθρονες",
+        amvones: "Αμβωνες",
+        karekles: "Καρεκλες",
+        psaltiria: "Ψαλτηρια",
+        lipsanothikes: "Λειψανοθηκες"
     },
     contactMessages: {
         failCopyEmail: "Αποτυχία αντιγραφής email:",
