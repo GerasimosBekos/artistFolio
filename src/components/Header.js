@@ -89,7 +89,7 @@ function Header() {
             }
           }}
         >
-          <img src="/images/logo.png" alt="Woodcarver Logo" className="logo" />
+          <img src="/images/other/logo.png" alt="Woodcarver Logo" className="logo" />
           <div className="artist-name">
             <span className="surname">{t.header.woodcarverSurname}</span>
             <span className="name">&nbsp;&nbsp;{t.header.woodcarverName}</span>

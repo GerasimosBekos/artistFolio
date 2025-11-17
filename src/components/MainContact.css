@@ -25,7 +25,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url('/public/images/texture.jpg') center/cover no-repeat;
+  background: url('/public/images/other/texture.jpg') center/cover no-repeat;
   opacity: 0.46;
   z-index: 0;
   mix-blend-mode: multiply;
@@ -286,7 +286,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url('/public/images/texture.jpg') center/cover no-repeat;
+  background: url('/public/images/other/texture.jpg') center/cover no-repeat;
   opacity: 0.45;
   z-index: 0;
   mix-blend-mode: multiply;

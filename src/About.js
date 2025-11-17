@@ -10,10 +10,10 @@ import { useLanguage } from "./contexts/LanguageContext";
 
 function About(props) {
 
-    const heroImage = "/images/about4.jpg";
+    const heroImage = "/images/hero/about.jpg";
 
     // Image component props
-    const image = "/images/woodcarving2.jpg";
+    const image = "/images/footer/about.jpg";
     const image_height = "350px";
     const image_textSize = "2rem";
 

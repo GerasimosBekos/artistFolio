@@ -1,7 +1,7 @@
 .gallery {
   font-family: var(--font-main);
   background-color: #fff;
-  background-image: url('/public/images/mainbg.png');
+  background-image: url('/public/images/other/mainbg.png');
   background-repeat: no-repeat;
   background-position: top left, bottom right;
   background-size: contain;

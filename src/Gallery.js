@@ -11,10 +11,10 @@ import { useLanguage } from "./contexts/LanguageContext";
 
 function Gallery(props) {
 
-    const heroImage = "/images/gallery.jpg";
+    const heroImage = "/images/hero/gallery.jpg";
     
     // Image Footer
-    const image = "/images/woodcarving1.jpg";
+    const image = "/images/footer/gallery.jpg";
     const image_height = "350px";
     const image_textSize = "2rem";
 
