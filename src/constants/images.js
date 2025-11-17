@@ -13,16 +13,18 @@ export const CLOUDINARY_IMAGES = {
   // Footer images
   footer: {
     main: 'woodcarver/footer/main',
-    woodcarving1: 'woodcarver/footer/woodcarving1',
-    woodcarving2: 'woodcarver/footer/woodcarving2',
-    woodcarving3: 'woodcarver/footer/woodcarving3',
+    about: 'woodcarver/footer/about',
+    contact: 'woodcarver/footer/contact',
+    gallery: 'woodcarver/footer/gallery',
   },
   
   // Misc images
   misc: {
-    artist: 'woodcarver/misc/artist',
-    handCrop: 'woodcarver/misc/hand_crop',
-    logo: 'woodcarver/misc/logo',
+    artist: 'woodcarver/other/artist',
+    logo: 'woodcarver/other/logo',
+    mainbg: 'woodcarver/other/mainbg',
+    texture: 'woodcarver/other/texture',
+    imageTextMain: 'woodcarver/other/image_text_main',
   },
   
   // Category thumbnails (for MainGallery.js)

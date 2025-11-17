@@ -2,6 +2,8 @@ import "./Header.css";
 import React, { useState, useEffect, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext"
+import { getCloudinaryUrl } from "../utils/cloudinary";
+import { CLOUDINARY_IMAGES } from "../constants/images";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -89,7 +91,15 @@ function Header() {
             }
           }}
         >
-          <img src="/images/other/logo.png" alt="Woodcarver Logo" className="logo" />
+          <img 
+            src={getCloudinaryUrl(CLOUDINARY_IMAGES.misc.logo, { 
+                width: 300, 
+                quality: 90,
+                format: 'auto'
+            })} 
+            alt="Woodcarver Logo" 
+            className="logo" 
+          />
           <div className="artist-name">
             <span className="surname">{t.header.woodcarverSurname}</span>
             <span className="name">&nbsp;&nbsp;{t.header.woodcarverName}</span>

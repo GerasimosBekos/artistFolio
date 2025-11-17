@@ -7,33 +7,39 @@ import ImageText from "./components/ImageText";
 import Footer from "./components/Footer";
 import Title from "./components/Title";
 import { useLanguage } from "./contexts/LanguageContext";
-
+import { CLOUDINARY_IMAGES } from "./constants/images";
 
 function Gallery(props) {
-
-    const heroImage = "/images/hero/gallery.jpg";
-    
-    // Image Footer
-    const image = "/images/footer/gallery.jpg";
-    const image_height = "350px";
-    const image_textSize = "2rem";
-
     const { t } = useLanguage();
 
     return (
         <>
             <Header />
-            <HeroScreen title={t.gallery.heroTitle} text={t.gallery.heroSubtitle} image={heroImage} height="70vh" opacity="0.8"/>
+            <HeroScreen 
+                title={t.gallery.heroTitle} 
+                text={t.gallery.heroSubtitle} 
+                image={CLOUDINARY_IMAGES.hero.gallery} 
+                height="70vh" 
+                opacity="0.8"
+            />
             <Breadcrumb />
+            
             <div className="gallery">
                 <Title title={t.gallery.title} subtitle={t.gallery.subtitle} /> 
                 <div data-aos="fade-up" data-aos-delay="200">
                     <MainGallery/>
                 </div>
             </div>
-            <ImageText text={t.gallery.footerImageText} image={image} height={image_height} textSize={image_textSize}/>
+            
+            <ImageText 
+                text={t.gallery.footerImageText} 
+                image={CLOUDINARY_IMAGES.footer.gallery} 
+                height="350px" 
+                textSize="2rem"
+            />
             <Footer />
         </>
     );
 }
+
 export default Gallery;

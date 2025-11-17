@@ -7,22 +7,16 @@ import ImageText from "./components/ImageText";
 import Footer from "./components/Footer";
 import Title from "./components/Title";
 import { useLanguage } from "./contexts/LanguageContext";
+import { CLOUDINARY_IMAGES } from "./constants/images";
 
 function About(props) {
-
-    const heroImage = "/images/hero/about.jpg";
-
-    // Image component props
-    const image = "/images/footer/about.jpg";
-    const image_height = "350px";
-    const image_textSize = "2rem";
 
     const {t} = useLanguage();
 
     return (
         <>
             <Header />
-            <HeroScreen title={t.about.heroTitle} text={t.about.heroSubtitle} image={heroImage} height="70vh" opacity="0.8"/>
+            <HeroScreen title={t.about.heroTitle} text={t.about.heroSubtitle} image={CLOUDINARY_IMAGES.hero.about} height="70vh" opacity="0.8"/>
             <Breadcrumb />
 
             <div className="about">
@@ -30,7 +24,12 @@ function About(props) {
                 <MainAbout />
                 
             </div>
-            <ImageText text={t.about.footerImageText} image={image} height={image_height} textSize={image_textSize}/>
+            <ImageText 
+                text={t.about.footerImageText} 
+                image={CLOUDINARY_IMAGES.footer.about} 
+                height="350px" 
+                textSize="2rem"
+            />
             <Footer />
         </>
     );

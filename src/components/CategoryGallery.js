@@ -11,6 +11,7 @@ import { getCloudinaryUrl } from "../utils/cloudinary";
 import { useLanguage } from "../contexts/LanguageContext";
 import Title from "../components/Title";
 import ImageText from "../components/ImageText";
+import { CLOUDINARY_IMAGES } from "../constants/images";
 
 // ===================================================================
 // LAZY LOADING IMAGE COMPONENT
@@ -241,7 +242,12 @@ const CategoryGallery = () => {
             {t.gallery.return}
           </Link>
         </div>
-        <ImageText text={t.gallery.footerImageText} image="/images/woodcarving1.jpg" height="350px" textSize="2rem"/>
+        <ImageText 
+          text={t.gallery.footerImageText} 
+          image={CLOUDINARY_IMAGES.footer.gallery} 
+          height="350px" 
+          textSize="2rem"
+        />
         <Footer />
       </>
     );
@@ -336,7 +342,12 @@ const CategoryGallery = () => {
           </span>
         </div>
       )}
-      <ImageText text={t.gallery.footerImageText} image="/images/woodcarving1.jpg" height="350px" textSize="2rem"/>
+      <ImageText 
+        text={t.gallery.footerImageText} 
+        image={CLOUDINARY_IMAGES.footer.gallery} 
+        height="350px" 
+        textSize="2rem"
+      />
       <Footer />
     </>
   );

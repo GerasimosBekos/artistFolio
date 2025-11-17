@@ -1,6 +1,8 @@
 import "../Main.css";
 import "./MainAbout.css";
-import { useLanguage } from "../contexts/LanguageContext"
+import { useLanguage } from "../contexts/LanguageContext";
+import { getCloudinaryUrl} from "../utils/cloudinary";
+import { CLOUDINARY_IMAGES } from "../constants/images";
 
 function MainAbout(props) {
 
@@ -11,7 +13,15 @@ function MainAbout(props) {
             <section id="about" className="content-section">
                 <div className="content-about">
                     <div className="content-about-image">
-                        <img src="/images/artist.jpeg" alt="About Me" className="content-about-img" />
+                        <img 
+                            src={getCloudinaryUrl(CLOUDINARY_IMAGES.misc.artist, { 
+                                width: 400, 
+                                quality: 85,
+                                format: 'auto'
+                            })} 
+                            alt="About Me" 
+                            className="content-about-img" 
+                        />
                     </div>
                     <div className="content-about-text">
                         <div className="content-about-text-title">
