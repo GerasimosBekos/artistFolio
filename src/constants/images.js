@@ -18,8 +18,8 @@ export const CLOUDINARY_IMAGES = {
     gallery: 'woodcarver/footer/gallery',
   },
   
-  // Misc images
-  misc: {
+  // other images
+  other: {
     artist: 'woodcarver/other/artist',
     logo: 'woodcarver/other/logo',
     mainbg: 'woodcarver/other/mainbg',

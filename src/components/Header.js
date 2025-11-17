@@ -92,7 +92,7 @@ function Header() {
           }}
         >
           <img 
-            src={getCloudinaryUrl(CLOUDINARY_IMAGES.misc.logo, { 
+            src={getCloudinaryUrl(CLOUDINARY_IMAGES.other.logo, { 
                 width: 300, 
                 quality: 90,
                 format: 'auto'

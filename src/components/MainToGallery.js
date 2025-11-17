@@ -8,7 +8,7 @@ import { CLOUDINARY_IMAGES } from "../constants/images";
 function MainToGallery(props) {
     const {t} = useLanguage();
     
-    const backgroundUrl = getCloudinaryUrl(CLOUDINARY_IMAGES.misc.imageTextMain, {
+    const backgroundUrl = getCloudinaryUrl(CLOUDINARY_IMAGES.other.imageTextMain, {
         width: 1920,
         quality: 85,
         format: 'auto'

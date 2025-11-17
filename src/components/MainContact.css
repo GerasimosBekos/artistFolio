@@ -25,8 +25,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url('/public/images/other/texture.jpg') center/cover no-repeat;
-  opacity: 0.46;
+  /* background: url('/public/images/other/texture.jpg') center/cover no-repeat; */
+  opacity: 0.45;
   z-index: 0;
   mix-blend-mode: multiply;
 }
@@ -286,7 +286,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url('/public/images/other/texture.jpg') center/cover no-repeat;
+  /* background: url('/public/images/other/texture.jpg') center/cover no-repeat; */
   opacity: 0.45;
   z-index: 0;
   mix-blend-mode: multiply;
@@ -298,9 +298,9 @@
 }
 
 .contact-form-heading {
-  font-size: 1.9rem;
+  font-size: 2rem;
   font-weight: 600;
-  color: #5c3d1e;
+  color: #5c3d1e; 
   margin: 0 0 0.8rem 0;
   /* font-family: "Zen Old Mincho", serif; */
   font-family: var(--font-main);

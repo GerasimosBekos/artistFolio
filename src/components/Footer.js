@@ -15,8 +15,8 @@ function Footer(props) {
                 </div>
 
                 <div className="footer-center">
-                <Link to="/about" className="footer-link">{t.footer.about}</Link>
                 <Link to="/gallery" className="footer-link">{t.footer.gallery}</Link>
+                <Link to="/about" className="footer-link">{t.footer.about}</Link>
                 <Link to="/contact" className="footer-link">{t.footer.contact}</Link>
                 
                 </div>

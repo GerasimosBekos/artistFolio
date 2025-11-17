@@ -14,7 +14,7 @@ function MainAbout(props) {
                 <div className="content-about">
                     <div className="content-about-image">
                         <img 
-                            src={getCloudinaryUrl(CLOUDINARY_IMAGES.misc.artist, { 
+                            src={getCloudinaryUrl(CLOUDINARY_IMAGES.other.artist, { 
                                 width: 400, 
                                 quality: 85,
                                 format: 'auto'

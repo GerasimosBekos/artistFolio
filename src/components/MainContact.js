@@ -3,6 +3,8 @@ import emailjs from '@emailjs/browser';
 import "./MainContact.css";
 import "../Main.css";
 import { useLanguage } from "../contexts/LanguageContext";
+import { CLOUDINARY_IMAGES } from "../constants/images";
+import { getCloudinaryUrl } from '../utils/cloudinary';
 
 function MainContact() {
   const [formData, setFormData] = useState({
@@ -153,7 +155,14 @@ function MainContact() {
       <section id="contact" className="content-section" style={{ position: 'relative' }}>
         <div className="contact-wrapper">
           {/* === LEFT SIDE === */}
-          <div className="contact-info-primary">
+          <div className="contact-info-primary" style={{
+            background: `url(${getCloudinaryUrl(CLOUDINARY_IMAGES.other.texture,)
+            
+          })`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}>
             <h3 className="contact-info-heading">{t.contact.contactInfoTitle}</h3>
             
             <div className="contact-info-list">
@@ -257,7 +266,14 @@ function MainContact() {
   
 
           {/* === RIGHT SIDE (FORM) === */}
-          <div className="contact-form-secondary">
+          <div className="contact-form-secondary" style={{
+            background: `url(${getCloudinaryUrl(CLOUDINARY_IMAGES.other.texture,)
+            
+          })`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}>
             <h3 className="contact-form-heading">{t.contact.quickMessageTitle}</h3>
             <p className="contact-form-subtitle">{t.contact.quickMessageText}</p>
             

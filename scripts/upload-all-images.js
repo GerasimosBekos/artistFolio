@@ -24,9 +24,9 @@ const imagesToUpload = {
   'footer/woodcarving3': 'public/images/woodcarving3.jpg',
   
   // Other images
-  'misc/artist': 'public/images/artist.jpeg',
-  'misc/hand_crop': 'public/images/hand_crop.jpg',
-  'misc/logo': 'public/images/logo.png',
+  'other/artist': 'public/images/artist.jpeg',
+  'other/hand_crop': 'public/images/hand_crop.jpg',
+  'other/logo': 'public/images/logo.png',
   
   // Category images (for MainGallery.js)
   'categories/templo': 'public/images/categories/templo.jpg',
