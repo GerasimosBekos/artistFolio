@@ -42,3 +42,14 @@
   margin: 1rem 10rem;
   margin-bottom: 2.3rem;
 }
+
+@media (max-width: 480px) {
+  .image-container {
+    max-height: 12rem;
+    font-size: 0.8rem;
+  }
+
+  .image-text {
+    font-size: 0.1rem;
+  }
+}

@@ -64,7 +64,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 40vh;
+    min-height: 35vh;
   }
 
   .hero::after {
@@ -88,14 +88,16 @@
 
 @media (max-width: 480px) {
   .hero {
-    max-height: 30vh;
+    max-height: 20vh;
   }
 
   .quote-title {
-    font-size: 2rem;
+    font-size: 1.7rem;
+    margin-top: 5rem;
   }
 
   .quote-text {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
+    margin: auto 2.7rem;
   }
 }

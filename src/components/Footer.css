@@ -62,3 +62,34 @@
 .site-footer {
   margin-top: auto;
 }
+
+@media (max-width: 480px) {
+  .site-footer {
+    max-height: 20rem;
+  }
+
+  .footer-content {
+    gap: 0.9rem;
+  }
+
+  .footer-title {
+    margin-top: 0;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  .footer-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .footer-center,
+  .footer-right {
+    font-size: 0.8rem;
+
+  }
+
+  .footer-bottom {
+    font-size: 0.5rem;
+    margin: 0.5rem auto 0;
+  }
+}

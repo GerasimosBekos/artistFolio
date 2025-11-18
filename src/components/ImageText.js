@@ -32,8 +32,8 @@ function ImageText({title, text, image, height, titleSize, textSize}) {
 
 ImageText.defaultProps = {
     title: "",
-    titleSize: "2rem",
-    textSize: "1.5rem"
+    titleSize: "",
+    textSize: ""
 };
 
 export default ImageText;
