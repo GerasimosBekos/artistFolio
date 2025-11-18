@@ -260,13 +260,14 @@ const CategoryGallery = () => {
         image={data.hero} 
         // title={data.title}
         title={getCategoryTitle()} 
-        height="60vh" 
+        height="60vh"
+        title_size="5rem"
       />
       <Breadcrumb />
 
       <div className="category-gallery">
         {/* <h1 className="category-title">{getCategoryTitle()}</h1> */}
-        <Title title={getCategoryTitle()} />
+        <Title title={getCategoryTitle()} subtitle={t.gallery.category}/>
 
         <div className="category-grid">
           {orderedImages.map((publicId, i) => (

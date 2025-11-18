@@ -352,6 +352,7 @@
 @media (max-width: 480px) {
   .header-container {
     padding: 0.4rem 0.5rem;
+    /* width: 90%; */
   }
 
   .logo {
@@ -379,10 +380,11 @@
   }
 
   .nav {
-    gap: 1rem;
+    gap: 1.1rem;
+
   }
 
   .nav-option {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }

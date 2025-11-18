@@ -23,7 +23,6 @@ async function generateGalleryData() {
       prefix: `${FOLDER_PREFIX}/gallery/`,
       max_results: 500
     });
-
     const galleryData = {};
     
     // Group by category
@@ -42,6 +41,7 @@ async function generateGalleryData() {
           hero: `${FOLDER_PREFIX}/gallery/${category}/hero`,
           images: []
         };
+        console.log(`category: ${category}`);
       }
       
       // Skip hero image from images array

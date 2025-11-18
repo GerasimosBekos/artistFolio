@@ -68,6 +68,7 @@ export const fr = {
     heroSubtitle: "Œuvres sculptées avec passion et amour pour la tradition",
     title: "Créations",
     subtitle: "CATÉGORIES",
+    category: "CATÉGORY",
     footerImageText: "\"Tout ce que vous faites, faites-le de bon cœur, comme pour le Seigneur et non pour des hommes\" - Colossiens 3:23",
     return: "← Retour aux catégories",
     notAvailable: "Cette catégorie n’est pas encore disponible",

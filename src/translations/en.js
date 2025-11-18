@@ -69,6 +69,7 @@ export const en = {
     heroSubtitle: "Woodcarved artworks made with passion and love for tradition",
     title: "Creations",
     subtitle: "CATEGORIES",
+    category: "CATEGORY",
     footerImageText: "\"Whatever you do, work heartily, as for the Lord and not for men\" - Colossians 3:23",
     return: "← Back to categories",
     notAvailable: "This category is not available yet",
@@ -80,7 +81,7 @@ export const en = {
     heroSubtitle: "The place where the art of woodcarving comes to life",
     title: "Our Workshop",
     subtitle: "HISTORY",
-    aboutMeTitle: "About me",
+    aboutMeTitle: "About me", // eslint-disable-next-line
     aboutMeText: "My approach to this tradition is one of study and apprenticeship based on the works of great woodcarvers, \
                 which reveal knowledge, experience, sensitivity, high technique, and which are often the imprint of ecclesiastical \
                 experience on inanimate material, as much as possible. My collaboration with experienced craftsmen aims at the successful \

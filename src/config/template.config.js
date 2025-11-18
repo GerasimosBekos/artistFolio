@@ -63,8 +63,8 @@ export const TEMPLATE_CONFIG = {
 
   // ==================== SITE SETTINGS ====================
   site: {
-    defaultLanguage: "el",           // Default language
-    availableLanguages: ["el", "en"], // Available languages
+    defaultLanguage: "en",           // Default language
+    availableLanguages: ["el", "en", "fr"], // Available languages
     
     // Features to enable/disable
     features: {

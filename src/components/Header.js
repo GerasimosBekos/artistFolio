@@ -12,7 +12,7 @@ function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const {t} = useLanguage();
-  const { language, toggleLanguage } = useLanguage();
+  const { language, setSpecificLanguage } = useLanguage();
 
   // Scroll detection - only when not actively scrolling to top
   useEffect(() => {
@@ -73,10 +73,6 @@ function Header() {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
-  const handleLanguageSelect = () => {
-    toggleLanguage();
-    setDropdownOpen(false);
-  };
 
   return (
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
@@ -139,10 +135,10 @@ function Header() {
             className="lang-button"
             onClick={() => setDropdownOpen((prev) => !prev)}
           >
-            {language === "el" ? "EL" : "EN"}
+            {language.toUpperCase()}
             <span className={`arrow ${dropdownOpen ? "up" : "down"}`}></span>
           </button>
-          {dropdownOpen && (
+          {/* {dropdownOpen && (
             <div className="lang-menu">
               <button
                 className="lang-option"
@@ -151,7 +147,23 @@ function Header() {
                 {language === "el" ? "EN" : "EL"}
               </button>
             </div>
-          )}
+          )} */}
+          {dropdownOpen && (
+          <div className="lang-menu">
+            {['el', 'en', 'fr'].filter(lang => lang !== language).map(lang => (
+              <button
+                key={lang}
+                className="lang-option"
+                onClick={() => {
+                  setSpecificLanguage(lang);
+                  setDropdownOpen(false);
+                }}
+              >
+                {lang.toUpperCase()}
+              </button>
+            ))}
+          </div>
+        )}
         </div>
       </div>
        

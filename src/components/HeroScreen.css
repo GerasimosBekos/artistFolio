@@ -64,7 +64,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 400px;
+    min-height: 50vh;
   }
 
   .quote {
@@ -73,7 +73,7 @@
   }
 
   .quote-title {
-    font-size: 2.5rem;
+    font-size: 5.5rem;
     margin-bottom: 0.8rem;
   }
 
@@ -84,7 +84,7 @@
 
 @media (max-width: 480px) {
   .hero {
-    min-height: 350px;
+    max-height: 30vh;
   }
 
   .quote-title {
