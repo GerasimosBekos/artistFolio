@@ -312,7 +312,7 @@
   }
 
   .artist-name {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .header.scrolled .artist-name {
@@ -330,7 +330,7 @@
   .nav {
     width: 100%;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1.7rem;
     flex-wrap: wrap;
   }
 
@@ -351,7 +351,7 @@
 
 @media (max-width: 480px) {
   .header-container {
-    padding: 0.4rem 0.5rem;
+    padding: 0.4rem 0r 0.4rem 0;
     /* width: 90%; */
   }
 
@@ -380,11 +380,19 @@
   }
 
   .nav {
-    gap: 1.1rem;
-
+    width: 120%;
+    gap: 0rem;
+    padding: 0;
+    margin: 0;
+    justify-content: space-around;
+    margin-left: -2rem;
+    margin-right: -2rem;
   }
 
+
   .nav-option {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    padding: 0 0.3rem;
+    white-space: nowrap;
   }
 }
