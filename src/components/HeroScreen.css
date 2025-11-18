@@ -93,11 +93,12 @@
 
   .quote-title {
     font-size: 1.7rem;
-    margin-top: 5rem;
+    margin-top: 6rem;
+    margin-bottom: 0;
   }
 
   .quote-text {
-    font-size: 0.9rem;
-    margin: auto 2.7rem;
+    font-size: 1rem;
+    margin: 0 2rem;
   }
 }

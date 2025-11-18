@@ -335,7 +335,7 @@
   }
 
   .nav-option {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .lang-dropdown {
@@ -344,7 +344,7 @@
   }
 
   .lang-button {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding: 3px 20px;
   }
 }
@@ -364,11 +364,11 @@
   }
 
   .artist-name {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .header.scrolled .artist-name {
-    font-size: 0.8rem;
+    font-size: 0..9rem;
   }
 
   .profession {
@@ -376,7 +376,7 @@
   }
 
   .header.scrolled .profession {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
   .nav {
@@ -387,12 +387,13 @@
     justify-content: space-around;
     margin-left: -2rem;
     margin-right: -2rem;
+    margin-bottom: 0.5rem;
   }
 
 
   .nav-option {
-    font-size: 0.9rem;
-    padding: 0 0.3rem;
+    font-size: 1rem;
+    /* padding: 0 0.3rem; */
     white-space: nowrap;
   }
 }

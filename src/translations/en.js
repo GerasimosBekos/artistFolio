@@ -7,10 +7,7 @@ export const en = {
     profession: "Woodcarver",
     bio: `My approach to this tradition is one of study and apprenticeship in the works of great woodcarvers,
     whose creations reveal knowledge, experience, sensitivity, and high craftsmanship. Often, their work reflects the
-    living ecclesiastical experience captured in the lifeless material, as much as this is possible. My collaboration
-    with experienced craftsmen aims at the successful continuation of the woodcarving art. Fellow companion in this
-    effort is my brother Theophilos, theologian and chanter. I hope, with God’s grace, for a future personal contact
-    and cooperation.`,
+    living ecclesiastical experience captured in the lifeless material, as much as this is possible.`,
   },
 
   // ==================== CONTACT INFO ====================
@@ -84,9 +81,7 @@ export const en = {
     aboutMeTitle: "About me", // eslint-disable-next-line
     aboutMeText: "My approach to this tradition is one of study and apprenticeship based on the works of great woodcarvers, \
                 which reveal knowledge, experience, sensitivity, high technique, and which are often the imprint of ecclesiastical \
-                experience on inanimate material, as much as possible. My collaboration with experienced craftsmen aims at the successful \
-                continuation of the art of woodcarving. My brother Theofilos, theologian and cantor, is a companion in this effort. \
-                I hope, with God's grace, for future personal contact and collaboration.",
+                experience on inanimate material, as much as possible.",
     woodcarverFullName: "Panagiotis Bekos",
     woodcarverSpeciality: "Woodcarver",
     footerImageText: "\"For we are His workmanship, created in Christ Jesus for good works\" - Ephesians 2:10"

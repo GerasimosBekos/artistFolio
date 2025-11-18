@@ -260,7 +260,7 @@ const CategoryGallery = () => {
         image={data.hero} 
         // title={data.title}
         title={getCategoryTitle()} 
-        height="60vh"
+        height="70vh"
         title_size="5rem"
       />
       <Breadcrumb />

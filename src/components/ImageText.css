@@ -4,7 +4,7 @@
   position: relative;
   z-index: 0;
   margin-top: 3rem;
-  margin-bottom: 5rem;
+  margin-bottom: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -15,11 +15,8 @@
   justify-content: center;
   color: white;
   font-family: var(--font-main);
-  position: relative;
   overflow: hidden;
-  z-index: 0;
   opacity: 0.85;
-  margin-bottom: 0;
 }
 
 .image-container::before {
@@ -43,13 +40,30 @@
   margin-bottom: 2.3rem;
 }
 
+/* Fix for mobile devices - disable fixed attachment */
+@media (max-width: 768px) {
+  .image-container {
+    background-attachment: scroll;
+    /* Optional: add min-height if needed */
+    min-height: 10rem;
+  }
+}
+
 @media (max-width: 480px) {
   .image-container {
-    max-height: 12rem;
-    font-size: 0.8rem;
+    max-height: 10rem;
+    background-attachment: scroll;
+  }
+
+  .image-container::before {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.45));
   }
 
   .image-text {
-    font-size: 0.1rem;
+    width: 80%;
+    font-weight: 500;
+    font-size: 0.9rem !important;
+    margin: 1rem auto;
+    margin-bottom: 2.3rem;
   }
 }

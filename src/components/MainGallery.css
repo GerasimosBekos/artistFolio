@@ -1,5 +1,8 @@
+/* File: src/components/MainGallery.css - REPLACE ENTIRE FILE */
+
+/* ========== GALLERY SECTION ==================== */
 .content-gallery-subtitle {
-  font-size: var(--font-size-subtitle);
+  font-size: var(--font-size-subtitle, 1.5rem);
   width: 100%;
   display: flex;
   align-items: center;
@@ -9,12 +12,12 @@
   margin: 0rem;
   position: relative;
   overflow: hidden;
-  color: var(--color-secondary);
+  color: var(--color-secondary, #c0be8e);
   margin-bottom: -0.8rem;
 }
 
 .content-gallery-title {
-  font-size: var(--font-size-page-title);
+  font-size: var(--font-size-page-title, 3.5rem);
   width: 100%;
   display: flex;
   align-items: center;
@@ -24,9 +27,12 @@
   margin: 0;
   position: relative;
   overflow: hidden;
-  color: var(--color-text-dark);
+  color: var(--color-text-dark, #333);
 }
 
+/* ============================ GRID ================================ */
+
+/* === GALLERY GRID LAYOUT === */
 .content-gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -35,70 +41,220 @@
   width: 100%;
   margin-top: 2rem;
 }
+
+/* === EACH CATEGORY CARD === */
 .gallery-item {
-position: relative;
-overflow: hidden;
-border-radius: 10px;
-cursor: pointer;
-transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
 }
+
+/* === IMAGE === */
 .gallery-item img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-opacity: 0.65;
-transition: opacity 0.4s ease, transform 0.4s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.65;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
+
+/* === TITLE OVERLAY === */
 .gallery-item span {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: white;
-font-family: var(--font-main);
-font-size: 1.8rem;
-font-weight: 500;
-text-align: center;
-letter-spacing: 0.5px;
-text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-z-index: 2;
-transition: transform 0.4s ease, opacity 0.4s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: var(--font-main);
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
+
+/* === BACKGROUND OVERLAY for extra readability === */
 .gallery-item::before {
-content: "";
-position: absolute;
-inset: 0;
-background: rgba(0, 0, 0, 0.25);
-transition: background 0.4s ease;
-z-index: 1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  transition: background 0.4s ease;
+  z-index: 1;
 }
-.gallery-item:hover img {
-transform: scale(1.05);
-opacity: 1;
+
+/* === DESKTOP HOVER EFFECT === */
+@media (hover: hover) and (pointer: fine) {
+  .gallery-item:hover img {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  .gallery-item:hover::before {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .gallery-item:hover span {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
 }
-.gallery-item:hover::before {
-background: rgba(0, 0, 0, 0.1);
-}
-.gallery-item:hover span {
-transform: translate(-50%, -50%) scale(1.05);
-}
+
+/* === SIZE VARIATIONS === */
 .gallery-item.wide {
-grid-column: span 2;
+  grid-column: span 2;
 }
+
 .gallery-item.tall {
-grid-row: span 2;
+  grid-row: span 2;
 }
+
+/* ============================ MOBILE RESPONSIVE ================================ */
+
+@media (max-width: 968px) {
+  .content-gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .gallery-item span {
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-width: 768px) {
-.content-gallery-grid {
-grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-grid-auto-rows: 180px;
+  .content-gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-auto-rows: 180px;
+    gap: 0.8rem;
+  }
+
+  .gallery-item.wide,
+  .gallery-item.tall {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .gallery-item span {
+    font-size: 1.4rem;
+  }
+
+  /* === MOBILE SCROLL HIGHLIGHT EFFECT === */
+  /* Default state: slightly dimmed */
+  .gallery-item {
+    opacity: 0.7;
+    transform: scale(0.95);
+  }
+
+  .gallery-item img {
+    opacity: 0.5;
+  }
+
+  .gallery-item::before {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  /* Center item: highlighted */
+  .gallery-item.center-highlight {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+  }
+
+  .gallery-item.center-highlight img {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+
+  .gallery-item.center-highlight::before {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .gallery-item.center-highlight span {
+    transform: translate(-50%, -50%) scale(1.08);
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Smooth scroll behavior */
+  .content-gallery-grid {
+    scroll-behavior: smooth;
+  }
 }
-.gallery-item.wide,
-.gallery-item.tall {
-grid-column: span 1;
-grid-row: span 1;
+
+@media (max-width: 480px) {
+  .content-gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: 180px;
+    gap: 0.6rem;
+  }
+
+  .gallery-item span {
+    font-size: 1.5rem;
+  }
+
+  /* Adjust highlight effect for smaller screens */
+  .gallery-item.center-highlight {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  }
+
+  .gallery-item.center-highlight span {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
 }
-.gallery-item span {
-font-size: 1.1rem;
+
+/* ============================ ACCESSIBILITY ================================ */
+
+/* Active/Focus states for keyboard navigation */
+.gallery-item:focus,
+.gallery-item:active {
+  outline: 3px solid #8b7355;
+  outline-offset: 2px;
 }
+
+.gallery-item:focus img,
+.gallery-item:active img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.gallery-item:focus::before,
+.gallery-item:active::before {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .gallery-item,
+  .gallery-item img,
+  .gallery-item span,
+  .gallery-item::before {
+    transition: none !important;
+  }
+  
+  .content-gallery-grid {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================ TOUCH INTERACTIONS ================================ */
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+  .gallery-item {
+    min-height: 150px;
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on iOS */
+  }
+
+  /* Active/pressed state for touch */
+  .gallery-item:active {
+    transform: scale(0.98);
+  }
+
+  .gallery-item.center-highlight:active {
+    transform: scale(0.98);
+  }
 }
