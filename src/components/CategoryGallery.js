@@ -123,7 +123,7 @@ const CategoryGallery = () => {
   const { t } = useLanguage();
 
   const getCategoryTitle = () => {
-    return t.categoriesNoTones?.[category] || data?.title || category;
+    return t.categories?.[category] || data?.title || category;
   };
 
   // KEY ASPECT 5: Detect Image Proportions

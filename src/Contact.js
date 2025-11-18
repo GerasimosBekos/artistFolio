@@ -17,15 +17,15 @@ function Contact(props) {
     return (
         <>
             <Header />
-            <HeroScreen title={t.contact.heroTitle} text={t.contact.heroSubtitle} image={CLOUDINARY_IMAGES.hero.contact} height="70vh" opacity="0.8"/>
+            <HeroScreen title={t.contactPage.heroTitle} text={t.contactPage.heroSubtitle} image={CLOUDINARY_IMAGES.hero.contact} height="70vh" opacity="0.8"/>
             <Breadcrumb />
             <div className="contact">
-                <Title title={t.contact.title} subtitle={t.contact.subtitle} />
+                <Title title={t.contactPage.title} subtitle={t.contactPage.subtitle} />
                 <MainContact />
                 
             </div>
             <ImageText 
-                text={t.contact.footerImageText} 
+                text={t.contactPage.footerImageText} 
                 image={CLOUDINARY_IMAGES.footer.contact} 
                 height="350px" 
                 textSize="2rem"

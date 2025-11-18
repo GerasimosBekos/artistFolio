@@ -1,5 +1,5 @@
 .subtitle {
-  font-size: 1.5rem;
+  font-size: var(--font-size-subtitle);
   width: 100%;
   display: flex;
   align-items: center;
@@ -9,20 +9,20 @@
   margin: 0rem;
   position: relative;
   overflow: hidden;
-  color: #c0be8e;
+  color: var(--color-secondary);
 }
 
 .title {
-  font-size: 3.5rem;
+  font-size: var(--font-size-page-title);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-header);
+  font-family: var(--font-main);
   opacity: 0.85;
   margin: 0;
   position: relative;
   overflow: hidden;
-  color: #333;
+  color: var(--color-text-dark);
   margin-bottom: 2rem;
 }

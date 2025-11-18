@@ -1,5 +1,5 @@
 {
-  "name": "react-artist-portfolio",
+  "name": "craftfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,7 +22,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    
+    "setup": "node scripts/setup-craftfolio.js",
+    "upload-images": "node scripts/upload-images-to-cloudinary.js",
+    "generate-gallery": "node scripts/generate-gallery-data.js",
+    "generate-theme": "node scripts/generate-theme-css.js"
   },
   "eslintConfig": {
     "extends": [

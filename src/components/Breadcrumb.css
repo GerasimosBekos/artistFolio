@@ -1,26 +1,25 @@
 .breadcrumb {
   font-family: var(--font-main);
   font-size: 1.5rem;
-  color: #8b7355;
-  margin: 3rem 0 0 15rem; /* left offset */
+  color: var(--color-primary);
+  margin: 3rem 0 0 15rem;
   text-align: left;
   display: flex;
   align-items: center;
-  flex-wrap: wrap; /* handle narrow screens */
+  flex-wrap: wrap;
 }
 
 .breadcrumb a {
-  color: #8b7355;
+  color: var(--color-primary);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .breadcrumb a:hover {
-  color: #5c3d1e;
-  /* text-decoration: underline; */
+  color: var(--color-accent);
 }
 
 .breadcrumb-current {
-  color: #5c3d1e;
+  color: var(--color-accent);
   font-weight: 600;
 }

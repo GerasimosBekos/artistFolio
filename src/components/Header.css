@@ -23,17 +23,15 @@
   transition: padding 0.3s ease;
 }
 
-/* Large header (at top) */
 .header:not(.scrolled) .header-container {
   padding: 0.6rem 2rem;
 }
 
-/* Small header (scrolled) */
 .header.scrolled .header-container {
   padding: 0.2rem 2rem;
 }
 
-/* === LOGO GROUP (image + text) === */
+/* === LOGO GROUP === */
 .logo-group {
   display: flex;
   align-items: center;
@@ -52,7 +50,7 @@
   height: 70px;
 }
 
-/* === ARTIST NAME (next to logo) === */
+/* === ARTIST NAME === */
 .artist-name {
   display: flex;
   flex-direction: column;
@@ -61,35 +59,31 @@
   text-shadow: 0.6px 0 0 currentColor;
   letter-spacing: 0.5px;
   text-decoration: none;
-  color: #c0be8e;
+  color: var(--color-secondary);
   margin-top: -0.4rem;
   transition: all 0.3s ease;
 }
 
 .header.scrolled .artist-name {
   font-size: 1.2rem;
-  /* margin-top: 0.3rem; */
 }
 
 .name {
   margin: 0;
-  color: #c0be8e;
-  /* margin-bottom: 0.4rem; */
+  color: var(--color-secondary);
   margin-top: -0.2rem;
 }
 
 .surname {
-  /* margin: 0; */
-  color: #c0be8e;
+  color: var(--color-secondary);
 }
 
 .profession {
   font-size: 1.4rem;
   font-weight: 500;
-  color: #623008;
+  color: var(--color-accent);
   text-shadow: 0.8px 0 0 currentColor;
   transition: font-size 0.3s ease;
-  /* margin-top: 0.8rem; */
 }
 
 .header.scrolled .profession {
@@ -120,7 +114,6 @@
   text-decoration: none;
 }
 
-/* === Underline from center === */
 .nav-option::after {
   content: "";
   position: absolute;
@@ -128,14 +121,14 @@
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: #8b5e3c;
+  background-color: var(--color-primary);
   transform: translateX(-50%);
   transition: width 0.3s ease;
   transform-origin: center;
 }
 
 .nav-option:hover {
-  color: #8b5e3c;
+  color: var(--color-primary);
 }
 
 .nav-option:hover::after {
@@ -143,16 +136,15 @@
 }
 
 .nav-option.active {
-  color: #8b5e3c;
+  color: var(--color-primary);
   font-weight: 500;
 }
 
 .nav-option.active::after {
   width: 100%;
-  background-color: #8b5e3c;
+  background-color: var(--color-primary);
 }
 
-/* === Smooth letter-only hover motion === */
 .nav-option span {
   display: inline-block;
   transition: transform 0.3s ease;
@@ -174,7 +166,6 @@
   z-index: 1001;
 }
 
-/* --- Toggle Button --- */
 .lang-button {
   background: none;
   border: none;
@@ -188,16 +179,15 @@
   padding: 4px 28px;
   border-radius: 6px;
   transition: color 0.25s ease, transform 0.2s ease, background 0.3s ease;
-  font-family: var(--font-header, inherit);
+  font-family: var(--font-header);
 }
 
 .lang-button:hover {
-  color: var(--accent-color, #a15c00);
+  color: var(--color-primary);
   background: rgba(0, 0, 0, 0.03);
   transform: translateY(-1px);
 }
 
-/* --- Tiny arrow --- */
 .arrow {
   width: 0;
   height: 0;
@@ -212,7 +202,6 @@
   transform: rotate(180deg);
 }
 
-/* --- Dropdown menu --- */
 .lang-menu {
   position: absolute;
   top: 115%;
@@ -220,24 +209,19 @@
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
   border: none;
-  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); */
   border-radius: 10px;
-  /* padding: 2px 0; */
   min-width: 72px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   animation: fadeIn 0.25s ease forwards;
   transform-origin: top right;
-  /* font-family: var(--font-header, inherit); */
 }
 
-/* --- Dropdown option --- */
 .lang-option {
   background: transparent;
   border: none;
-  /* font-family: var(--font-main, inherit); */
-   font-family: var(--font-header, inherit);
+  font-family: var(--font-header);
   font-size: 0.75rem;
   color: #2b2b2b;
   text-align: center;
@@ -247,11 +231,10 @@
 }
 
 .lang-option:hover {
-  background: rgba(161, 92, 0, 0.1); /* accent tint, not full fill */
-  color: var(--accent-color, #a15c00);
+  background: rgba(161, 92, 0, 0.1);
+  color: var(--color-primary);
 }
 
-/* --- Animation --- */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -263,12 +246,7 @@
   }
 }
 
-
 /* === RESPONSIVE === */
-/* ==================== HEADER RESPONSIVE ==================== */
-/* File: src/components/Header.css - ADD THESE MEDIA QUERIES */
-
-/* Tablet (768px - 968px) */
 @media (max-width: 968px) {
   .header-container {
     padding: 0.6rem 1rem;
@@ -312,7 +290,6 @@
   }
 }
 
-/* Mobile (below 768px) */
 @media (max-width: 768px) {
   .header-container {
     flex-wrap: wrap;
@@ -372,7 +349,6 @@
   }
 }
 
-/* Extra Small Mobile (below 480px) */
 @media (max-width: 480px) {
   .header-container {
     padding: 0.4rem 0.5rem;
@@ -408,9 +384,5 @@
 
   .nav-option {
     font-size: 1rem;
-  }
-
-  .nav-option span {
-    display: inline-block;
   }
 }

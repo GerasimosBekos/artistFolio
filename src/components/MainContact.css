@@ -43,7 +43,7 @@
   margin: 0 0 2.5rem 0;
   /* font-family: "Zen Old Mincho", serif; */
   font-family: var(--font-main);
-  border-bottom: 3px solid #8b7355;
+  border-bottom: 3px solid var(--color-primary);
   padding-bottom: 1rem;
 }
 
@@ -64,7 +64,7 @@
   padding: 0.8rem 1.2rem;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 12px;
-  border-left: 4px solid #8b7355;
+  border-left: 4px solid var(--color-primary);
   transition: all 0.3s ease;
 }
 
@@ -77,7 +77,7 @@
 /* --- Icon --- */
 .contact-card-icon {
   font-size: 2rem;
-  color: #8b7355;
+  color: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,7 +95,7 @@
 /* --- Label --- */
 .contact-card-label {
   font-size: 0.8rem;
-  color: #888;
+  color: var(--color-accent);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -104,7 +104,7 @@
 /* --- Value --- */
 .contact-card-value {
   font-size: 1.3rem;
-  color: #5c3d1e;
+  color: var(--color-accent);
   font-weight: 600;
   line-height: 1.4;
   font-family: var(--font-main);
@@ -118,7 +118,7 @@
 }
 
 .contact-card-link:hover {
-  color: #8b7355;
+  color: var(--color-primary);
 }
 
 /* --- Hours --- */
@@ -134,7 +134,7 @@
   background: none;
   border: none;
   padding: 0;
-  color: #5c3d1e;
+  color: var(--color-primary);
   font-weight: 600;
   font-size: 1.3rem;
   cursor: pointer;
@@ -142,7 +142,7 @@
 }
 
 .email-copy-btn:hover {
-  color: #8b7355;
+  color: var(--color-primary);
 }
 
 .email-copy-toast {
@@ -176,7 +176,7 @@
   background: none;
   border: none;
   padding: 0;
-  color: #5c3d1e;
+  color: var(--color-accent);
   font-weight: 600;
   font-size: 1.3rem;
   cursor: pointer;
@@ -184,7 +184,7 @@
 }
 
 .phone-copy-btn:hover {
-  color: #8b7355;
+  color: var(--color-primary);
 }
 
 .phone-copy-toast {
@@ -226,7 +226,7 @@
 
 .contact-social-heading {
   font-size: 1.2rem;
-  color: #666;
+  color: var(--color-text-light);
   font-weight: 600;
   margin-bottom: 1.2rem;
   text-transform: uppercase;
@@ -245,7 +245,7 @@
   align-items: center;
   gap: 0.6rem;
   text-decoration: none;
-  color: #5c3d1e;
+  color: var(--color-accent);
   font-weight: 500;
   font-size: 1.15rem;
   transition: all 0.3s ease;
@@ -254,17 +254,17 @@
 
 .contact-social-link-simple i {
   font-size: 1.4rem;
-  color: #8b7355;
+  color: var(--color-primary);
   transition: all 0.3s ease;
 }
 
 .contact-social-link-simple:hover {
-  color: #8b7355;
+  color: var(--color-primary);
   transform: translateX(5px);
 }
 
 .contact-social-link-simple:hover i {
-  color: #5c3d1e;
+  color: var(--color-accent);
   transform: scale(1.15);
 }
 
@@ -300,7 +300,7 @@
 .contact-form-heading {
   font-size: 2rem;
   font-weight: 600;
-  color: #5c3d1e; 
+  color: var(--color-accent); 
   margin: 0 0 0.8rem 0;
   /* font-family: "Zen Old Mincho", serif; */
   font-family: var(--font-main);
@@ -308,7 +308,7 @@
 
 .contact-form-subtitle {
   font-size: 1rem;
-  color: #666;
+  color: var(--color-text-light);
   margin: 0 0 1.5rem 0;
   line-height: 1.5;
 }
@@ -334,7 +334,7 @@
 .contact-field-compact label {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #5c3d1e;
+  color: var(--color-accent);
 }
 
 .contact-input-compact,
@@ -355,7 +355,7 @@
 
 .contact-input-compact::placeholder,
 .contact-textarea-compact::placeholder {
-  color: #999;
+  color: var(--color-text-light);
   font-size: 0.95rem;
 }
 
@@ -367,14 +367,14 @@
 
 .contact-input-compact:focus,
 .contact-textarea-compact:focus {
-  border-color: #8b7355;
+  border-color: var(--color-primary);
   background: white;
   box-shadow: 0 0 0 4px rgba(139, 115, 85, 0.1);
 }
 
 .contact-submit-compact {
   width: 100%;
-  background: linear-gradient(135deg, #8b7355 0%, #6b5742 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, #6b5742 100%);
   color: white;
   border: none;
   padding: 1.2rem 2rem;
@@ -392,7 +392,7 @@
 }
 
 .contact-submit-compact:hover:not(:disabled) {
-  background: linear-gradient(135deg, #6b5742 0%, #5f4a33 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(139, 115, 85, 0.4);
 }

@@ -1,7 +1,6 @@
 .contact {
   font-family: var(--font-main);
   background-color: #fff;
-  /* background-image: url('/public/images/other/mainbg.png'); */
   background-repeat: no-repeat;
   background-position: top left, bottom right;
   background-size: contain;
@@ -11,6 +10,4 @@
   box-sizing: border-box;
   margin: 0 auto;
   padding: 2rem 0;
-  
 }
-

@@ -1,7 +1,6 @@
 .gallery {
   font-family: var(--font-main);
   background-color: #fff;
-  /* background-image: url('/public/images/other/mainbg.png'); */
   background-repeat: no-repeat;
   background-position: top left, bottom right;
   background-size: contain;
@@ -10,7 +9,6 @@
   width: 100%;
   box-sizing: border-box;
   margin-top: 4rem;
-  
 
   display: flex;
   flex-direction: column;
@@ -20,6 +18,4 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 0;
-  
 }
-

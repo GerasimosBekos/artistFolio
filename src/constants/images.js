@@ -1,46 +1,49 @@
-// Central configuration for all Cloudinary images
-// This makes it easy to update image paths in one place
+// Import config
+import { TEMPLATE_CONFIG } from '../config/template.config';
 
+const FOLDER = TEMPLATE_CONFIG.cloudinary.folderPrefix;
+
+// Central configuration for all Cloudinary images
 export const CLOUDINARY_IMAGES = {
   // Hero images
   hero: {
-    main: 'woodcarver/hero/main',
-    about: 'woodcarver/hero/about',
-    contact: 'woodcarver/hero/contact',
-    gallery: 'woodcarver/hero/gallery',
+    main: `${FOLDER}/hero/main`,
+    about: `${FOLDER}/hero/about`,
+    contact: `${FOLDER}/hero/contact`,
+    gallery: `${FOLDER}/hero/gallery`,
   },
   
   // Footer images
   footer: {
-    main: 'woodcarver/footer/main',
-    about: 'woodcarver/footer/about',
-    contact: 'woodcarver/footer/contact',
-    gallery: 'woodcarver/footer/gallery',
+    main: `${FOLDER}/footer/main`,
+    about: `${FOLDER}/footer/about`,
+    contact: `${FOLDER}/footer/contact`,
+    gallery: `${FOLDER}/footer/gallery`,
   },
   
-  // other images
+  // Other images
   other: {
-    artist: 'woodcarver/other/artist',
-    logo: 'woodcarver/other/logo',
-    mainbg: 'woodcarver/other/mainbg',
-    texture: 'woodcarver/other/texture',
-    imageTextMain: 'woodcarver/other/image_text_main',
+    artist: `${FOLDER}/other/artist`,
+    logo: `${FOLDER}/other/logo`,
+    mainbg: `${FOLDER}/other/mainbg`,
+    texture: `${FOLDER}/other/texture`,
+    imageTextMain: `${FOLDER}/other/image_text_main`,
   },
   
-  // Category thumbnails (for MainGallery.js)
+  // Category thumbnails
   categories: {
-    templo: 'woodcarver/categories/templo',
-    prosk: 'woodcarver/categories/prosk',
-    stasidia: 'woodcarver/categories/stasidia',
-    epitafios: 'woodcarver/categories/epitafios',
-    korniza: 'woodcarver/categories/korniza',
-    stavros: 'woodcarver/categories/stavros',
-    thronos: 'woodcarver/categories/thronos',
-    pagkari: 'woodcarver/categories/pagkari',
-    polithrona: 'woodcarver/categories/polithrona',
-    amvonas: 'woodcarver/categories/amvonas',
-    karekles: 'woodcarver/categories/karekles',
-    psaltiri: 'woodcarver/categories/psaltiri',
-    lipsanothiki: 'woodcarver/categories/lipsanothiki',
+    templo: `${FOLDER}/categories/templo`,
+    prosk: `${FOLDER}/categories/prosk`,
+    stasidia: `${FOLDER}/categories/stasidia`,
+    epitafios: `${FOLDER}/categories/epitafios`,
+    korniza: `${FOLDER}/categories/korniza`,
+    stavros: `${FOLDER}/categories/stavros`,
+    thronos: `${FOLDER}/categories/thronos`,
+    pagkari: `${FOLDER}/categories/pagkari`,
+    polithrona: `${FOLDER}/categories/polithrona`,
+    amvonas: `${FOLDER}/categories/amvonas`,
+    karekles: `${FOLDER}/categories/karekles`,
+    psaltiri: `${FOLDER}/categories/psaltiri`,
+    lipsanothiki: `${FOLDER}/categories/lipsanothiki`,
   }
 };

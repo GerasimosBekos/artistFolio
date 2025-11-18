@@ -1,135 +1,149 @@
 export const en = {
-    general: {
-        phone: "+306912345669",
-        email: "woodcarver@woodmail.com"
+  // ==================== PERSONAL INFO ====================
+  personal: {
+    firstName: "Panagiotis",
+    lastName: "Bekos",
+    fullName: "Panagiotis Bekos",
+    profession: "Woodcarver",
+    bio: `My approach to this tradition is one of study and apprenticeship in the works of great woodcarvers,
+    whose creations reveal knowledge, experience, sensitivity, and high craftsmanship. Often, their work reflects the
+    living ecclesiastical experience captured in the lifeless material, as much as this is possible. My collaboration
+    with experienced craftsmen aims at the successful continuation of the woodcarving art. Fellow companion in this
+    effort is my brother Theophilos, theologian and chanter. I hope, with God’s grace, for a future personal contact
+    and cooperation.`,
+  },
+
+  // ==================== CONTACT INFO ====================
+  contact: {
+    email: "info@woodcarver.gr",
+    phone: "+30 694 123 4567",
+    address: {
+      street: "160 Alexandras Avenue",
+      city: "Athens",
+      postalCode: "11471",
+      country: "Greece",
     },
-    header: {
-        woodcarverName: "Panagiotis",
-        woodcarverSurname: "Bekos",
-        woodcarverSpeciality: "Woodcarver",
-        main: "Home",
-        gallery: "Gallery",
-        about: "About",
-        contact: "Contact"
+    social: {
+      facebook: "https://www.facebook.com/your-page",
+      instagram: "https://www.instagram.com/your-account",
     },
-    footer: {
-        woodcarverFullName: "Panagiotis Bekos",
-        description: "Woodcarver",
-        main: "Home",
-        gallery: "Gallery",
-        about: "About",
-        contact: "Contact"
-    },
-    main: {
-        heroTitle: "Woodcarving",
-        // heroSubtitle: "\"The art that gave mankind the ability to express a complete and unique way of aesthetic perception through the plasticity of wood\"",
-        heroSubtitle: "The art that carves stories into the heart of the wood",
-        gallerySubtitle: "CATEGORIES",
-        galleryTitle: "Creations",
-        textToGallery: "Discover all my creations",
-        buttonToGallery: "View Collection",
-        contactSubtitle: "CONTACT",
-        contactTitle: "Get in Touch",
-        footerImageText: "\"...and let the beauty of the Lord our God be upon us, and establish the work of our hands for us; yes, establish the work of our hands\" - Psalm 89:17"
-    },
-    gallery: {
-        heroTitle: "Woodcarving Art",
-        heroSubtitle: "Handcrafted wooden artworks made with passion and love for tradition",
-        title: "Creations",
-        subtitle: "CATEGORIES",
-        footerImageText: "\"...whatever you do, work at it with all your heart, as working for the Lord, not for human masters\" - Colossians 3:23",
-        return: "← Back to categories",
-        notAvailable: "Only templa you can choose",
-    },
-    about: {
-        heroTitle: "Woodcarving Workshop",
-        heroSubtitle: "The place where the art of woodcarving comes alive",
-        title: "Our Workshop",
-        subtitle: "HISTORY",
-        aboutMeTitle: "About Me",// eslint-disable-next-line
-        aboutMeText: "My approach to this tradition is one of study and apprenticeship based on the works of great woodcarvers, \
+  },
+
+  // ==================== HEADER ====================
+  header: {
+    woodcarverName: "Panagiotis",
+    woodcarverSurname: "Bekos",
+    woodcarverSpeciality: "Woodcarver",
+    main: "Home",
+    gallery: "Creations",
+    about: "The Workshop",
+    contact: "Contact"
+  },
+
+  // ==================== FOOTER ====================
+  footer: {
+    woodcarverFullName: "Panagiotis Bekos",
+    description: "Woodcarver",
+    main: "Home",
+    gallery: "Creations",
+    about: "The Workshop",
+    contact: "Contact"
+  },
+
+  // ==================== MAIN PAGE ====================
+  main: {
+    heroTitle: "Woodcarving",
+    heroSubtitle: "The art that carves stories into the heart of wood",
+    gallerySubtitle: "CATEGORIES",
+    galleryTitle: "Creations",
+    textToGallery: "Discover all my creations",
+    buttonToGallery: "View the collection",
+    contactSubtitle: "CONTACT",
+    contactTitle: "Get in touch with me",
+    footerImageText: "\"…and let the beauty of the Lord our God be upon us, and establish the work of our hands upon us; yes, establish the work of our hands.\" - Psalm 89:17"
+  },
+
+  // ==================== GALLERY PAGE ====================
+  gallery: {
+    heroTitle: "Woodcarving Art",
+    heroSubtitle: "Woodcarved artworks made with passion and love for tradition",
+    title: "Creations",
+    subtitle: "CATEGORIES",
+    footerImageText: "\"Whatever you do, work heartily, as for the Lord and not for men\" - Colossians 3:23",
+    return: "← Back to categories",
+    notAvailable: "This category is not available yet",
+  },
+
+  // ==================== ABOUT PAGE ====================
+  about: {
+    heroTitle: "Woodcarving Workshop",
+    heroSubtitle: "The place where the art of woodcarving comes to life",
+    title: "Our Workshop",
+    subtitle: "HISTORY",
+    aboutMeTitle: "About me",
+    aboutMeText: "My approach to this tradition is one of study and apprenticeship based on the works of great woodcarvers, \
                 which reveal knowledge, experience, sensitivity, high technique, and which are often the imprint of ecclesiastical \
                 experience on inanimate material, as much as possible. My collaboration with experienced craftsmen aims at the successful \
                 continuation of the art of woodcarving. My brother Theofilos, theologian and cantor, is a companion in this effort. \
                 I hope, with God's grace, for future personal contact and collaboration.",
-        woodcarverFullName: "Panagiotis Bekos",
-        woodcarverSpeciality: "Woodcarver",
-        footerImageText: "\"...For we are God's handiwork, created in Christ Jesus to do good works\" - Ephesians 2:10"
-    },
-    contact: {
-        heroTitle: "Contact",
-        heroSubtitle: "Get in touch for more information",
-        title: "Get in Touch",
-        subtitle: "CONTACT",
-        contactInfoTitle: "Contact Information",
-        phoneTitle: "PHONE",
-        addressTitle: "ADDRESS",
-        addressValue: "Leoforos Alexandras 160",
-        addressValueCountry: "Greece",
-        openingHoursTitle: "BUSINESS HOURS",
-        openingHoursDays: "Monday - Friday",
-        openingHoursHours: "9:00 - 18:00",
-        followMe: "FOLLOW ME",
-        quickMessageTitle: "Quick Message",
-        quickMessageText: "Send me a brief message and I will get back to you soon",
-        nameTitle: "Name",
-        namePlaceholder: "Your name",
-        messageTitle: "Message",
-        messagePlaceholder: "Write your message...",
-        messageButton: "Send Message",
-        messageSending: "Sending...",
-        messageSent: "Sent!",
-        messageSuccess: "Thank you! I will get back to you soon.",
-        footerImageText: "\"...look upon your servants and their work, and guide their children\" - Psalm 90:16"
-    },
-    categories: {
-        main: "Home",
-        gallery: "Gallery",
-        about: "About",
-        contact: "Contact",
-        templa: "Iconostases",
-        proskinitaria: "Icon Stands",
-        stasidia: "Choir Stalls",
-        epitafioi: "Epitaphios Shrines",
-        kornizes: "Frames",
-        stavroi: "Crosses",
-        pagkaria: "Donation Boxes",
-        thronoi: "Bishop Thrones",
-        polithrones: "Armchairs",
-        amvones: "Pulpits",
-        karekles: "Chairs",
-        psaltiria: "Chanter Stands",
-        lipsanothikes: "Reliquaries"
-    },
-    categoriesNoTones: {
-        main: "Home",
-        gallery: "Gallery",
-        about: "About",
-        contact: "Contact",
-        templa: "Iconostases",
-        proskinitaria: "Icon Stands",
-        stasidia: "Choir Stalls",
-        epitafioi: "Epitaphios Shrines",
-        kornizes: "Frames",
-        stavroi: "Crosses",
-        pagkaria: "Donation Boxes",
-        thronoi: "Bishop Thrones",
-        polithrones: "Armchairs",
-        amvones: "Pulpits",
-        karekles: "Chairs",
-        psaltiria: "Chanter Stands",
-        lipsanothikes: "Reliquaries"
-    },
-    contactMessages: {
-        failCopyEmail: "Failed to copy email:",
-        failCopyPhone: "Failed to copy phone:",
-        nameRequired: "Name is required.",
-        emailRequired: "Email is required.",
-        nameInvalid: "Name contains invalid characters.",
-        emailInvalid: "Invalid email format.",
-        messageRequired: "Message is required.",
-        sendFailed: "Failed to send. Please try again.",
-        emailCopied: "Email copied!",
-        phoneCopied: "Phone copied!",
-    }
+    woodcarverFullName: "Panagiotis Bekos",
+    woodcarverSpeciality: "Woodcarver",
+    footerImageText: "\"For we are His workmanship, created in Christ Jesus for good works\" - Ephesians 2:10"
+  },
+
+  // ==================== CONTACT PAGE ====================
+  contactPage: {
+    heroTitle: "Contact",
+    heroSubtitle: "Get in touch with me for more information",
+    title: "Contact me",
+    subtitle: "CONTACT",
+    contactInfoTitle: "Contact Details",
+    phoneTitle: "PHONE",
+    addressTitle: "ADDRESS",
+    followMe: "FOLLOW ME",
+    quickMessageTitle: "Quick Message",
+    quickMessageText: "Send me a short message and I will contact you soon",
+    nameTitle: "Name",
+    namePlaceholder: "Your name",
+    messageTitle: "Message",
+    messagePlaceholder: "Write your message...",
+    messageButton: "Send message",
+    messageSending: "Sending...",
+    messageSent: "Sent!",
+    messageSuccess: "Thank you! I will contact you soon.",
+    footerImageText: "\"…look upon Your servants and upon Your works, and guide their children\" - Psalm 89:16"
+  },
+
+  // ==================== CATEGORIES ====================
+  categories: {
+    main: "Home",
+    gallery: "Gallery",
+    about: "About",
+    contact: "Contact",
+    templa: "Iconostases",
+    proskinitaria: "Icon Stands",
+    stasidia: "Choir Stalls",
+    epitafioi: "Epitaphios Shrines",
+    kornizes: "Frames",
+    stavroi: "Crosses",
+    pagkaria: "Donation Boxes",
+    thronoi: "Bishop Thrones",
+    polithrones: "Armchairs",
+    amvones: "Pulpits",
+    karekles: "Chairs",
+    psaltiria: "Chanter Stands",
+    lipsanothikes: "Reliquaries"
+  },
+
+  // ==================== MESSAGES ====================
+  messages: {
+    emailCopied: "Email copied!",
+    phoneCopied: "Phone number copied!",
+    nameRequired: "Name is required.",
+    emailRequired: "Email is required.",
+    nameInvalid: "The name contains invalid characters.",
+    emailInvalid: "Invalid email.",
+    messageRequired: "Message is required.",
+    sendFailed: "Sending failed. Please try again.",
+  }
 };

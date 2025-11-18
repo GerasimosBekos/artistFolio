@@ -11,30 +11,25 @@
   font-family: var(--font-header);
   overflow: hidden;
   min-height: 500px; 
-  width: 100%; /* ensure full width */
+  width: 100%;
 }
 
-/* === TEXT === */
 .quote {
   max-width: 1000px;
-  width: 90%; /* responsive width */
+  width: 90%;
   padding: 2rem;
   border-radius: 8px;
-  /* font-size: 2rem; */
   line-height: 1.6;
   text-align: center;
   z-index: 2;
   position: relative;
-  margin: auto; /* extra insurance for centering */
+  margin: auto;
   max-height: 11rem;
 }
 
 .quote-title {
   padding: 0;
-  /* font-size: 4.7rem; */
-  /* margin-bottom: 0.2rem; */
   font-weight: 500;
-
 }
 
 .quote-text {
@@ -43,11 +38,8 @@
   font-weight: 480;
   font-family: var(--font-main);
   font-style: italic;
-  /* text-shadow: 50px 5px 10px rgba(0,0,0,0.7); */
-  /* margin: 0 2rem; */
 }
 
-/* === FADE AT BOTTOM === */
 .hero::after {
   content: "";
   position: absolute;
@@ -70,7 +62,6 @@
   background-color: rgba(0, 0, 0, 0.23);
 }
 
-/* === RESPONSIVE === */
 @media (max-width: 768px) {
   .hero {
     min-height: 400px;

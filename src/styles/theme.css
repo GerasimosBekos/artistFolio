@@ -1,0 +1,30 @@
+/* ============================================
+   CRAFTFOLIO THEME VARIABLES
+   Auto-generated from config/template.config.js
+   DO NOT EDIT MANUALLY
+   
+   To update: npm run generate-theme
+   ============================================ */
+
+:root {
+  /* ==================== COLORS ==================== */
+  --color-primary: #8b7355;
+  --color-secondary: #c0be8e;
+  --color-accent: #623008;
+  --color-text-dark: #333;
+  --color-text-light: #666;
+  --color-background: #fff;
+  --color-footer-bg: #1a1a1aCC;
+
+  /* ==================== FONTS ==================== */
+  --font-main: "Chiron Sung HK", serif;
+  --font-header: "Byzantine", serif;
+
+  /* ==================== FONT SIZES ==================== */
+  --font-size-hero-title: 4.3rem;
+  --font-size-page-title: 3.5rem;
+  --font-size-section-title: 2.5rem;
+  --font-size-subtitle: 1.5rem;
+  --font-size-body: 1.2rem;
+  --font-size-small: 1rem;
+}
