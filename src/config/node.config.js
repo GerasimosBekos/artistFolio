@@ -6,6 +6,6 @@ module.exports = {
     cloudName: process.env.REACT_APP_CLOUDINARY_CLOUD_NAME,
     apiKey: process.env.REACT_APP_CLOUDINARY_API_KEY,
     apiSecret: process.env.REACT_APP_CLOUDINARY_API_SECRET,
-    folderPrefix: "wood", // <-- Set your folder prefix here
+    folderPrefix: "woodcarver", // <-- Set your folder prefix here
   }
 };

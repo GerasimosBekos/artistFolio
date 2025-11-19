@@ -48,11 +48,10 @@ function scanImagesDirectory(dir, baseDir = dir, prefix = '') {
       );
     } else if (/\.(jpg|jpeg|png|gif|webp)$/i.test(item)) {
       const fileName = item.replace(/\.(jpg|jpeg|png|gif|webp)$/i, '');
-      const cloudinaryPath = prefix ? `${prefix}/${fileName}` : fileName;
       
       images.push({
         localPath: fullPath,
-        cloudinaryPath: cloudinaryPath,
+        cloudinaryPath: fileName,
         fileName: item,
         folderPath: prefix ? `${FOLDER_PREFIX}/${prefix}` : FOLDER_PREFIX
       });

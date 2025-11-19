@@ -1,34 +1,33 @@
 {
   "lipsanothikes": {
     "title": "Lipsanothikes",
-    "hero": "wood/gallery/lipsanothikes/hero",
+    "hero": "woodcarver/gallery/lipsanothikes/hero",
     "images": [
-      "wood/gallery/lipsanothikes/gallery/lipsanothikes/7-11-2017 001",
-      "wood/gallery/lipsanothikes/gallery/lipsanothikes/7-11-2017 006",
-      "wood/gallery/lipsanothikes/gallery/lipsanothikes/7-11-2017 007",
-      "wood/gallery/lipsanothikes/gallery/lipsanothikes/20150210_115118",
-      "wood/gallery/lipsanothikes/gallery/lipsanothikes/1687290942538",
-      "wood/gallery/lipsanothikes/gallery/lipsanothikes/1687290942550",
-      "wood/gallery/lipsanothikes/gallery/lipsanothikes/1687290942555"
+      "woodcarver/gallery/lipsanothikes/7-11-2017 001",
+      "woodcarver/gallery/lipsanothikes/7-11-2017 006",
+      "woodcarver/gallery/lipsanothikes/7-11-2017 007",
+      "woodcarver/gallery/lipsanothikes/20150210_115118",
+      "woodcarver/gallery/lipsanothikes/1687290942538",
+      "woodcarver/gallery/lipsanothikes/1687290942550",
+      "woodcarver/gallery/lipsanothikes/1687290942555"
     ]
   },
   "templa": {
     "title": "Templa",
-    "hero": "wood/gallery/templa/hero",
+    "hero": "woodcarver/gallery/templa/hero",
     "images": [
-      "wood/gallery/templa/gallery/templa/templa",
-      "wood/gallery/templa/gallery/templa/1",
-      "wood/gallery/templa/gallery/templa/2",
-      "wood/gallery/templa/gallery/templa/3",
-      "wood/gallery/templa/gallery/templa/4",
-      "wood/gallery/templa/gallery/templa/5",
-      "wood/gallery/templa/gallery/templa/6",
-      "wood/gallery/templa/gallery/templa/7",
-      "wood/gallery/templa/gallery/templa/8",
-      "wood/gallery/templa/gallery/templa/9",
-      "wood/gallery/templa/gallery/templa/10",
-      "wood/gallery/templa/gallery/templa/11",
-      "wood/gallery/templa/gallery/templa/12"
+      "woodcarver/gallery/templa/1",
+      "woodcarver/gallery/templa/2",
+      "woodcarver/gallery/templa/3",
+      "woodcarver/gallery/templa/4",
+      "woodcarver/gallery/templa/5",
+      "woodcarver/gallery/templa/6",
+      "woodcarver/gallery/templa/7",
+      "woodcarver/gallery/templa/8",
+      "woodcarver/gallery/templa/9",
+      "woodcarver/gallery/templa/10",
+      "woodcarver/gallery/templa/11",
+      "woodcarver/gallery/templa/12"
     ]
   }
 }
