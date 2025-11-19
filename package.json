@@ -23,7 +23,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    
     "setup": "node scripts/setup-craftfolio.js",
     "upload-images": "node scripts/upload-images-to-cloudinary.js",
     "generate-gallery": "node scripts/generate-gallery-data.js",
@@ -46,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "playwright": "^1.56.1"
   }
 }
