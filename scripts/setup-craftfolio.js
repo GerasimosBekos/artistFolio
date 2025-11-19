@@ -124,7 +124,7 @@ async function setupWizard() {
       console.log('\n🚀 Starting image upload...\n');
       
       // Import and run upload script
-      const { uploadAllImages } = require('./upload-images-to-cloudinary');
+      const { uploadAllImages } = require('./upload-all-images');
       await uploadAllImages();
     } else {
       console.log('\n⏭️  Skipping image upload. You can run it later with:');

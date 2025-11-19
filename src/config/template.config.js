@@ -42,7 +42,7 @@ export const TEMPLATE_CONFIG = {
     apiSecret: process.env.REACT_APP_CLOUDINARY_API_SECRET,
     
     // Folder structure in Cloudinary
-    folderPrefix: "woodcarver",  // Root folder name
+    folderPrefix: "wood",  // Root folder name
     
     // Subfolders
     folders: {

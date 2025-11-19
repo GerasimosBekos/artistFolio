@@ -2,6 +2,7 @@
 import { TEMPLATE_CONFIG } from '../config/template.config';
 
 const FOLDER = TEMPLATE_CONFIG.cloudinary.folderPrefix;
+console.log(FOLDER);
 
 // Central configuration for all Cloudinary images
 export const CLOUDINARY_IMAGES = {

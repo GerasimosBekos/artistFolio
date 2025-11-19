@@ -2,7 +2,7 @@ require('dotenv').config({ path: '.env.local' });
 const cloudinary = require('cloudinary').v2;
 const fs = require('fs');
 const path = require('path');
-const nodeConfig = require('../config/node.config');
+const nodeConfig = require('../src/config/node.config');
 
 const FOLDER_PREFIX = nodeConfig.cloudinary.folderPrefix;
 
@@ -13,13 +13,13 @@ cloudinary.config({
 });
 
 
-async function uploadImage(localPath, cloudinaryPath) {
+async function uploadImage(localPath, cloudinaryPath, folderPath) {
   try {
     const result = await cloudinary.uploader.upload(localPath, {
       public_id: cloudinaryPath,
       overwrite: true,
       resource_type: 'auto',
-      folder: FOLDER_PREFIX
+      folder: folderPath
     });
     
     return { success: true, url: result.secure_url };
@@ -53,7 +53,8 @@ function scanImagesDirectory(dir, baseDir = dir, prefix = '') {
       images.push({
         localPath: fullPath,
         cloudinaryPath: cloudinaryPath,
-        fileName: item
+        fileName: item,
+        folderPath: prefix ? `${FOLDER_PREFIX}/${prefix}` : FOLDER_PREFIX
       });
     }
   });
@@ -87,12 +88,12 @@ async function uploadAllImages() {
     
     process.stdout.write(`${progress} Uploading ${img.cloudinaryPath}... `);
     
-    const result = await uploadImage(img.localPath, img.cloudinaryPath);
+    const result = await uploadImage(img.localPath, img.cloudinaryPath, img.folderPath);
     
     if (result.success) {
       console.log('✅');
       results.success.push(img.cloudinaryPath);
-      results.mapping[img.localPath] = `${FOLDER_PREFIX}/${img.cloudinaryPath}`;
+      results.mapping[img.localPath] = `${img.folderPath}/${img.cloudinaryPath}`;
     } else {
       console.log(`❌ ${result.error}`);
       results.failed.push({ path: img.localPath, error: result.error });

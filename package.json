@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "setup": "node scripts/setup-craftfolio.js",
-    "upload-images": "node scripts/upload-images-to-cloudinary.js",
+    "upload-images": "node scripts/upload-all-images.js",
     "generate-gallery": "node scripts/generate-gallery-data.js",
     "generate-theme": "node scripts/generate-theme-css.js"
   },
