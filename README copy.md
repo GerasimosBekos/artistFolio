@@ -1,4 +1,4 @@
-# 🎨 Craftfolio - Artisan Portfolio Template
+# 🎨 artistFolio - Artisan Portfolio Template
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-18.x-blue)](https://reactjs.org/)
@@ -27,8 +27,8 @@
 
 ### 1. Clone & Install
 ```bash
-git clone https://github.com/yourusername/craftfolio.git
-cd craftfolio
+git clone https://github.com/yourusername/artistFolio.git
+cd artistFolio
 npm install
 ```
 

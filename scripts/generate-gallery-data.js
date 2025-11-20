@@ -29,7 +29,7 @@ async function generateGalleryData() {
     result.resources.forEach(resource => {
       const publicId = resource.public_id;
       
-      // Extract category from path: craftfolio/gallery/[category]/[image]
+      // Extract category from path: artistFolio/gallery/[category]/[image]
       const match = publicId.match(/gallery\/([^\/]+)\//);
       if (!match) return;
       

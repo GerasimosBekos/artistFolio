@@ -55,7 +55,7 @@ function generateThemeCSS() {
   const { colors, fonts, fontSizes } = config;
 
   const cssContent = `/* ============================================
-   CRAFTFOLIO THEME VARIABLES
+   artistFolio THEME VARIABLES
    Auto-generated from config/template.config.js
    DO NOT EDIT MANUALLY
    

@@ -1,4 +1,4 @@
-# 🛠️ Craftfolio Setup Guide
+# 🛠️ artistFolio Setup Guide
 
 Complete step-by-step guide to set up your portfolio.
 
@@ -15,8 +15,8 @@ Complete step-by-step guide to set up your portfolio.
 
 ### 1.1 Clone Repository
 ```bash
-git clone https://github.com/yourusername/craftfolio.git
-cd craftfolio
+git clone https://github.com/yourusername/artistFolio.git
+cd artistFolio
 ```
 
 ### 1.2 Install Dependencies
@@ -352,5 +352,5 @@ npm run generate-gallery
 ## 🆘 Need Help?
 
 - Check [README.md](README.md)
-- Open [GitHub Issue](https://github.com/yourusername/craftfolio/issues)
-- Email: support@craftfolio.com
+- Open [GitHub Issue](https://github.com/yourusername/artistFolio/issues)
+- Email: support@artistFolio.com

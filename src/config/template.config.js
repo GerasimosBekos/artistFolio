@@ -1,5 +1,5 @@
 // ============================================
-// CRAFTFOLIO TEMPLATE CONFIGURATION
+// artistFolio TEMPLATE CONFIGURATION
 // ============================================
 // Edit this file to customize your portfolio
 

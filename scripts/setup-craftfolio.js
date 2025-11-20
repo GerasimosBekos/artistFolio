@@ -16,7 +16,7 @@ const question = (query) => new Promise((resolve) => rl.question(query, resolve)
 console.log(`
 ╔════════════════════════════════════════════════════════════╗
 ║                                                            ║
-║           🎨 CRAFTFOLIO SETUP WIZARD 🎨                   ║
+║           🎨 artistFolio SETUP WIZARD 🎨                   ║
 ║                                                            ║
 ║   This wizard will help you set up your portfolio         ║
 ║                                                            ║

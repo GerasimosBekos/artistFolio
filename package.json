@@ -1,5 +1,5 @@
 {
-  "name": "craftfolio",
+  "name": "artistFolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "setup": "node scripts/setup-craftfolio.js",
+    "setup": "node scripts/setup-artistFolio.js",
     "upload-images": "node scripts/upload-all-images.js",
     "generate-gallery": "node scripts/generate-gallery-data.js",
     "generate-theme": "node scripts/generate-theme-css.js"
