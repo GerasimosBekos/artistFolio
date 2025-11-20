@@ -63,7 +63,7 @@ export const TEMPLATE_CONFIG = {
 
   // ==================== SITE SETTINGS ====================
   site: {
-    defaultLanguage: "en",           // Default language
+    defaultLanguage: "el",           // Default language
     availableLanguages: ["el", "en", "fr"], // Available languages
     
     // Features to enable/disable
@@ -78,18 +78,22 @@ export const TEMPLATE_CONFIG = {
   },
 
   // ==================== GALLERY CATEGORIES ====================
-  // Add/remove/edit categories here
+  // ⭐ DYNAMIC: Add/remove/edit categories here
   // gridSize options: "normal", "wide", "tall"
+  // enabled: true/false to show/hide category
+  // imageName: optional - override default image name (defaults to category id)
   categories: [
     {
       id: "templa",
       enabled: true,
       gridSize: "wide",
+      imageName: "templo", // Custom image name
     },
     {
       id: "proskinitaria",
       enabled: true,
       gridSize: "tall",
+      imageName: "prosk",
     },
     {
       id: "stasidia",
@@ -100,36 +104,43 @@ export const TEMPLATE_CONFIG = {
       id: "epitafioi",
       enabled: true,
       gridSize: "tall",
+      imageName: "epitafios",
     },
     {
       id: "kornizes",
       enabled: true,
       gridSize: "normal",
+      imageName: "korniza",
     },
     {
       id: "stavroi",
       enabled: true,
       gridSize: "tall",
+      imageName: "stavros",
     },
     {
       id: "thronoi",
       enabled: true,
       gridSize: "tall",
+      imageName: "thronos",
     },
     {
       id: "pagkaria",
       enabled: true,
       gridSize: "normal",
+      imageName: "pagkari",
     },
     {
       id: "polithrones",
       enabled: true,
       gridSize: "tall",
+      imageName: "polithrona",
     },
     {
       id: "amvones",
       enabled: true,
       gridSize: "tall",
+      imageName: "amvonas",
     },
     {
       id: "karekles",
@@ -140,11 +151,30 @@ export const TEMPLATE_CONFIG = {
       id: "psaltiria",
       enabled: true,
       gridSize: "normal",
+      imageName: "psaltiri",
     },
     {
       id: "lipsanothikes",
       enabled: true,
       gridSize: "normal",
+      imageName: "lipsanothiki",
     },
   ],
+
+  // ==================== HELPER FUNCTIONS ====================
+  // Get enabled categories only
+  getEnabledCategories() {
+    return this.categories.filter(cat => cat.enabled);
+  },
+
+  // Get category by ID
+  getCategoryById(id) {
+    return this.categories.find(cat => cat.id === id);
+  },
+
+  // Get image name for category (with fallback to id)
+  getCategoryImageName(id) {
+    const category = this.getCategoryById(id);
+    return category?.imageName || id;
+  }
 };

@@ -1,4 +1,4 @@
-// File: src/components/MainGallery.js - REPLACE ENTIRE FILE
+// File: src/components/MainGallery.js - FULLY DYNAMIC VERSION
 
 import "./MainGallery.css";
 import "../Main.css";
@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 import { getCloudinaryUrl } from "../utils/cloudinary";
 import { CLOUDINARY_IMAGES } from "../constants/images";
+import { TEMPLATE_CONFIG } from "../config/template.config";
 import { useEffect, useRef, useState } from "react";
 
 function MainGallery(props) {
@@ -18,22 +19,26 @@ function MainGallery(props) {
         return getCloudinaryUrl(publicId, { width: 500, quality: 85, format: 'auto' });
     };
 
-    // Gallery items configuration
-    const galleryItems = [
-        { id: 'templa', to: '/gallery/templa', image: CLOUDINARY_IMAGES.categories.templo, label: t.categories.templa, className: 'wide' },
-        { id: 'proskinitaria', to: '/gallery/proskinitaria', image: CLOUDINARY_IMAGES.categories.prosk, label: t.categories.proskinitaria, className: 'tall' },
-        { id: 'stasidia', to: '/gallery/stasidia', image: CLOUDINARY_IMAGES.categories.stasidia, label: t.categories.stasidia, className: '' },
-        { id: 'epitafioi', to: '/gallery/epitafioi', image: CLOUDINARY_IMAGES.categories.epitafios, label: t.categories.epitafioi, className: 'tall' },
-        { id: 'kornizes', to: '/gallery/kornizes', image: CLOUDINARY_IMAGES.categories.korniza, label: t.categories.kornizes, className: '' },
-        { id: 'stavroi', to: '/gallery/stavroi', image: CLOUDINARY_IMAGES.categories.stavros, label: t.categories.stavroi, className: 'tall' },
-        { id: 'thronoi', to: '/gallery/thronoi', image: CLOUDINARY_IMAGES.categories.thronos, label: t.categories.thronoi, className: 'tall' },
-        { id: 'pagkaria', to: '/gallery/pagkaria', image: CLOUDINARY_IMAGES.categories.pagkari, label: t.categories.pagkaria, className: '' },
-        { id: 'polithrones', to: '/gallery/polithrones', image: CLOUDINARY_IMAGES.categories.polithrona, label: t.categories.polithrones, className: 'tall' },
-        { id: 'amvones', to: '/gallery/amvones', image: CLOUDINARY_IMAGES.categories.amvonas, label: t.categories.amvones, className: 'tall' },
-        { id: 'karekles', to: '/gallery/karekles', image: CLOUDINARY_IMAGES.categories.karekles, label: t.categories.karekles, className: '' },
-        { id: 'psaltiria', to: '/gallery/psaltiria', image: CLOUDINARY_IMAGES.categories.psaltiri, label: t.categories.psaltiria, className: '' },
-        { id: 'lipsanothikes', to: '/gallery/lipsanothikes', image: CLOUDINARY_IMAGES.categories.lipsanothiki, label: t.categories.lipsanothikes, className: '' },
-    ];
+    // ⭐ BUILD GALLERY ITEMS DYNAMICALLY FROM CONFIG
+    const galleryItems = TEMPLATE_CONFIG.categories
+        .filter(cat => cat.enabled) // Only show enabled categories
+        .map(cat => {
+            const categoryKey = cat.id;
+            
+            // Get image from CLOUDINARY_IMAGES using category ID
+            const imagePublicId = CLOUDINARY_IMAGES.categories[categoryKey] 
+                || CLOUDINARY_IMAGES.categories[cat.id] 
+                || `${TEMPLATE_CONFIG.cloudinary.folderPrefix}/categories/${categoryKey}`;
+            
+            return {
+                id: categoryKey,
+                to: `/gallery/${categoryKey}`,
+                image: imagePublicId,
+                label: t.categories?.[categoryKey] || cat.id, // Fallback to ID if translation missing
+                className: cat.gridSize === 'wide' ? 'wide' : 
+                          cat.gridSize === 'tall' ? 'tall' : ''
+            };
+        });
 
     // Detect mobile device
     useEffect(() => {
@@ -52,7 +57,7 @@ function MainGallery(props) {
 
         const options = {
             root: null,
-            rootMargin: '-30% 0px -30% 0px', // Trigger when item is in center 20% of viewport
+            rootMargin: '-30% 0px -30% 0px',
             threshold: 0.5
         };
 
@@ -71,7 +76,7 @@ function MainGallery(props) {
         return () => {
             items.forEach((item) => observer.unobserve(item));
         };
-    }, [isMobile, t.categories]); // Re-run when language changes
+    }, [isMobile, t.categories]);
 
     return (
         <div>

@@ -1,8 +1,8 @@
-// Import config
+// File: src/constants/images.js - FULLY DYNAMIC WITH CONFIG METHODS
+
 import { TEMPLATE_CONFIG } from '../config/template.config';
 
 const FOLDER = TEMPLATE_CONFIG.cloudinary.folderPrefix;
-console.log(FOLDER);
 
 // Central configuration for all Cloudinary images
 export const CLOUDINARY_IMAGES = {
@@ -31,20 +31,22 @@ export const CLOUDINARY_IMAGES = {
     imageTextMain: `${FOLDER}/other/image_text_main`,
   },
   
-  // Category thumbnails
-  categories: {
-    templo: `${FOLDER}/categories/templo`,
-    prosk: `${FOLDER}/categories/prosk`,
-    stasidia: `${FOLDER}/categories/stasidia`,
-    epitafios: `${FOLDER}/categories/epitafios`,
-    korniza: `${FOLDER}/categories/korniza`,
-    stavros: `${FOLDER}/categories/stavros`,
-    thronos: `${FOLDER}/categories/thronos`,
-    pagkari: `${FOLDER}/categories/pagkari`,
-    polithrona: `${FOLDER}/categories/polithrona`,
-    amvonas: `${FOLDER}/categories/amvonas`,
-    karekles: `${FOLDER}/categories/karekles`,
-    psaltiri: `${FOLDER}/categories/psaltiri`,
-    lipsanothiki: `${FOLDER}/categories/lipsanothiki`,
-  }
+  // ⭐ DYNAMIC: Category thumbnails generated from config
+  categories: (() => {
+    const categoryImages = {};
+    
+    // Build category images from config using helper method
+    TEMPLATE_CONFIG.categories.forEach(cat => {
+      const imageName = TEMPLATE_CONFIG.getCategoryImageName(cat.id);
+      categoryImages[cat.id] = `${FOLDER}/categories/${imageName}`;
+    });
+    
+    return categoryImages;
+  })()
+};
+
+// ⭐ Helper function to get category image by ID
+export const getCategoryImage = (categoryId) => {
+  return CLOUDINARY_IMAGES.categories[categoryId] 
+    || `${FOLDER}/categories/${categoryId}`;
 };
