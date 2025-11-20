@@ -4,7 +4,7 @@ A beautiful, performant portfolio template for artisans, craftspeople, and visua
 
 ## Demonstration
 <table>
-  <tr>
+  <tr text-decoration:none>
     <td align="center">
       <strong style="font-size:17px">Woodcarving</strong><br><br>
       <img src="docs/images/mock_wood_desktop.gif" width="550px">
