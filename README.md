@@ -49,7 +49,7 @@ With just:
 
 ### 1. Clone and Install
 ```bash
-git clone https://github.com/yourusername/artistFolio.git
+git clone https://github.com/GerasimosBekos/artistFolio.git
 cd artistFolio
 npm install
 ```
