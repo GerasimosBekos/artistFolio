@@ -117,7 +117,7 @@ async function setupWizard() {
 
     // Ask about uploading images
     console.log('\n📋 STEP 3: Upload Images to Cloudinary\n');
-    const uploadImages = await question('Do you want to upload images to Cloudinary now? (yes/no):   (if FIRST time : answer NO) ');
+    const uploadImages = await question('Do you want to upload images to Cloudinary now? (yes/no):   (if FIRST time : answer no) ');
     
     if (uploadImages.toLowerCase() === 'yes') {
       console.log('\n🚀 Starting image upload...\n');
@@ -135,7 +135,7 @@ async function setupWizard() {
     const logoPath = path.join(__dirname, '../public/images/other/logo.png');
     
     if (fs.existsSync(logoPath)) {
-      const generateFavicon = await question('Generate favicon from logo? (yes/no):    (if FIRST time : answer NO) ');
+      const generateFavicon = await question('Generate favicon from logo? (yes/no):    (if FIRST time : answer no) ');
       if (generateFavicon.toLowerCase() === 'yes') {
         console.log('📝 To generate favicon, use an online tool like:');
         console.log('   https://realfavicongenerator.net/');
