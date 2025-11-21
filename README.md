@@ -51,7 +51,6 @@ With just:
 ```bash
 git clone https://github.com/GerasimosBekos/artistFolio.git
 cd artistFolio
-npm install
 ```
 
 ### 2. Install dependencies
