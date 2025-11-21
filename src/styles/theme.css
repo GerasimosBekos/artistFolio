@@ -8,17 +8,17 @@
 
 :root {
   /* ==================== COLORS ==================== */
-  --color-primary: #8b7355;
-  --color-secondary: #c0be8e;
-  --color-accent: #623008;
-  --color-text-dark: #333;
-  --color-text-light: #666;
-  --color-background: #fff;
-  --color-footer-bg: #1a1a1aCC;
+  --color-primary: #b76e79;
+  --color-secondary: #f7e7ce;
+  --color-accent: #8b4f5c;
+  --color-text-dark: #3d3d3d;
+  --color-text-light: #7a7a7a;
+  --color-background: #fff9f5;
+  --color-footer-bg: #8b4f5ce6;
 
   /* ==================== FONTS ==================== */
-  --font-main: "Chiron Sung HK", serif;
-  --font-header: "Byzantine", serif;
+  --font-main: "Montserrat", sans-serif;
+  --font-header: "Playfair Display", sans-serif;
 
   /* ==================== FONT SIZES ==================== */
   --font-size-hero-title: 4.3rem;

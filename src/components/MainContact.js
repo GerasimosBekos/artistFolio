@@ -3,8 +3,6 @@ import emailjs from '@emailjs/browser';
 import "./MainContact.css";
 import "../Main.css";
 import { useLanguage } from "../contexts/LanguageContext";
-import { CLOUDINARY_IMAGES } from "../constants/images";
-import { getCloudinaryUrl } from '../utils/cloudinary';
 import { TEMPLATE_CONFIG } from '../config/template.config';
 
 function MainContact() {
@@ -167,7 +165,7 @@ function MainContact() {
         <div className="contact-wrapper">
           {/* === LEFT SIDE === */}
           <div className="contact-info-primary" style={{
-            background: `url(${getCloudinaryUrl(CLOUDINARY_IMAGES.other.texture)})`,
+            // background: `url(${getCloudinaryUrl(CLOUDINARY_IMAGES.other.texture)})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat'
@@ -276,7 +274,7 @@ function MainContact() {
 
           {/* === RIGHT SIDE (FORM) === */}
           <div className="contact-form-secondary" style={{
-            background: `url(${getCloudinaryUrl(CLOUDINARY_IMAGES.other.texture)})`,
+            // background: `url(${getCloudinaryUrl(CLOUDINARY_IMAGES.other.texture)})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat'

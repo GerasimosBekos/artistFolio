@@ -1,6 +1,6 @@
 .contact {
   font-family: var(--font-main);
-  background-color: #fff;
+  /* background-color: #fff; */
   background-repeat: no-repeat;
   background-position: top left, bottom right;
   background-size: contain;

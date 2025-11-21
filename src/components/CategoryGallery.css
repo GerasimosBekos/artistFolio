@@ -41,7 +41,7 @@
   overflow: hidden;
   border-radius: 10px;
   cursor: pointer;
-  background-color: #f0f0f0;
+  background-color: var(--color-background);
 }
 
 /* SIZE VARIATIONS */

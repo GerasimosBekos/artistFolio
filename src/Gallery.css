@@ -1,6 +1,6 @@
 .gallery {
   font-family: var(--font-main);
-  background-color: #fff;
+  background-color: var(--color-background);
   background-repeat: no-repeat;
   background-position: top left, bottom right;
   background-size: contain;

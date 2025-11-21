@@ -9,7 +9,7 @@ const LanguageContext = createContext();
 export const useLanguage = () => useContext(LanguageContext);
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('el'); // default Greek
+  const [language, setLanguage] = useState('en'); // default Greek
 
   const translations = {
     el: el,

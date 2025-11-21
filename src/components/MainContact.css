@@ -10,7 +10,9 @@
 /* === LEFT SIDE - PRIMARY CONTACT INFO === */
 .contact-info-primary {
   flex: 1.2;
-  background: rgba(255, 255, 255, 0.7);
+  /* background: rgba(255, 255, 255, 0.7); */
+  background: rgba(255, 255, 255, 0.6);
+  /* background-color: var(--color-background); */
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   padding: 3rem;
@@ -25,6 +27,7 @@
   content: "";
   position: absolute;
   inset: 0;
+  /* background-color: var(--color-background); */
   /* background: url('/public/images/other/texture.jpg') center/cover no-repeat; */
   opacity: 0.45;
   z-index: 0;
@@ -39,7 +42,7 @@
 .contact-info-heading {
   font-size: 2rem;
   font-weight: 600;
-  color: #5c3d1e;
+  color: var(--color-accent);
   margin: 0 0 2.5rem 0;
   /* font-family: "Zen Old Mincho", serif; */
   font-family: var(--font-main);

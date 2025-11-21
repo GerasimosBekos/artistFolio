@@ -1,145 +1,151 @@
+// ============================================
+// FRENCH TRANSLATIONS
+// ============================================
+// Edit all text content for your portfolio here
+
 export const fr = {
   // ==================== PERSONAL INFO ====================
   personal: {
-    firstName: "Panagiotis",
-    lastName: "Bekos",
-    fullName: "Panagiotis Bekos",
-    profession: "Sculpteur sur bois",
-    bio: `Mon approche de cette tradition est une démarche d’étude et d’apprentissage sur les œuvres de grands sculpteurs sur bois,
-    dont les créations révèlent savoir, expérience, sensibilité et une technique élevée. Souvent, leurs œuvres reflètent
-    l’expérience ecclésiastique inscrite dans la matière inerte, autant que cela est possible. Ma collaboration avec des artisans
-    expérimentés vise à poursuivre avec succès l’art de la sculpture sur bois. Compagnon de cette démarche : mon frère Théophilos,
-    théologien et chantre. J’espère, avec la grâce de Dieu, une future rencontre et collaboration personnelle.`,
+    firstName: "Maria",
+    lastName: "Toulipa",
+    fullName: "Maria Toulipa",
+    profession: "Créatrice de Bijoux",
+    bio: `Mon approche de cet art est celle de l'étude et de l'apprentissage, en apprenant des œuvres de grands créateurs de bijoux,
+    qui démontrent des connaissances, de l'expérience, de la sensibilité, une haute technicité, et qui capturent souvent l'inspiration 
+    artistique et l'amour de l'artisanat dans des matériaux précieux. Ma collaboration avec des artisans expérimentés 
+    vise à poursuivre avec succès la tradition de la joaillerie. Ma compagne dans cet effort est ma sœur Elena, 
+    designer et artiste. J'espère un contact personnel et une collaboration future.`,
   },
 
   // ==================== CONTACT INFO ====================
   contact: {
-    email: "info@woodcarver.gr",
-    phone: "+30 694 123 4567",
+    email: "info@mariajewelry.gr",
+    phone: "+30 694 567 8901",
     address: {
-      street: "160 Avenue Alexandras",
+      street: "45 Rue Solomou",
       city: "Athènes",
-      postalCode: "11471",
+      postalCode: "10682",
       country: "Grèce",
     },
     social: {
-      facebook: "https://www.facebook.com/your-page",
-      instagram: "https://www.instagram.com/your-account",
+      facebook: "https://www.facebook.com/maria-jewelry",
+      instagram: "https://www.instagram.com/maria.jewelry",
     },
   },
 
   // ==================== HEADER ====================
   header: {
-    woodcarverName: "Panagiotis",
-    woodcarverSurname: "Bekos",
-    woodcarverSpeciality: "Sculpteur sur bois",
+    woodcarverName: "Maria",
+    woodcarverSurname: "Toulipa",
+    woodcarverSpeciality: "Créatrice de Bijoux",
     main: "Accueil",
-    gallery: "Créations",
-    about: "L’Atelier",
+    gallery: "Galerie",
+    about: "Atelier",
     contact: "Contact"
   },
 
   // ==================== FOOTER ====================
   footer: {
-    woodcarverFullName: "Panagiotis Bekos",
-    description: "Sculpteur sur bois",
+    woodcarverFullName: "Maria Toulipa",
+    description: "Créatrice de Bijoux",
     main: "Accueil",
-    gallery: "Créations",
-    about: "L’Atelier",
+    gallery: "Galerie",
+    about: "Atelier",
     contact: "Contact"
   },
 
   // ==================== MAIN PAGE ====================
   main: {
-    heroTitle: "Sculpture sur bois",
-    heroSubtitle: "L’art qui grave des histoires au cœur du bois",
+    heroTitle: "Création de Bijoux",
+    heroSubtitle: "L'art qui crée la beauté dans les métaux précieux",
     gallerySubtitle: "CATÉGORIES",
     galleryTitle: "Créations",
     textToGallery: "Découvrez toutes mes créations",
     buttonToGallery: "Voir la collection",
     contactSubtitle: "CONTACT",
     contactTitle: "Contactez-moi",
-    footerImageText: "\"…que la beauté du Seigneur notre Dieu repose sur nous, et affermis l’œuvre de nos mains ; oui, affermis l’œuvre de nos mains.\" - Psaume 89:17"
+    footerImageText: "Chaque bijou est une histoire qui prend vie dans mes mains"
   },
 
   // ==================== GALLERY PAGE ====================
   gallery: {
-    heroTitle: "Art de la sculpture sur bois",
-    heroSubtitle: "Œuvres sculptées avec passion et amour pour la tradition",
+    heroTitle: "Bijoux Artisanaux",
+    heroSubtitle: "Pièces de bijoux uniques fabriquées avec passion et amour de l'art",
     title: "Créations",
     subtitle: "CATÉGORIES",
-    category: "CATÉGORY",
-    footerImageText: "\"Tout ce que vous faites, faites-le de bon cœur, comme pour le Seigneur et non pour des hommes\" - Colossiens 3:23",
+    category: "CATÉGORIE",
+    footerImageText: "Chaque création est unique, tout comme vous",
     return: "← Retour aux catégories",
-    notAvailable: "Cette catégorie n’est pas encore disponible",
+    notAvailable: "Cette catégorie n'est pas encore disponible",
   },
 
   // ==================== ABOUT PAGE ====================
   about: {
-    heroTitle: "Atelier de sculpture sur bois",
-    heroSubtitle: "Le lieu où l’art de sculpter le bois prend vie",
+    heroTitle: "Atelier de Joaillerie",
+    heroSubtitle: "L'espace où l'art du bijou prend vie",
     title: "Notre Atelier",
     subtitle: "HISTOIRE",
-    aboutMeTitle: "À propos de moi",
-    aboutMeText: "Mon approche de cette tradition est une démarche d’étude et d’apprentissage...",
-    woodcarverFullName: "Panagiotis Bekos",
-    woodcarverSpeciality: "Sculpteur sur bois",
-    footerImageText: "\"Car nous sommes son ouvrage, créés en Jésus-Christ pour de bonnes œuvres\" - Éphésiens 2:10"
+    aboutMeTitle: "À propos de moi",  // eslint-disable-next-line
+    aboutMeText: "Mon approche de cet art est celle de l'étude et de l'apprentissage, en apprenant des œuvres de grands créateurs de bijoux, \
+                qui démontrent des connaissances, de l'expérience, de la sensibilité, une haute technicité, et qui capturent souvent l'inspiration \
+                artistique dans des matériaux précieux, autant que possible.",
+    woodcarverFullName: "Maria Toulipa",
+    woodcarverSpeciality: "Créatrice de Bijoux",
+    footerImageText: "Je crée des bijoux qui racontent votre histoire"
   },
 
   // ==================== CONTACT PAGE ====================
   contactPage: {
     heroTitle: "Contact",
-    heroSubtitle: "Contactez-moi pour plus d’informations",
+    heroSubtitle: "Contactez-moi pour plus d'informations",
     title: "Contactez-moi",
     subtitle: "CONTACT",
     contactInfoTitle: "Coordonnées",
     phoneTitle: "TÉLÉPHONE",
     addressTitle: "ADRESSE",
     followMe: "SUIVEZ-MOI",
-    quickMessageTitle: "Message rapide",
-    quickMessageText: "Envoyez-moi un court message et je vous répondrai bientôt",
+    quickMessageTitle: "Message Rapide",
+    quickMessageText: "Envoyez-moi un message rapide et je vous répondrai bientôt",
     nameTitle: "Nom",
     namePlaceholder: "Votre nom",
     messageTitle: "Message",
     messagePlaceholder: "Écrivez votre message...",
     messageButton: "Envoyer le message",
-    messageSending: "Envoi...",
+    messageSending: "Envoi en cours...",
     messageSent: "Envoyé !",
     messageSuccess: "Merci ! Je vous contacterai bientôt.",
-    footerImageText: "\"…regarde tes serviteurs et ton œuvre, et guide leurs enfants\" - Psaume 89:16"
+    footerImageText: "Créons ensemble le bijou parfait pour vous"
   },
 
   // ==================== CATEGORIES ====================
   categories: {
-    main: "Home",
-    gallery: "Gallery",
-    about: "About",
+    main: "Accueil",
+    gallery: "Galerie",
+    about: "Atelier",
     contact: "Contact",
-    templa: "Iconostases",
-    proskinitaria: "Reposoirs / Oratoires",
-    stasidia: "Stalles",
-    epitafioi: "Épitaphes",
-    kornizes: "Cadres",
-    stavroi: "Croix",
-    pagkaria: "Tronc / Boîtes d’offrandes",
-    thronoi: "Trônes",
-    polithrones: "Fauteuils",
-    amvones: "Chaires",
-    karekles: "Chaises",
-    psaltiria: "Pupitres liturgiques",
-    lipsanothikes: "Reliquaires"
+    rings: "Bagues",
+    necklaces: "Colliers",
+    earrings: "Boucles d'oreilles",
+    bracelets: "Bracelets",
+    pendants: "Pendentifs",
+    brooches: "Broches",
+    sets: "Parures",
+    wedding: "Mariage",
+    custom: "Sur mesure",
+    vintage: "Vintage",
+    modern: "Moderne",
+    classic: "Classique"
   },
 
   // ==================== MESSAGES ====================
   messages: {
     emailCopied: "Email copié !",
-    phoneCopied: "Numéro copié !",
-    nameRequired: "Le nom est obligatoire.",
-    emailRequired: "L’email est obligatoire.",
-    nameInvalid: "Le nom contient des caractères non valides.",
+    phoneCopied: "Numéro de téléphone copié !",
+    nameRequired: "Le nom est requis.",
+    emailRequired: "L'email est requis.",
+    nameInvalid: "Le nom contient des caractères invalides.",
     emailInvalid: "Email invalide.",
-    messageRequired: "Le message est obligatoire.",
-    sendFailed: "Échec de l’envoi. Veuillez réessayer.",
+    messageRequired: "Le message est requis.",
+    sendFailed: "Échec de l'envoi. Veuillez réessayer.",
   }
 };

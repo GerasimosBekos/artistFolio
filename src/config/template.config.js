@@ -1,5 +1,5 @@
 // ============================================
-// artistFolio TEMPLATE CONFIGURATION
+// ARTISTFOLIO TEMPLATE CONFIGURATION
 // ============================================
 // Edit this file to customize your portfolio
 
@@ -8,20 +8,20 @@ export const TEMPLATE_CONFIG = {
   style: {
     // Color Palette
     colors: {
-      primary: "#8b7355",      // Main brand color (buttons, accents)
-      secondary: "#c0be8e",    // Secondary accent color
-      accent: "#623008",       // Dark accent color
-      textDark: "#333",        // Main text color
-      textLight: "#666",       // Secondary text color
-      background: "#fff",      // Background color
-      footerBg: "#1a1a1aCC",   // Footer background
+      primary: "#b76e79",    // Rose gold
+      secondary: "#f7e7ce",  // Champagne
+      accent: "#8b4f5c",     // Deep rose
+      textDark: "#3d3d3d",
+      textLight: "#7a7a7a",
+      background: "#fff9f5",
+      footerBg: "#8b4f5ce6",
     },
 
     // Typography
     fonts: {
-      main: "Chiron Sung HK",   // Body text font
-      header: "Byzantine",       // Headers and titles font
-      fallback: "serif",         // Fallback font family
+      main: "Montserrat",      // Clean, modern sans-serif for body text
+      header: "Playfair Display", // Elegant serif for headers and titles
+      fallback: "sans-serif",  // Fallback font family
     },
 
     // Font Sizes
@@ -42,7 +42,8 @@ export const TEMPLATE_CONFIG = {
     apiSecret: process.env.REACT_APP_CLOUDINARY_API_SECRET,
     
     // Folder structure in Cloudinary
-    folderPrefix: "woodcarver",  // Root folder name
+    folderPrefix: "jewelry",  // Root folder name 
+                            // !!! CHANGE ALSO ./node.config.js
     
     // Subfolders
     folders: {
@@ -63,7 +64,7 @@ export const TEMPLATE_CONFIG = {
 
   // ==================== SITE SETTINGS ====================
   site: {
-    defaultLanguage: "el",           // Default language
+    defaultLanguage: "en",           // Default language
     availableLanguages: ["el", "en", "fr"], // Available languages
     
     // Features to enable/disable
@@ -78,86 +79,68 @@ export const TEMPLATE_CONFIG = {
   },
 
   // ==================== GALLERY CATEGORIES ====================
-  // ⭐ DYNAMIC: Add/remove/edit categories here
-  // gridSize options: "normal", "wide", "tall"
-  // enabled: true/false to show/hide category
-  // imageName: optional - override default image name (defaults to category id)
+  // Add/remove/edit categories here
+  // gridSize options: "normal", "wide", "tall" 
   categories: [
     {
-      id: "templa",
+      id: "bracelets",
       enabled: true,
-      gridSize: "wide",
-      imageName: "templo", // Custom image name
-    },
+      gridSize: "wide",    // The 'bracelets' category should be
+    },                     // shown vericaly in the gallery grid
     {
-      id: "proskinitaria",
+      id: "brooches",
       enabled: true,
       gridSize: "tall",
-      imageName: "prosk",
     },
     {
-      id: "stasidia",
+      id: "classic",
       enabled: true,
       gridSize: "normal",
     },
     {
-      id: "epitafioi",
+      id: "custom",
       enabled: true,
       gridSize: "tall",
-      imageName: "epitafios",
     },
     {
-      id: "kornizes",
-      enabled: true,
-      gridSize: "normal",
-      imageName: "korniza",
-    },
-    {
-      id: "stavroi",
-      enabled: true,
-      gridSize: "tall",
-      imageName: "stavros",
-    },
-    {
-      id: "thronoi",
-      enabled: true,
-      gridSize: "tall",
-      imageName: "thronos",
-    },
-    {
-      id: "pagkaria",
-      enabled: true,
-      gridSize: "normal",
-      imageName: "pagkari",
-    },
-    {
-      id: "polithrones",
-      enabled: true,
-      gridSize: "tall",
-      imageName: "polithrona",
-    },
-    {
-      id: "amvones",
-      enabled: true,
-      gridSize: "tall",
-      imageName: "amvonas",
-    },
-    {
-      id: "karekles",
+      id: "earrings",
       enabled: true,
       gridSize: "normal",
     },
     {
-      id: "psaltiria",
+      id: "modern",
       enabled: true,
-      gridSize: "normal",
-      imageName: "psaltiri",
+      gridSize: "tall",
     },
     {
-      id: "lipsanothikes",
+      id: "necklaces",
+      enabled: true,
+      gridSize: "tall",
+    },
+    {
+      id: "pendants",
       enabled: true,
       gridSize: "normal",
-      imageName: "lipsanothiki",
+    },
+    {
+      id: "rings",
+      enabled: true,
+      gridSize: "tall",
+    },
+    {
+      id: "sets",
+      enabled: true,
+      gridSize: "tall",
+    },
+    {
+      id: "vintage",
+      enabled: true,
+      gridSize: "normal",
+    },
+    {
+      id: "wedding",
+      enabled: true,
+      gridSize: "normal",
     },
   ],
 

@@ -26,8 +26,6 @@ export const CLOUDINARY_IMAGES = {
   other: {
     artist: `${FOLDER}/other/artist`,
     logo: `${FOLDER}/other/logo`,
-    mainbg: `${FOLDER}/other/mainbg`,
-    texture: `${FOLDER}/other/texture`,
     imageTextMain: `${FOLDER}/other/image_text_main`,
   },
   

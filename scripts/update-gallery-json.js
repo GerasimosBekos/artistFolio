@@ -45,7 +45,3 @@ console.log(`✅ Backup created: ${backupPath}`);
 
 fs.writeFileSync(galleryPath, JSON.stringify(updated, null, 2));
 console.log(`✅ Updated: ${galleryPath}`);
-
-// Show sample
-console.log('\n📝 Sample updated entry:');
-console.log(JSON.stringify(updated.templa, null, 2));

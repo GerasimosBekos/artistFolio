@@ -1,104 +1,111 @@
+// ============================================
+// ENGLISH TRANSLATIONS
+// ============================================
+// Edit all text content for your portfolio here
+
 export const en = {
   // ==================== PERSONAL INFO ====================
   personal: {
-    firstName: "Panagiotis",
-    lastName: "Bekos",
-    fullName: "Panagiotis Bekos",
-    profession: "Woodcarver",
-    bio: `My approach to this tradition is one of study and apprenticeship in the works of great woodcarvers,
-    whose creations reveal knowledge, experience, sensitivity, and high craftsmanship. Often, their work reflects the
-    living ecclesiastical experience captured in the lifeless material, as much as this is possible.`,
+    firstName: "Maria",
+    lastName: "Toulipa",
+    fullName: "Maria Toulipa",
+    profession: "Jewelry Artist",
+    bio: `My approach to this art is one of study and apprenticeship, learning from the works of great jewelry makers,
+    who demonstrate knowledge, experience, sensitivity, high technical skill, and often capture artistic 
+    inspiration and love for craftsmanship in precious materials. My collaboration with experienced artisans 
+    aims at successfully continuing the jewelry-making tradition. My companion in this effort is my sister Elena, 
+    a designer and artist. I look forward to future personal contact and collaboration.`,
   },
 
   // ==================== CONTACT INFO ====================
   contact: {
-    email: "info@woodcarver.gr",
-    phone: "+30 694 123 4567",
+    email: "info@mariajewelry.gr",
+    phone: "+30 694 567 8901",
     address: {
-      street: "160 Alexandras Avenue",
+      street: "45 Solomou Street",
       city: "Athens",
-      postalCode: "11471",
+      postalCode: "10682",
       country: "Greece",
     },
     social: {
-      facebook: "https://www.facebook.com/your-page",
-      instagram: "https://www.instagram.com/your-account",
+      facebook: "https://www.facebook.com/maria-jewelry",
+      instagram: "https://www.instagram.com/maria.jewelry",
     },
   },
 
   // ==================== HEADER ====================
   header: {
-    woodcarverName: "Panagiotis",
-    woodcarverSurname: "Bekos",
-    woodcarverSpeciality: "Woodcarver",
+    woodcarverName: "Maria",
+    woodcarverSurname: "Toulipa",
+    woodcarverSpeciality: "Jewelry Artist",
     main: "Home",
-    gallery: "Creations",
-    about: "The Workshop",
+    gallery: "Gallery",
+    about: "Workshop",
     contact: "Contact"
   },
 
   // ==================== FOOTER ====================
   footer: {
-    woodcarverFullName: "Panagiotis Bekos",
-    description: "Woodcarver",
+    woodcarverFullName: "Maria Toulipa",
+    description: "Jewelry Artist",
     main: "Home",
-    gallery: "Creations",
-    about: "The Workshop",
+    gallery: "Gallery",
+    about: "Workshop",
     contact: "Contact"
   },
 
   // ==================== MAIN PAGE ====================
   main: {
-    heroTitle: "Woodcarving",
-    heroSubtitle: "The art that carves stories into the heart of wood",
+    heroTitle: "Jewelry Making",
+    heroSubtitle: "The art that creates beauty in precious metals",
     gallerySubtitle: "CATEGORIES",
     galleryTitle: "Creations",
     textToGallery: "Discover all my creations",
-    buttonToGallery: "View the collection",
-    contactSubtitle: "CONTACT",
-    contactTitle: "Get in touch with me",
-    footerImageText: "\"…and let the beauty of the Lord our God be upon us, and establish the work of our hands upon us; yes, establish the work of our hands.\" - Psalm 89:17"
+    buttonToGallery: "View collection",
+    contactSubtitle: "GET IN TOUCH",
+    contactTitle: "Contact Me",
+    footerImageText: "Every piece of jewelry is a story that comes alive in my hands"
   },
 
   // ==================== GALLERY PAGE ====================
   gallery: {
-    heroTitle: "Woodcarving Art",
-    heroSubtitle: "Woodcarved artworks made with passion and love for tradition",
+    heroTitle: "Handcrafted Jewelry",
+    heroSubtitle: "Unique jewelry pieces crafted with passion and love for the art",
     title: "Creations",
     subtitle: "CATEGORIES",
     category: "CATEGORY",
-    footerImageText: "\"Whatever you do, work heartily, as for the Lord and not for men\" - Colossians 3:23",
+    footerImageText: "Each creation is unique, just like you",
     return: "← Back to categories",
     notAvailable: "This category is not available yet",
   },
 
   // ==================== ABOUT PAGE ====================
   about: {
-    heroTitle: "Woodcarving Workshop",
-    heroSubtitle: "The place where the art of woodcarving comes to life",
+    heroTitle: "Jewelry Workshop",
+    heroSubtitle: "The space where the art of jewelry comes to life",
     title: "Our Workshop",
-    subtitle: "HISTORY",
-    aboutMeTitle: "About me", // eslint-disable-next-line
-    aboutMeText: "My approach to this tradition is one of study and apprenticeship based on the works of great woodcarvers, \
-                which reveal knowledge, experience, sensitivity, high technique, and which are often the imprint of ecclesiastical \
-                experience on inanimate material, as much as possible.",
-    woodcarverFullName: "Panagiotis Bekos",
-    woodcarverSpeciality: "Woodcarver",
-    footerImageText: "\"For we are His workmanship, created in Christ Jesus for good works\" - Ephesians 2:10"
+    subtitle: "STORY",
+    aboutMeTitle: "About Me",  // eslint-disable-next-line
+    aboutMeText: "My approach to this art is one of study and apprenticeship, learning from the works of great jewelry makers, \
+                who demonstrate knowledge, experience, sensitivity, high technical skill, and often capture artistic \
+                inspiration in precious materials, as much as possible.",
+    woodcarverFullName: "Maria Toulipa",
+    woodcarverSpeciality: "Jewelry Artist",
+    footerImageText: "I create jewelry that tells your story"
   },
 
   // ==================== CONTACT PAGE ====================
   contactPage: {
     heroTitle: "Contact",
     heroSubtitle: "Get in touch with me for more information",
-    title: "Contact me",
-    subtitle: "CONTACT",
-    contactInfoTitle: "Contact Details",
+    title: "Contact Me",
+    subtitle: "GET IN TOUCH",
+    contactInfoTitle: "Contact Information",
     phoneTitle: "PHONE",
     addressTitle: "ADDRESS",
     followMe: "FOLLOW ME",
     quickMessageTitle: "Quick Message",
-    quickMessageText: "Send me a short message and I will contact you soon",
+    quickMessageText: "Send me a quick message and I'll get back to you soon",
     nameTitle: "Name",
     namePlaceholder: "Your name",
     messageTitle: "Message",
@@ -106,29 +113,28 @@ export const en = {
     messageButton: "Send message",
     messageSending: "Sending...",
     messageSent: "Sent!",
-    messageSuccess: "Thank you! I will contact you soon.",
-    footerImageText: "\"…look upon Your servants and upon Your works, and guide their children\" - Psalm 89:16"
+    messageSuccess: "Thank you! I'll be in touch soon.",
+    footerImageText: "Let's create the perfect piece of jewelry for you together"
   },
 
   // ==================== CATEGORIES ====================
   categories: {
     main: "Home",
     gallery: "Gallery",
-    about: "About",
+    about: "Workshop",
     contact: "Contact",
-    templa: "Iconostases",
-    proskinitaria: "Icon Stands",
-    stasidia: "Choir Stalls",
-    epitafioi: "Epitaphios Shrines",
-    kornizes: "Frames",
-    stavroi: "Crosses",
-    pagkaria: "Donation Boxes",
-    thronoi: "Bishop Thrones",
-    polithrones: "Armchairs",
-    amvones: "Pulpits",
-    karekles: "Chairs",
-    psaltiria: "Chanter Stands",
-    lipsanothikes: "Reliquaries"
+    rings: "Rings",
+    necklaces: "Necklaces",
+    earrings: "Earrings",
+    bracelets: "Bracelets",
+    pendants: "Pendants",
+    brooches: "Brooches",
+    sets: "Sets",
+    wedding: "Wedding",
+    custom: "Custom",
+    vintage: "Vintage",
+    modern: "Modern",
+    classic: "Classic"
   },
 
   // ==================== MESSAGES ====================
@@ -137,9 +143,9 @@ export const en = {
     phoneCopied: "Phone number copied!",
     nameRequired: "Name is required.",
     emailRequired: "Email is required.",
-    nameInvalid: "The name contains invalid characters.",
+    nameInvalid: "Name contains invalid characters.",
     emailInvalid: "Invalid email.",
     messageRequired: "Message is required.",
-    sendFailed: "Sending failed. Please try again.",
+    sendFailed: "Failed to send. Please try again.",
   }
 };

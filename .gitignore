@@ -13,8 +13,8 @@
 
 # misc
 .DS_Store
-.env
-.env.local
+# .env
+# .env.local
 .env.development.local
 .env.test.local
 .env.production.local
@@ -28,8 +28,8 @@ scripts/upload-results-*.json
 scripts/migration-results-*.json
 
 # Local images (keep structure, not actual files)
-public/images/**/*
-!public/images/**/.gitkeep
+# public/images/**/*
+# !public/images/**/.gitkeep
 
 # IDE
 .vscode
