@@ -14,20 +14,20 @@ With just:
 
   `You now have a beautiful portfolio to show your work!`
     
-      
+See the results on this [website](https://bekos-woodcarving-website.vercel.app/).
 
   ## 🎬 Demonstration
 <p align="center">
   <div style="position:relative; display:inline-block; width:300px; margin-right:20px; vertical-align:top;">
     <strong>Woodcarving Workshop</strong><br><br>
-    <img src="docs/images/mock_wood_desktop.gif" width="300">
-    <img src="docs/images/mock_wood_mobile.gif" height="100" style="position:absolute; bottom:5px; right:5px;">
+    <img src="docs/images/mock_wood_desktop.gif" width="600">
+    <img src="docs/images/mock_wood_mobile.gif" height="250" style="position:absolute; bottom:5px; right:5px;">
   </div>
 
   <div style="position:relative; display:inline-block; width:300px; vertical-align:top;">
     <strong>Jewelry Workshop</strong><br><br>
-    <img src="docs/images/mock_jewelry_desktop.gif" width="300">
-    <img src="docs/images/mock_jewelry_mobile.gif" height="100" style="position:absolute; bottom:5px; right:5px;">
+    <img src="docs/images/mock_jewelry_desktop.gif" width="600">
+    <img src="docs/images/mock_jewelry_mobile.gif" height="250" style="position:absolute; bottom:5px; right:5px;">
   </div>
 </p>
 
